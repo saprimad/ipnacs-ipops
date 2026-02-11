@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "prof-amelia-chen",
+    "name": "Prof. Amelia Chen",
+    "title": "Professor of Biomedical Informatics",
+    "organization": "National University of Singapore",
+    "bio": "Prof. Chen leads interdisciplinary research on clinical AI validation, translational informatics, and trustworthy data governance.",
+    "topic": "Trustworthy AI for Clinical Decision Support"
+  },
+  {
+    "slug": "dr-michael-okafor",
+    "name": "Dr. Michael Okafor",
+    "title": "Director of Digital Therapeutics",
+    "organization": "Global Health Innovation Lab",
+    "bio": "Dr. Okafor develops scalable digital therapeutic interventions across chronic disease pathways and implementation science programs.",
+    "topic": "Digital Therapeutics from Trials to Real-World Care"
+  },
+  {
+    "slug": "dr-sarah-lim",
+    "name": "Dr. Sarah Lim",
+    "title": "Head of Regulatory Science",
+    "organization": "Asia-Pacific MedTech Council",
+    "bio": "Dr. Lim advises on evidence frameworks, post-market surveillance, and policy harmonisation for health technologies.",
+    "topic": "Regulation and Evidence Standards in Digital Health"
+  }
+]
