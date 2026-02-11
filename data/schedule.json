@@ -1,0 +1,27 @@
+{
+  "days": [
+    {
+      "label": "Day 1",
+      "date": "13 August 2026",
+      "items": [
+        { "time": "08:00", "title": "Registration and Welcome Refreshments", "type": "General" },
+        { "time": "09:00", "title": "Opening Ceremony and Conference Briefing", "type": "Plenary" },
+        { "time": "10:00", "title": "Keynote Session: Digital Transformation in Wellness and Therapy", "type": "Keynote" },
+        { "time": "11:30", "title": "Parallel Scientific Tracks (Session A)", "type": "Track" },
+        { "time": "14:00", "title": "Industry and Academic Forum", "type": "Forum" },
+        { "time": "16:00", "title": "Poster Engagement and Networking", "type": "Networking" }
+      ]
+    },
+    {
+      "label": "Day 2",
+      "date": "14 August 2026",
+      "items": [
+        { "time": "09:00", "title": "Plenary Panel: Future Directions in Pharmaceutical Science", "type": "Plenary" },
+        { "time": "10:30", "title": "Parallel Scientific Tracks (Session B)", "type": "Track" },
+        { "time": "12:00", "title": "Lunch and Collaboration Session", "type": "Networking" },
+        { "time": "14:00", "title": "Selected Oral Presentations", "type": "Presentation" },
+        { "time": "16:00", "title": "Awards and Closing Ceremony", "type": "General" }
+      ]
+    }
+  ]
+}

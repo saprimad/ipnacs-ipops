@@ -1,0 +1,66 @@
+{
+  "_comment_conferenceName": "Main conference name shown in the navbar, hero, and SEO title.",
+  "conferenceName": "IPNaCS & IPoPS 2026",
+  "_comment_fullConferenceName": "Long-form conference names for formal references.",
+  "fullConferenceName": "8th International Conference on Pharmaceutical, Nutraceutical, and Cosmeceutical Sciences (IPNaCS) and 11th International Postgraduate Conference on Pharmaceutical Sciences (IPoPS)",
+  "_comment_tagline": "Short academic tagline displayed on the home page hero section.",
+  "tagline": "Connected Innovation: Digital Transformation in Wellness, Longevity and Therapy",
+  "_comment_date": "Official conference start date in ISO format (used by the countdown timer and labels).",
+  "date": "2026-08-13T09:00:00+08:00",
+  "_comment_endDate": "Official conference end date in ISO format for schedule context.",
+  "endDate": "2026-08-14T17:00:00+08:00",
+  "_comment_venue": "Venue name displayed on home and venue pages.",
+  "venue": "DoubleTree by Hilton",
+  "_comment_location": "City and country text shown in event metadata and footer.",
+  "location": "Shah Alam, Malaysia",
+  "_comment_organizer": "Organizer institution shown in footer and contact sections.",
+  "organizer": "Faculty of Pharmacy, Universiti Teknologi MARA (UiTM)",
+  "_comment_contactEmail": "Primary contact address for forms and sponsorship CTAs.",
+  "contactEmail": "secretariat@ipnacs-ipops.com",
+  "_comment_registrationUrl": "External registration URL for all Register Now buttons.",
+  "registrationUrl": "https://ipnacs-ipops.com/",
+  "_comment_cfpUrl": "External call-for-papers URL. Leave empty string to hide CFP button.",
+  "cfpUrl": "",
+  "description": "An international scientific meeting bringing together researchers, academics, industry professionals, and postgraduate scholars to discuss digital transformation across pharmaceutical and related sciences.",
+  "socials": {
+    "linkedin": "https://www.linkedin.com",
+    "x": "https://x.com",
+    "youtube": "https://www.youtube.com"
+  },
+  "highlights": [
+    "International keynote and plenary sessions",
+    "Interdisciplinary pharmaceutical science tracks",
+    "Postgraduate research presentations",
+    "Cross-sector networking and collaboration"
+  ],
+  "tracks": [
+    "Pharmacology and Precision Medicine",
+    "Pharmacy and Digital Health",
+    "Nutraceutical Science",
+    "Cosmetic Science and Innovation",
+    "Pharmaceutical Technology",
+    "Pharmaceutical Chemistry",
+    "Regenerative Medicine",
+    "Policy, Regulation and Ethics"
+  ],
+  "importantDates": [
+    { "label": "First Announcement", "value": "February 2026" },
+    { "label": "Abstract Submission Opens", "value": "March 2026" },
+    { "label": "Abstract Submission Deadline", "value": "May 2026" },
+    { "label": "Acceptance Notification", "value": "June 2026" },
+    { "label": "Early Bird Registration Deadline", "value": "30 June 2026" },
+    { "label": "Conference Dates", "value": "13–14 August 2026" },
+    { "label": "Full Paper Submission Deadline", "value": "31 August 2026" }
+  ],
+  "submissionGuidelines": [
+    "Maximum 300 words in Times New Roman, 12 pt, single spacing.",
+    "Include: Title, Author(s), Affiliation, Background/Rationale, Objectives, Methods, Results, Conclusion, and up to 5 keywords.",
+    "Accepted abstracts will be published in the MyCite-indexed International Journal of Pharmaceuticals, Nutraceuticals and Cosmetic Science (IJPNaCS)."
+  ],
+  "registrationFees": [
+    { "category": "Undergraduate / Postgraduate", "fee": "MYR 450 / USD 120" },
+    { "category": "Pharmacist / Health Professional", "fee": "MYR 600" },
+    { "category": "Academic / Researcher / Industry", "fee": "MYR 800 / USD 200" }
+  ],
+  "sponsors": ["Platinum Partner", "Gold Partner", "Silver Partner", "Academic Partner"]
+}
