@@ -1,35 +1,65 @@
-import type { Metadata } from "next";
-import { FaqAccordion } from "@/components/faq-accordion";
-import { buildMetadata } from "@/lib/metadata";
+// app/registration/page.tsx
 
-export const metadata: Metadata = buildMetadata("FAQ", "Frequently asked questions for conference participants.");
-
-const faqItems = [
-  {
-    question: "How do I submit an abstract?",
-    answer: "Use the Call for Papers portal. Submission guidelines and templates are available there."
-  },
-  {
-    question: "Can I attend only one day?",
-    answer: "Yes. Day-specific attendance options are planned and will be listed during registration."
-  },
-  {
-    question: "Will presentation certificates be provided?",
-    answer: "Yes. Digital certificates will be issued after verification of attendance and participation."
-  },
-  {
-    question: "Is online participation available?",
-    answer: "A limited hybrid track may be announced based on session format and speaker availability."
-  }
-];
-
-export default function FaqPage() {
+export default function RegistrationPage() {
   return (
-    <main className="section">
-      <h1 className="text-3xl font-bold">Frequently Asked Questions</h1>
-      <div className="mt-6">
-        <FaqAccordion items={faqItems} />
-      </div>
+    <main className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
+      <header className="space-y-4 text-center">
+        <h1 className="text-4xl font-extrabold tracking-tight text-brand-900 sm:text-5xl">
+          Submit Abstract
+        </h1>
+        <p className="mx-auto max-w-2xl text-base text-slate-600">
+          Abstracts accepted at IPNaCS &amp; IPoPS 2026 will be considered for publication in the
+          International Journal of Pharmaceuticals, Nutraceuticals and Cosmetic Science (IJPNaCS).
+        </p>
+      </header>
+
+      <section className="mt-14 rounded-xl border border-slate-200 bg-white p-10 shadow-sm">
+        <p className="mx-auto max-w-3xl leading-relaxed text-slate-700 text-justify">
+          All submissions must comply with the journal’s formatting, stylistic and bibliographic
+          requirements. The review process will be conducted through a double-blind peer review
+          system; therefore, author names and affiliations must not appear in the submitted manuscript.
+          The manuscript file must be prepared in Microsoft Word format (.doc, .docx or .rtf), and
+          authors are responsible for ensuring that all co-authors have approved the submission.
+          Declarations of funding, ethical approval and competing interests must be included before
+          the reference list. The similarity index must not exceed 25%, and submissions must not be
+          under consideration elsewhere.
+        </p>
+
+        <div className="mt-10 space-y-6">
+          <div>
+            <h2 className="text-xl font-bold text-brand-900">Submission Method</h2>
+            <p className="mt-3 text-slate-700">
+              Manuscripts should be submitted by email to the Editorial Office:
+            </p>
+            <p className="mt-2 font-semibold text-brand-900">
+              ijpnacs@gmail.com
+            </p>
+            <p className="mt-2 text-slate-700">
+              International Journal of Pharmaceuticals, Nutraceuticals and Cosmetic Science (IJPNaCS) <br />
+              Faculty of Pharmacy, Universiti Teknologi MARA <br />
+              Puncak Alam Campus, Selangor, Malaysia
+            </p>
+          </div>
+
+          <div className="flex flex-wrap gap-4 pt-4">
+            <a
+              href="https://docs.google.com/document/d/1xZgX6ENwsIX6y5HO39xbiMEDJss9v-tV/edit"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-md bg-brand-700 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-brand-600"
+            >
+              Download Manuscript Template
+            </a>
+
+            <a
+              href="mailto:ijpnacs@gmail.com"
+              className="inline-flex items-center justify-center rounded-md border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-800 shadow-sm hover:bg-slate-50"
+            >
+              Submit via Email
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

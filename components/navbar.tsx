@@ -11,7 +11,7 @@ const links = [
   ["Venue", "/venue"],
   ["Registration", "/registration"],
   ["Sponsors", "/sponsors"],
-  ["FAQ", "/faq"],
+  ["Submit Abstract", "/faq"],
   ["Code of Conduct", "/code-of-conduct"],
   ["Contact", "/contact"],
 ] as const;
