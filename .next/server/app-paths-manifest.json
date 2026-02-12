@@ -1,4 +1,11 @@
 {
-  "/page": "app/page.js",
-  "/venue/page": "app/venue/page.js"
+  "/about/page": "app/about/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/sponsors/page": "app/sponsors/page.js",
+  "/code-of-conduct/page": "app/code-of-conduct/page.js",
+  "/faq/page": "app/faq/page.js",
+  "/registration/page": "app/registration/page.js",
+  "/schedule/page": "app/schedule/page.js",
+  "/venue/page": "app/venue/page.js",
+  "/speakers/page": "app/speakers/page.js"
 }
