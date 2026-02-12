@@ -1,11 +1,6 @@
-import type { Metadata } from "next";
 import "./globals.css";
-import { Navbar } from "@/components/navbar";
-import { Footer } from "@/components/footer";
-import { BackToTop } from "@/components/back-to-top";
-import { buildMetadata } from "@/lib/metadata";
-
-export const metadata: Metadata = buildMetadata("Home");
+import { Navbar } from "../components/navbar";
+import { Footer } from "../components/footer";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -14,7 +9,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navbar />
         {children}
         <Footer />
-        <BackToTop />
       </body>
     </html>
   );

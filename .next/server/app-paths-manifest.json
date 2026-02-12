@@ -1,0 +1,7 @@
+{
+  "/page": "app/page.js",
+  "/sponsors/page": "app/sponsors/page.js",
+  "/about/page": "app/about/page.js",
+  "/registration/page": "app/registration/page.js",
+  "/code-of-conduct/page": "app/code-of-conduct/page.js"
+}

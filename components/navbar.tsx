@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { site } from "@/lib/site";
 
 const links = [
   ["Home", "/"],
@@ -14,18 +13,37 @@ const links = [
   ["Sponsors", "/sponsors"],
   ["FAQ", "/faq"],
   ["Code of Conduct", "/code-of-conduct"],
-  ["Contact", "/contact"]
+  ["Contact", "/contact"],
 ] as const;
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8" aria-label="Main navigation">
-        <Link href="/" className="text-sm font-semibold text-brand-900 sm:text-base">
-          {site.conferenceName}
+    <header className="sticky top-0 z-50 border-b border-gray-200 bg-white/95 backdrop-blur">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+        <Link href="/" className="text-lg font-semibold text-[#0F2A4D]">
+          IPNACS–IPOPS 2026
         </Link>
+
+        <ul className="hidden items-center gap-6 text-sm md:flex">
+          {links.map(([label, href]) => (
+            <li key={href}>
+              <Link href={href} className="text-slate-600 hover:text-[#0F2A4D] transition">
+                {label}
+              </Link>
+            </li>
+          ))}
+
+          <li>
+            <Link
+              href="/registration"
+              className="ml-2 rounded-lg bg-[#0F2A4D] px-4 py-2 text-white font-medium hover:opacity-90 transition"
+            >
+              Register
+            </Link>
+          </li>
+        </ul>
 
         <button
           className="rounded border border-slate-300 px-3 py-1 text-sm md:hidden"
@@ -36,20 +54,10 @@ export function Navbar() {
         >
           Menu
         </button>
-
-        <ul className="hidden items-center gap-4 text-sm md:flex">
-          {links.map(([label, href]) => (
-            <li key={href}>
-              <Link href={href} className="text-slate-700 hover:text-brand-700">
-                {label}
-              </Link>
-            </li>
-          ))}
-        </ul>
       </nav>
 
       {open && (
-        <ul id="mobile-menu" className="space-y-1 border-t border-slate-200 bg-white px-4 py-3 md:hidden">
+        <ul id="mobile-menu" className="space-y-1 border-t border-gray-200 bg-white px-6 py-4 md:hidden">
           {links.map(([label, href]) => (
             <li key={href}>
               <Link
@@ -61,6 +69,16 @@ export function Navbar() {
               </Link>
             </li>
           ))}
+
+          <li>
+            <Link
+              href="/registration"
+              className="block rounded bg-[#0F2A4D] px-4 py-2 text-center text-white font-medium hover:opacity-90 transition"
+              onClick={() => setOpen(false)}
+            >
+              Register
+            </Link>
+          </li>
         </ul>
       )}
     </header>
