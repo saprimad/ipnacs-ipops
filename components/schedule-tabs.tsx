@@ -13,7 +13,7 @@ type ScheduleDay = {
   key: string;
   label: string;
   date?: string;
-  items: ScheduleItem[];
+  items: readonly ScheduleItem[]; // accepts readonly arrays from `as const`
 };
 
 export function ScheduleTabs({ days }: { days: readonly ScheduleDay[] }) {
@@ -24,6 +24,8 @@ export function ScheduleTabs({ days }: { days: readonly ScheduleDay[] }) {
     () => days.find((d) => d.key === activeKey) ?? days[0],
     [days, activeKey]
   );
+
+  if (!activeDay) return null;
 
   return (
     <div className="rounded-xl border border-slate-200 bg-white shadow-sm">
@@ -45,7 +47,12 @@ export function ScheduleTabs({ days }: { days: readonly ScheduleDay[] }) {
             >
               {day.label}
               {day.date ? (
-                <span className={["ml-2 text-xs", isActive ? "text-white/90" : "text-slate-500"].join(" ")}>
+                <span
+                  className={[
+                    "ml-2 text-xs",
+                    isActive ? "text-white/90" : "text-slate-500",
+                  ].join(" ")}
+                >
                   {day.date}
                 </span>
               ) : null}
@@ -57,12 +64,16 @@ export function ScheduleTabs({ days }: { days: readonly ScheduleDay[] }) {
       {/* Content */}
       <div className="p-6">
         <h2 className="text-xl font-bold text-[#0F2A4D]">
-          {activeDay?.label}
-          {activeDay?.date ? <span className="ml-2 text-base font-medium text-slate-500">({activeDay.date})</span> : null}
+          {activeDay.label}
+          {activeDay.date ? (
+            <span className="ml-2 text-base font-medium text-slate-500">
+              ({activeDay.date})
+            </span>
+          ) : null}
         </h2>
 
         <div className="mt-6 space-y-4">
-          {activeDay?.items?.map((item, idx) => (
+          {activeDay.items.map((item, idx) => (
             <div
               key={`${activeDay.key}-${idx}`}
               className="rounded-lg border border-slate-200 bg-white p-4"
@@ -82,9 +93,7 @@ export function ScheduleTabs({ days }: { days: readonly ScheduleDay[] }) {
               </div>
 
               {item.description ? (
-                <p className="mt-2 text-sm text-slate-700">
-                  {item.description}
-                </p>
+                <p className="mt-2 text-sm text-slate-700">{item.description}</p>
               ) : null}
             </div>
           ))}
