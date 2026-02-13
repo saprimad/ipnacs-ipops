@@ -1,3 +1,5 @@
+import { Countdown } from "@/components/countdown";
+
 export default function HomePage() {
   return (
     <main className="bg-[#F7F8FA] text-[#0F2A4D]">
@@ -43,24 +45,27 @@ export default function HomePage() {
             13–14 Aug 2026 | DoubleTree by Hilton, Shah Alam
           </p>
 
+          {/* COUNTDOWN */}
+          <Countdown targetDate="2026-08-13T09:00:00+08:00" />
+
           {/* Buttons */}
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+          <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
             <a
-              href="#register"
+              href="/registration"
               className="rounded-lg px-8 py-3 font-semibold text-white bg-[#0F2A4D] hover:opacity-90 transition"
             >
               Register Now
             </a>
 
             <a
-              href="#submit-abstract"
+              href="/registration"
               className="rounded-lg px-8 py-3 font-semibold text-white bg-[#0F2A4D] hover:opacity-90 transition"
             >
               Submit Abstract
             </a>
 
             <a
-              href="#programme"
+              href="/schedule"
               className="rounded-lg px-8 py-3 font-semibold text-white bg-[#0F2A4D] hover:opacity-90 transition"
             >
               View Programme

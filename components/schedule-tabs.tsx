@@ -1,39 +1,98 @@
 "use client";
 
-import { useState } from "react";
-import type { ScheduleDay } from "@/lib/site";
+import { useMemo, useState } from "react";
 
-export function ScheduleTabs({ days }: { days: ScheduleDay[] }) {
-  const [active, setActive] = useState(0);
-  const day = days[active];
+type ScheduleItem = {
+  time: string;
+  title: string;
+  description?: string;
+  location?: string;
+};
+
+type ScheduleDay = {
+  key: string;
+  label: string;
+  date?: string;
+  items: ScheduleItem[];
+};
+
+export function ScheduleTabs({ days }: { days: readonly ScheduleDay[] }) {
+  const firstKey = useMemo(() => days?.[0]?.key ?? "day-1", [days]);
+  const [activeKey, setActiveKey] = useState<string>(firstKey);
+
+  const activeDay = useMemo(
+    () => days.find((d) => d.key === activeKey) ?? days[0],
+    [days, activeKey]
+  );
 
   return (
-    <div>
-      <div className="mb-6 flex flex-wrap gap-2" role="tablist" aria-label="Conference schedule days">
-        {days.map((item, index) => (
-          <button
-            key={item.label}
-            role="tab"
-            aria-selected={active === index}
-            className={`rounded-lg border px-4 py-2 text-sm font-medium ${active === index ? "border-brand-700 bg-brand-700 text-white" : "border-slate-300 bg-white text-slate-700"}`}
-            onClick={() => setActive(index)}
-          >
-            {item.label}
-          </button>
-        ))}
+    <div className="rounded-xl border border-slate-200 bg-white shadow-sm">
+      {/* Tabs */}
+      <div className="flex flex-wrap gap-2 border-b border-slate-200 p-4">
+        {days.map((day) => {
+          const isActive = day.key === activeKey;
+          return (
+            <button
+              key={day.key}
+              type="button"
+              onClick={() => setActiveKey(day.key)}
+              className={[
+                "rounded-lg px-4 py-2 text-sm font-semibold transition",
+                isActive
+                  ? "bg-[#0F2A4D] text-white"
+                  : "bg-slate-100 text-slate-700 hover:bg-slate-200",
+              ].join(" ")}
+            >
+              {day.label}
+              {day.date ? (
+                <span className={["ml-2 text-xs", isActive ? "text-white/90" : "text-slate-500"].join(" ")}>
+                  {day.date}
+                </span>
+              ) : null}
+            </button>
+          );
+        })}
       </div>
 
-      <div className="card overflow-hidden">
-        <div className="border-b border-slate-200 bg-slate-50 px-4 py-3 text-sm font-semibold text-slate-700">{day.date}</div>
-        <ul>
-          {day.items.map((item) => (
-            <li key={`${day.label}-${item.time}-${item.title}`} className="grid gap-2 border-b border-slate-100 px-4 py-4 sm:grid-cols-[100px_1fr_auto] sm:items-center">
-              <p className="text-sm font-semibold text-brand-700">{item.time}</p>
-              <p className="text-sm text-slate-800">{item.title}</p>
-              <span className="w-fit rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-600">{item.type}</span>
-            </li>
+      {/* Content */}
+      <div className="p-6">
+        <h2 className="text-xl font-bold text-[#0F2A4D]">
+          {activeDay?.label}
+          {activeDay?.date ? <span className="ml-2 text-base font-medium text-slate-500">({activeDay.date})</span> : null}
+        </h2>
+
+        <div className="mt-6 space-y-4">
+          {activeDay?.items?.map((item, idx) => (
+            <div
+              key={`${activeDay.key}-${idx}`}
+              className="rounded-lg border border-slate-200 bg-white p-4"
+            >
+              <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                <div className="text-sm font-semibold text-slate-900">
+                  {item.title}
+                  {item.location ? (
+                    <span className="ml-2 font-medium text-slate-500">
+                      {item.location}
+                    </span>
+                  ) : null}
+                </div>
+                <div className="text-sm font-semibold text-[#0F2A4D]">
+                  {item.time}
+                </div>
+              </div>
+
+              {item.description ? (
+                <p className="mt-2 text-sm text-slate-700">
+                  {item.description}
+                </p>
+              ) : null}
+            </div>
           ))}
-        </ul>
+        </div>
+
+        <p className="mt-8 text-xs text-slate-500">
+          Note: The schedule is subject to refinement as the final scientific programme is confirmed.
+        </p>
       </div>
     </div>
   );
