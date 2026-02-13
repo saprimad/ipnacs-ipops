@@ -1,18 +1,25 @@
+import Link from "next/link";
+import Image from "next/image";
+import { FaFacebookF, FaYoutube, FaInstagram } from "react-icons/fa";
+
 export function Footer() {
   return (
-    <footer className="bg-white border-t border-gray-200 mt-20">
-      
-      {/* Main Footer */}
-      <div className="max-w-6xl mx-auto px-6 py-12">
+    <footer className="mt-20 border-t border-slate-200 bg-[#0F2A4D] text-white">
+      <div className="mx-auto max-w-6xl px-6 py-12">
 
-        <div className="grid md:grid-cols-3 gap-10 text-sm text-gray-600">
+        {/* Top Section */}
+        <div className="grid gap-10 md:grid-cols-3">
 
-          {/* Conference Info */}
+          {/* Left - Conference */}
           <div>
-            <h3 className="font-semibold text-[#0F2A4D] mb-4">
-              IPNACS–IPOPS 2026
-            </h3>
-            <p>
+            <Link
+              href="/"
+              className="inline-block text-lg font-semibold hover:opacity-90 transition"
+            >
+              IPNaCS–IPoPS 2026
+            </Link>
+
+            <p className="mt-4 text-sm text-slate-200 leading-relaxed">
               An international academic conference bringing together scholars,
               researchers and practitioners in pharmaceutical sciences and innovation.
             </p>
@@ -20,48 +27,85 @@ export function Footer() {
 
           {/* Organizer */}
           <div>
-            <h3 className="font-semibold text-[#0F2A4D] mb-4">
-              Organizer
-            </h3>
-            <p>Faculty of Pharmacy</p>
-            <p>Universiti Teknologi MARA (UiTM)</p>
-            <p>Shah Alam, Malaysia</p>
+            <h3 className="mb-4 text-lg font-semibold">Organizer</h3>
+
+            <p className="text-sm text-slate-200 leading-relaxed">
+              Faculty of Pharmacy <br />
+              Level 11, FF1 Building <br />
+              UiTM Selangor, Puncak Alam Campus <br />
+              42300 Bandar Puncak Alam <br />
+              Selangor, MALAYSIA
+            </p>
           </div>
 
           {/* Contact */}
           <div>
-            <h3 className="font-semibold text-[#0F2A4D] mb-4">
-              Contact
-            </h3>
-            <p>secretariat@ipnacs-ipops.com</p>
-            <p>DoubleTree by Hilton</p>
+            <h3 className="mb-4 text-lg font-semibold">Contact</h3>
+
+            <p className="text-sm text-slate-200 leading-relaxed">
+              <a
+                href="mailto:info@ipnacs-ipops.com"
+                className="hover:underline"
+              >
+                info@ipnacs-ipops.com
+              </a>
+            </p>
+
+            {/* Social Icons */}
+            <div className="mt-6 flex gap-4">
+              <a
+                href="https://www.facebook.com/pharmacyuitm/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#0F2A4D] hover:opacity-80 transition"
+              >
+                <FaFacebookF />
+              </a>
+
+              <a
+                href="https://www.youtube.com/channel/UCHg7xn66_RfCLHztSXadMAg"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#0F2A4D] hover:opacity-80 transition"
+              >
+                <FaYoutube />
+              </a>
+
+              <a
+                href="https://www.instagram.com/pharmacy_uitm/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-[#0F2A4D] hover:opacity-80 transition"
+              >
+                <FaInstagram />
+              </a>
+            </div>
           </div>
-
         </div>
-      </div>
 
-      {/* Institutional Recognition / Branding */}
-      <div className="border-t border-gray-200 py-10 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-
-          <p className="text-xs uppercase tracking-widest text-gray-500 mb-6">
-            Institutional Recognition
+        {/* Institutional Recognition (No white box) */}
+        <div className="mt-14 border-t border-slate-600 pt-8 text-center">
+          <p className="text-xs font-semibold tracking-[0.2em] text-slate-300">
+            INSTITUTIONAL RECOGNITION
           </p>
 
-          <img
-            src="/brand.png"
-            alt="Institutional Branding"
-            className="w-full max-w-5xl mx-auto object-contain"
-          />
-
+          <div className="mt-6 flex justify-center">
+            <Image
+              src="/brand.png"
+              alt="Institutional Recognition"
+              width={1200}
+              height={240}
+              className="h-auto w-full max-w-4xl"
+            />
+          </div>
         </div>
-      </div>
 
-      {/* Bottom Bar */}
-      <div className="border-t border-gray-200 py-6 text-center text-xs text-gray-500">
-        © 2026 IPNACS–IPOPS | Faculty of Pharmacy, Universiti Teknologi MARA
-      </div>
+        {/* Copyright */}
+        <div className="mt-10 border-t border-slate-600 pt-6 text-center text-sm text-slate-300">
+          © 2026 IPNaCS–IPoPS | Faculty of Pharmacy, Universiti Teknologi MARA
+        </div>
 
+      </div>
     </footer>
   );
 }

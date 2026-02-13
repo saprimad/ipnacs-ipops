@@ -1,11 +1,11 @@
 {
+  "/contact/page": "app/contact/page.js",
+  "/registration/page": "app/registration/page.js",
   "/faq/page": "app/faq/page.js",
-  "/code-of-conduct/page": "app/code-of-conduct/page.js",
   "/venue/page": "app/venue/page.js",
   "/sponsors/page": "app/sponsors/page.js",
-  "/page": "app/page.js",
   "/schedule/page": "app/schedule/page.js",
+  "/code-of-conduct/page": "app/code-of-conduct/page.js",
   "/about/page": "app/about/page.js",
-  "/registration/page": "app/registration/page.js",
   "/speakers/page": "app/speakers/page.js"
 }

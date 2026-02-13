@@ -1,5 +1,7 @@
 // app/registration/page.tsx
 
+import Image from "next/image";
+
 export default function RegistrationPage() {
   return (
     <main className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
@@ -14,6 +16,25 @@ export default function RegistrationPage() {
       </header>
 
       <section className="mt-14 rounded-xl border border-slate-200 bg-white p-10 shadow-sm">
+
+        {/* Journal Logo - NOW ABOVE PARAGRAPH */}
+        <div className="mb-8 flex justify-center">
+          <a
+            href="https://ijpncs.uitm.edu.my/index.php/en/ijpncs-journal"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:opacity-80 transition"
+          >
+            <Image
+              src="/ijpnacs.png"
+              alt="IJPNaCS Journal"
+              width={180}
+              height={60}
+              className="h-auto w-auto"
+            />
+          </a>
+        </div>
+
         <p className="mx-auto max-w-3xl leading-relaxed text-slate-700 text-justify">
           All submissions must comply with the journal’s formatting, stylistic and bibliographic
           requirements. The review process will be conducted through a double-blind peer review
@@ -27,7 +48,9 @@ export default function RegistrationPage() {
 
         <div className="mt-10 space-y-6">
           <div>
-            <h2 className="text-xl font-bold text-brand-900">Submission Method</h2>
+            <h2 className="text-xl font-bold text-brand-900">
+              Submission Method
+            </h2>
             <p className="mt-3 text-slate-700">
               Manuscripts should be submitted by email to the Editorial Office:
             </p>
