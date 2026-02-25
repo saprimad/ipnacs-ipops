@@ -1,4 +1,4 @@
-// File: C:\Users\X1\ipnacs-ipops\app\speakers\page.tsx
+// File: C:\Users\Admin\Documents\ipnacs-ipops\app\speakers\page.tsx
 import * as entry from '../../../../app/speakers/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

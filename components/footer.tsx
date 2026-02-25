@@ -12,12 +12,25 @@ export function Footer() {
 
           {/* Left - Conference */}
           <div>
-            <Link
-              href="/"
-              className="inline-block text-lg font-semibold hover:opacity-90 transition"
-            >
-              IPNaCS–IPoPS 2026
-            </Link>
+
+            {/* Evolusi + Title */}
+            <div className="flex items-center gap-4">
+              <Image
+                src="/evolusi.png"
+                alt="UiTM Evolusi"
+                width={80}
+                height={80}
+                className="h-14 w-auto object-contain"
+                priority
+              />
+
+              <Link
+                href="/"
+                className="text-xl font-semibold hover:opacity-90 transition"
+              >
+                IPNaCS–IPoPS 2026
+              </Link>
+            </div>
 
             <p className="mt-4 text-sm text-slate-200 leading-relaxed">
               An international academic conference bringing together scholars,
@@ -44,10 +57,10 @@ export function Footer() {
 
             <p className="text-sm text-slate-200 leading-relaxed">
               <a
-                href="mailto:info@ipnacs-ipops.com"
+                href="mailto:ipnacsipops26@gmail.com"
                 className="hover:underline"
               >
-                info@ipnacs-ipops.com
+                ipnacsipops26@gmail.com
               </a>
             </p>
 
@@ -83,7 +96,7 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Institutional Recognition (No white box) */}
+        {/* Institutional Recognition */}
         <div className="mt-14 border-t border-slate-600 pt-8 text-center">
           <p className="text-xs font-semibold tracking-[0.2em] text-slate-300">
             INSTITUTIONAL RECOGNITION
