@@ -18,7 +18,7 @@ export default function RegistrationPage() {
     },
     {
       title: "IPNaCS–IPoPS Networking Dinner",
-      note: "Pharmacy Faculty: FOC. External participants: MYR 200 / USD 60.",
+      note: "An exclusive networking evening fostering scientific dialogue, interdisciplinary collaboration and strategic partnerships among conference delegates.",
       rows: [{ label: "Dinner Fee", rm: "MYR 200", usd: "USD 60" }],
     },
   ] as const;
