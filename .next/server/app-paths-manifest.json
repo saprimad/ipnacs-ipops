@@ -1,10 +1,6 @@
 {
-  "/page": "app/page.js",
-  "/contact/page": "app/contact/page.js",
-  "/code-of-conduct/page": "app/code-of-conduct/page.js",
-  "/faq/page": "app/faq/page.js",
-  "/sponsors/page": "app/sponsors/page.js",
   "/registration/page": "app/registration/page.js",
-  "/venue/page": "app/venue/page.js",
-  "/schedule/page": "app/schedule/page.js"
+  "/speakers/page": "app/speakers/page.js",
+  "/page": "app/page.js",
+  "/contact/page": "app/contact/page.js"
 }
