@@ -42,7 +42,7 @@ export default function HomePage() {
 
           {/* Date */}
           <p className="mt-6 text-sm md:text-base text-gray-600">
-            13–14 Aug 2026 | DoubleTree by Hilton, Shah Alam
+            13–14 Aug 2026 | Concorde Hotel, Shah Alam, Malaysia
           </p>
 
           {/* COUNTDOWN */}

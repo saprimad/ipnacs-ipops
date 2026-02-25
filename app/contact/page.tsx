@@ -25,10 +25,10 @@ export default function ContactPage() {
         </p>
 
         <a
-          href="mailto:info@ipnacs-ipops.com"
+          href="mailto:ipnacsipops26@gmail.com"
           className="mt-2 block text-lg font-semibold text-brand-900 hover:underline"
         >
-          info@ipnacs-ipops.com
+          ipnacsipops26@gmail.com
         </a>
 
         <div className="mt-8">
