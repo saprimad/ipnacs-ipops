@@ -8,25 +8,6 @@ export default function HomePage() {
       <section className="bg-white py-24">
         <div className="max-w-6xl mx-auto px-6 text-center">
 
-          {/* Logos */}
-          <div className="flex items-center justify-center gap-10 mb-10 flex-wrap">
-            <img
-              src="/uitm.png"
-              alt="UiTM Logo"
-              className="h-32 md:h-40 w-auto"
-            />
-            <div className="h-32 md:h-40 w-px bg-gray-300 hidden sm:block" />
-            <img
-              src="/logo.png"
-              alt="IPNACS-IPOPS Logo"
-              className="h-32 md:h-40 w-auto"
-            />
-          </div>
-
-          <p className="text-sm uppercase tracking-[0.2em] text-gray-500 mb-6">
-            Faculty of Pharmacy, Universiti Teknologi MARA
-          </p>
-
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             8th IPNaCS & 11th IPoPS 2026
           </h1>
@@ -50,26 +31,28 @@ export default function HomePage() {
 
           {/* Buttons */}
           <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
+
             <a
               href="/registration"
-              className="rounded-lg px-8 py-3 font-semibold text-white bg-[#0F2A4D] hover:opacity-90 transition"
+              className="w-full sm:w-auto sm:min-w-[200px] text-center rounded-lg px-8 py-3 font-semibold text-white bg-[#0F2A4D] hover:opacity-90 transition"
             >
               Register Now
             </a>
 
             <a
-              href="/registration"
-              className="rounded-lg px-8 py-3 font-semibold text-white bg-[#0F2A4D] hover:opacity-90 transition"
+              href="/faq"
+              className="w-full sm:w-auto sm:min-w-[200px] text-center rounded-lg px-8 py-3 font-semibold text-white bg-[#0F2A4D] hover:opacity-90 transition"
             >
               Submit Abstract
             </a>
 
             <a
               href="/schedule"
-              className="rounded-lg px-8 py-3 font-semibold text-white bg-[#0F2A4D] hover:opacity-90 transition"
+              className="w-full sm:w-auto sm:min-w-[200px] text-center rounded-lg px-8 py-3 font-semibold text-white bg-[#0F2A4D] hover:opacity-90 transition"
             >
               View Programme
             </a>
+
           </div>
 
         </div>
