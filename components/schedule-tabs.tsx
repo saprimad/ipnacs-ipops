@@ -2,19 +2,56 @@
 
 import { useMemo, useState } from "react";
 
+type TrackItem = {
+  label: string; // e.g., "Track 1"
+  name: string; // speaker name or TBC
+  role?: string; // designation / institution line
+  title?: string; // talk title or TBC
+};
+
 type ScheduleItem = {
   time: string;
   title: string;
-  description?: string;
+  description?: string; // fallback (legacy)
+  descriptionLines?: readonly string[]; // NEW: multiline description
   location?: string;
+  tracks?: readonly TrackItem[]; // for grid layout
 };
 
 type ScheduleDay = {
   key: string;
   label: string;
   date?: string;
-  items: readonly ScheduleItem[]; // accepts readonly arrays from `as const`
+  items: readonly ScheduleItem[];
 };
+
+function DescriptionBlock({
+  lines,
+  fallback,
+}: {
+  lines?: readonly string[];
+  fallback?: string;
+}) {
+  if (lines?.length) {
+    const [first, ...rest] = lines;
+    return (
+      <div className="mt-2 space-y-1 text-sm">
+        <p className="font-semibold text-slate-900">{first}</p>
+        {rest.map((line, i) => (
+          <p key={i} className="text-slate-700">
+            {line}
+          </p>
+        ))}
+      </div>
+    );
+  }
+
+  if (fallback) {
+    return <p className="mt-2 text-sm text-slate-700">{fallback}</p>;
+  }
+
+  return null;
+}
 
 export function ScheduleTabs({ days }: { days: readonly ScheduleDay[] }) {
   const firstKey = useMemo(() => days?.[0]?.key ?? "day-1", [days]);
@@ -92,9 +129,39 @@ export function ScheduleTabs({ days }: { days: readonly ScheduleDay[] }) {
                 </div>
               </div>
 
-              {item.description ? (
-                <p className="mt-2 text-sm text-slate-700">{item.description}</p>
-              ) : null}
+              {/* Tracks grid */}
+              {item.tracks?.length ? (
+                <div className="mt-3 grid gap-4 sm:grid-cols-2">
+                  {item.tracks.map((t) => (
+                    <div
+                      key={t.label}
+                      className="rounded-lg border border-slate-200 bg-white p-4"
+                    >
+                      <p className="text-sm font-bold text-[#0F2A4D]">
+                        {t.label}
+                      </p>
+
+                      <p className="mt-2 text-sm font-semibold text-slate-900">
+                        {t.name}
+                      </p>
+
+                      {t.role ? (
+                        <p className="mt-1 text-sm text-slate-700">{t.role}</p>
+                      ) : null}
+
+                      <p className="mt-2 text-sm text-slate-700">
+                        <span className="font-semibold">Title:</span>{" "}
+                        {t.title ?? "TBC"}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <DescriptionBlock
+                  lines={item.descriptionLines}
+                  fallback={item.description}
+                />
+              )}
             </div>
           ))}
         </div>

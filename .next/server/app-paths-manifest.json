@@ -1,3 +1,15 @@
 {
-  "/faq/page": "app/faq/page.js"
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/contact/route": "app/api/contact/route.js",
+  "/code-of-conduct/page": "app/code-of-conduct/page.js",
+  "/about/page": "app/about/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/faq/page": "app/faq/page.js",
+  "/registration/page": "app/registration/page.js",
+  "/page": "app/page.js",
+  "/speakers/[slug]/page": "app/speakers/[slug]/page.js",
+  "/speakers/page": "app/speakers/page.js",
+  "/sponsors/page": "app/sponsors/page.js",
+  "/venue/page": "app/venue/page.js",
+  "/schedule/page": "app/schedule/page.js"
 }
