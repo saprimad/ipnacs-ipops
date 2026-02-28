@@ -17,8 +17,8 @@ export const schedule = [
         title: "Opening Ceremony",
         descriptionLines: [
           "Opening Ceremony",
-          "Doa recital and welcome address by the Dean, Faculty of Pharmacy, UiTM (TBC)",
-          "Opening speech by the Vice Chancellor, Universiti Teknologi MARA (UiTM) (TBC)",
+          "Doa recital and welcome address by the Dean, Faculty of Pharmacy, UiTM",
+          "Opening speech by the Vice Chancellor, Universiti Teknologi MARA (UiTM)",
         ],
       },
 
