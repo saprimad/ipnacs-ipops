@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 
 type TrackItem = {
   label: string; // e.g., "Track 1"
@@ -25,6 +25,19 @@ type ScheduleDay = {
   items: readonly ScheduleItem[];
 };
 
+function renderItalics(text: string) {
+  // Supports simple inline italics using underscores: _italic text_
+  // Example: "Title: _TBC_" -> "Title: " + <em>TBC</em>
+  const parts = text.split(/(_[^_]+_)/g);
+
+  return parts.map((part, idx) => {
+    const isItalic =
+      part.startsWith("_") && part.endsWith("_") && part.length >= 3;
+    if (!isItalic) return <span key={idx}>{part}</span>;
+    return <em key={idx}>{part.slice(1, -1)}</em>;
+  });
+}
+
 function DescriptionBlock({
   lines,
   fallback,
@@ -36,10 +49,10 @@ function DescriptionBlock({
     const [first, ...rest] = lines;
     return (
       <div className="mt-2 space-y-1 text-sm">
-        <p className="font-semibold text-slate-900">{first}</p>
+        <p className="font-semibold text-slate-900">{renderItalics(first)}</p>
         {rest.map((line, i) => (
           <p key={i} className="text-slate-700">
-            {line}
+            {renderItalics(line)}
           </p>
         ))}
       </div>
@@ -47,7 +60,9 @@ function DescriptionBlock({
   }
 
   if (fallback) {
-    return <p className="mt-2 text-sm text-slate-700">{fallback}</p>;
+    return (
+      <p className="mt-2 text-sm text-slate-700">{renderItalics(fallback)}</p>
+    );
   }
 
   return null;
@@ -146,12 +161,14 @@ export function ScheduleTabs({ days }: { days: readonly ScheduleDay[] }) {
                       </p>
 
                       {t.role ? (
-                        <p className="mt-1 text-sm text-slate-700">{t.role}</p>
+                        <p className="mt-1 text-sm text-slate-700">
+                          {renderItalics(t.role)}
+                        </p>
                       ) : null}
 
                       <p className="mt-2 text-sm text-slate-700">
                         <span className="font-semibold">Title:</span>{" "}
-                        {t.title ?? "TBC"}
+                        {renderItalics(t.title ?? "TBC")}
                       </p>
                     </div>
                   ))}
@@ -167,7 +184,8 @@ export function ScheduleTabs({ days }: { days: readonly ScheduleDay[] }) {
         </div>
 
         <p className="mt-8 text-xs text-slate-500">
-          Note: The schedule is subject to refinement as the final scientific programme is confirmed.
+          Note: The schedule is subject to refinement as the final scientific
+          programme is confirmed.
         </p>
       </div>
     </div>

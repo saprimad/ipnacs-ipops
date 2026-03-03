@@ -16,7 +16,6 @@ export const schedule = [
         time: "09:00 - 10:00",
         title: "Opening Ceremony",
         descriptionLines: [
-          "Opening Ceremony",
           "Doa recital and welcome address by the Dean, Faculty of Pharmacy, UiTM",
           "Opening speech by the Vice Chancellor, Universiti Teknologi MARA (UiTM)",
         ],
@@ -30,7 +29,7 @@ export const schedule = [
         descriptionLines: [
           "Dr Azuana Binti Ramli",
           "Deputy Director General of Health (Pharmaceutical Services), Ministry of Health Malaysia",
-          "Title: TBC",
+          "Title: _TBC_",
         ],
       },
 
@@ -40,7 +39,7 @@ export const schedule = [
         descriptionLines: [
           "Professor Dr Suzana Shahar",
           "Dean, Faculty of Health Sciences, The National University of Malaysia (UKM)",
-          "Title: Nutraceuticals and Personalised Nutrition",
+          "Title: _Nutraceuticals and Personalised Nutrition_",
         ],
       },
 
@@ -50,9 +49,9 @@ export const schedule = [
         time: "14:00 - 14:50",
         title: "Plenary Session II (Hall A)",
         descriptionLines: [
-          "International Speaker",
+          "Professor Dr Varisa Pongrakhananon",
           "Chulalongkorn University",
-          "Title: TBC",
+          "Title: _TBC_",
         ],
       },
 
@@ -62,7 +61,7 @@ export const schedule = [
         descriptionLines: [
           "Professor Dr Kazunori Akimoto",
           "Professor, Faculty of Pharmaceutical Sciences, Tokyo University of Science (TUS)",
-          "Title: TBC",
+          "Title: _TBC_",
         ],
       },
 
@@ -74,7 +73,7 @@ export const schedule = [
             label: "Track 1",
             name: "Associate Professor Dr Shazia Jamshed",
             role: "School of Pharmacy, IMU University",
-            title: "TBC",
+            title: "_TBC_",
           },
           {
             label: "Track 2",
@@ -82,19 +81,28 @@ export const schedule = [
             role:
               "Associate Professor, Faculty of Pharmaceutical Sciences, Tokyo University of Science",
             title:
-              "Regenerative cell-based therapy for lymph node reconstruction",
+              "_Regenerative cell-based therapy for lymph node reconstruction_",
           },
           {
             label: "Track 3",
             name: "Professor Dr Wong Tin Wui",
             role: "Faculty of Pharmacy, Universiti Teknologi MARA",
-            title: "TBC",
+            title: "_TBC_",
           },
-          { label: "Track 4", name: "TBC", role: "TBC", title: "TBC" },
+          {
+            label: "Track 4",
+            name: "TBC",
+            role: "TBC",
+            title: "_TBC_",
+          },
         ],
       },
 
-      { time: "15:30 - 16:45", title: "Oral Presentations" },
+      { time: "15:30 - 15:45", title: "Selected Oral Presentation 1" },
+      { time: "15:45 - 16:00", title: "Selected Oral Presentation 2" },
+      { time: "16:00 - 16:15", title: "Selected Oral Presentation 3" },
+      { time: "16:15 - 16:30", title: "Selected Oral Presentation 4" },
+      { time: "16:30 - 16:45", title: "Selected Oral Presentation 5" },
 
       { time: "17:00 - 18:30", title: "Tea Break and Networking" },
 
@@ -102,13 +110,13 @@ export const schedule = [
         time: "19:30 - 22:30",
         title: "Gala Dinner",
         descriptionLines: [
-          "Gala Dinner",
           "25th Anniversary Celebration",
           "Cultural performances and networking",
         ],
       },
     ],
   },
+
   {
     key: "day-2",
     label: "Day 2",
@@ -119,15 +127,19 @@ export const schedule = [
         title: "Plenary Session IV (Hall A)",
         descriptionLines: [
           "Professor Dr Rohana Abd Ghani",
-          "Consultant Endocrinologist. Professor of Medicine, Faculty of Medicine, Universiti Teknologi MARA",
-          "Title: TBC",
+          "Consultant Endocrinologist, Professor of Medicine, Faculty of Medicine, Universiti Teknologi MARA",
+          "Title: _TBC_",
         ],
       },
 
       {
         time: "09:00 - 09:50",
         title: "Plenary Session V (Hall B)",
-        descriptionLines: ["International Speaker", "Kyoto, Japan", "Title: TBC"],
+        descriptionLines: [
+          "International Speaker",
+          "Kyoto, Japan",
+          "Title: _TBC_",
+        ],
       },
 
       { time: "10:00 - 10:30", title: "Tea Break and Poster Session" },
@@ -142,21 +154,26 @@ export const schedule = [
             role:
               "Senior Assistant Director, Health Informatics Centre, Ministry of Health Malaysia",
             title:
-              "Connected Data, Transforming Pharma: Lessons from MyHDW and AI Potential",
+              "_Connected Data, Transforming Pharma: Lessons from MyHDW and AI Potential_",
           },
           {
             label: "Track 6",
             name: "Professor Dr Teh Lay Kek",
             role: "Faculty of Pharmacy, Universiti Teknologi MARA",
-            title: "TBC",
+            title: "_TBC_",
           },
           {
             label: "Track 7",
             name: "Professor Dr Takehisa Hanawa",
             role: "Tokyo University of Science",
-            title: "TBC",
+            title: "_TBC_",
           },
-          { label: "Track 8", name: "TBC", role: "TBC", title: "TBC" },
+          {
+            label: "Track 8",
+            name: "TBC",
+            role: "TBC",
+            title: "_TBC_",
+          },
         ],
       },
 
@@ -170,7 +187,7 @@ export const schedule = [
         descriptionLines: [
           "Professor Dr Kalavathy Ramasamy",
           "Faculty of Pharmacy, Universiti Teknologi MARA",
-          "Title: TBC",
+          "Title: _TBC_",
         ],
       },
 
@@ -180,7 +197,6 @@ export const schedule = [
         time: "17:00 - 17:30",
         title: "Prize-Giving Ceremony",
         descriptionLines: [
-          "Prize-Giving Ceremony",
           "Awards for Best Oral Presentations",
           "Collaborator Recognition",
         ],
@@ -189,7 +205,7 @@ export const schedule = [
       {
         time: "17:30 - 18:00",
         title: "Closing Remarks",
-        descriptionLines: ["Closing Remarks", "Next steps", "Farewell"],
+        descriptionLines: ["Next steps", "Farewell"],
       },
     ],
   },
