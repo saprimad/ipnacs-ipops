@@ -61,7 +61,7 @@ export default function RegistrationPage() {
         <p className="mx-auto max-w-2xl text-base text-slate-600">
           IPNaCS &amp; IPoPS 2026 welcomes high-quality research abstracts aligned
           with the conference theme and tracks. Selected accepted abstracts may
-          be considered for publication in the{" "}
+          be considered for publication as a full paper in the{" "}
           <span className="font-semibold">
             International Journal of Pharmaceuticals, Nutraceuticals and Cosmetic Science (IJPNaCS)
           </span>
