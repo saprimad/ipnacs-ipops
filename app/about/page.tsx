@@ -15,32 +15,32 @@ export default function AboutPage() {
     },
     {
       name: "Tokyo University of Science",
-      src: "/unilogo/TUS.png",
+      src: "/unilogo/tus.png",
       url: "https://www.tus.ac.jp/en/",
     },
     {
       name: "IMU University",
-      src: "/unilogo/IMU.png",
+      src: "/unilogo/imu.png",
       url: "https://www.imu.edu.my/",
     },
     {
       name: "Chulalongkorn University",
-      src: "/unilogo/CHULA.png",
+      src: "/unilogo/chula.png",
       url: "https://www.chula.ac.th/en/",
     },
     {
       name: "Universitas Indonesia",
-      src: "/unilogo/UI.png",
+      src: "/unilogo/ui.png",
       url: "https://www.ui.ac.id/en/",
     },
     {
       name: "University of Santo Tomas",
-      src: "/unilogo/UST.png",
+      src: "/unilogo/ust.png",
       url: "https://www.ust.edu.ph/",
     },
     {
       name: "Josai International University",
-      src: "/unilogo/JIU.png",
+      src: "/unilogo/jiu.png",
       url: "https://www.jiu.ac.jp/en/",
     },
   ];
@@ -52,8 +52,8 @@ export default function AboutPage() {
           About
         </h1>
         <p className="mx-auto max-w-3xl text-base text-slate-600">
-          Learn more about IPNaCS &amp; IPoPS 2026, our theme, and the partner institutions behind this
-          25th Anniversary celebration.
+          Learn more about IPNaCS &amp; IPoPS 2026, our theme, and the partner institutions behind this 25th Anniversary
+          celebration.
         </p>
       </header>
 
@@ -66,20 +66,20 @@ export default function AboutPage() {
 
           <div className="mt-6 space-y-5 text-slate-700 leading-relaxed">
             <p>
-              Welcome to the official portal for the 8th International Conference on Pharmaceutical, Nutraceutical,
-              and Cosmeceutical Sciences (IPNaCS) and the 11th International Postgraduate Conference on Pharmaceutical
-              Sciences (IPoPS) 2026.
+              Welcome to the official portal for the 8th International Conference on Pharmaceutical, Nutraceutical, and
+              Cosmeceutical Sciences (IPNaCS) and the 11th International Postgraduate Conference on Pharmaceutical Sciences
+              (IPoPS) 2026.
             </p>
 
             <p>
-              This year is a landmark celebration marking the 25th Anniversary of the Faculty of Pharmacy,
-              Universiti Teknologi MARA. For over two decades, this collaborative spirit has been the heartbeat of
-              our community, and we are honoured to host this silver jubilee event.
+              This year is a landmark celebration marking the 25th Anniversary of the Faculty of Pharmacy, Universiti
+              Teknologi MARA. For over two decades, this collaborative spirit has been the heartbeat of our community, and
+              we are honoured to host this silver jubilee event.
             </p>
 
             <p>
-              The landscape of health and wellness is shifting. As we celebrate 25 years of academic excellence,
-              our focus turns toward the future:{" "}
+              The landscape of health and wellness is shifting. As we celebrate 25 years of academic excellence, our focus
+              turns toward the future:{" "}
               <span className="font-semibold text-brand-900">Digital Transformation</span>. In 2026, we explore how
               cutting-edge technology, from AI-driven drug discovery to digital health monitoring, is fundamentally
               reshaping the fields of:
@@ -92,8 +92,8 @@ export default function AboutPage() {
             </ul>
 
             <p>
-              IPNaCS and IPoPS are the result of a deep-rooted partnership spanning more than 20 years. Whether you are
-              an established researcher, an industry professional, or a postgraduate student at the start of your journey,
+              IPNaCS and IPoPS are the result of a deep-rooted partnership spanning more than 20 years. Whether you are an
+              established researcher, an industry professional, or a postgraduate student at the start of your journey,
               this conference offers a platform to exchange ideas, forge global partnerships, and celebrate a quarter-century
               of pharmaceutical progress.
             </p>
