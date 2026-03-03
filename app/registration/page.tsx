@@ -23,40 +23,35 @@ export default function RegistrationPage() {
     },
   ] as const;
 
+  const registrationLink =
+    "https://docs.google.com/forms/d/e/1FAIpQLSd8Ox39E2kydjQNtu2P8CgEVL9de6CRQ7q6jBF_YL9uInR4mw/formResponse?pli=1";
+
   return (
     <main className="bg-[#F7F8FA] text-[#0F2A4D]">
       {/* Header */}
       <section className="bg-white py-16 md:py-20 border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <p className="text-sm uppercase tracking-[0.2em] text-gray-500 mb-4">
-            Registration
-          </p>
-
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Registration Fees
-          </h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Registration</h1>
 
           <div className="mx-auto h-1 w-16 rounded bg-[#E5B82E] mb-6" />
 
-          <p className="text-gray-600 max-w-3xl mx-auto">
-            Registration and payment will be processed exclusively via the official 
-            UiTM event management system. Once the system is activated, participants 
-            may select their category and complete payment accordingly.
+          <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            Registration is conducted via the official conference registration form.
+            Please complete the form and follow the payment instructions according
+            to your selected participant category. Kindly ensure that the selected
+            category corresponds to your participant status. Confirmation and receipt
+            will be issued upon successful payment verification.
           </p>
 
-          <p className="mt-4 text-sm text-gray-500 max-w-2xl mx-auto">
-            Kindly ensure that the selected category corresponds accurately to your 
-            participant status. Confirmation and receipt issuance will follow the 
-            official UiTM payment workflow.
-          </p>
-
-          <div className="mt-8">
-            <button
-              disabled
-              className="inline-flex items-center justify-center rounded-lg px-8 py-3 font-semibold text-white bg-gray-400 cursor-not-allowed"
+          <div className="mt-10 flex items-center justify-center">
+            <a
+              href={registrationLink}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center rounded-xl px-12 py-4 text-lg font-semibold text-white bg-[#0F2A4D] hover:bg-[#0C223F] shadow-md hover:shadow-lg transition"
             >
-              UiTM Payment System: Coming Soon
-            </button>
+              Register Now
+            </a>
           </div>
         </div>
       </section>
@@ -64,6 +59,13 @@ export default function RegistrationPage() {
       {/* Fee Cards */}
       <section className="py-16 md:py-20">
         <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl md:text-3xl font-semibold text-[#0F2A4D]">
+              Registration Fees
+            </h2>
+            <div className="mx-auto mt-3 h-1 w-12 rounded bg-[#E5B82E]" />
+          </div>
+
           <div className="grid gap-6 md:grid-cols-3">
             {fees.map((f) => (
               <div
@@ -108,8 +110,13 @@ export default function RegistrationPage() {
             <ul className="list-disc list-inside text-gray-600 space-y-2">
               <li>Early bird rates are offered based on slot availability.</li>
               <li>Student category requires a valid student ID.</li>
-              <li>Participants are responsible for selecting the appropriate category.</li>
-              <li>The organiser reserves the right to verify eligibility and request supporting documentation where necessary.</li>
+              <li>
+                Participants are responsible for selecting the appropriate category.
+              </li>
+              <li>
+                The organiser reserves the right to verify eligibility and request
+                supporting documentation where necessary.
+              </li>
             </ul>
           </div>
         </div>
