@@ -5,7 +5,10 @@ export default function RegistrationPage() {
   const guidelineUrl =
     "https://docs.google.com/document/d/1Yea2exzZ5vBD5m4FRFs6ZEk3xIcFGlij/view";
   const submitFormUrl = "https://forms.gle/7sjqhQRtzvVKyziB7";
-  const journalUrl = "https://ijpncs.uitm.edu.my/index.php/en/ijpncs-journal";
+  const journalUrl =
+    "https://ijpncs.uitm.edu.my/index.php/en/ijpncs-journal";
+  const templateUrl =
+    "https://docs.google.com/document/d/1E-WDXbnvg_10dme_OJGhn1I6df48r6cB/edit?usp=drive_link&ouid=115603475847449834026&rtpof=true&sd=true";
 
   const tracks = [
     {
@@ -50,8 +53,6 @@ export default function RegistrationPage() {
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block"
-          aria-label="Submit Abstract"
-          title="Submit Abstract"
         >
           <h1 className="text-4xl font-extrabold tracking-tight text-brand-900 sm:text-5xl hover:opacity-90 transition">
             Submit Abstract
@@ -64,22 +65,14 @@ export default function RegistrationPage() {
           be considered for publication as a full paper in the{" "}
           <span className="font-semibold">
             International Journal of Pharmaceuticals, Nutraceuticals and Cosmetic Science (IJPNaCS)
-          </span>
-          .
+          </span>.
         </p>
       </header>
 
       <section className="mt-14 rounded-xl border border-slate-200 bg-white p-10 shadow-sm">
-        {/* Journal Logo (clickable) */}
+        {/* Journal Logo */}
         <div className="mb-10 flex justify-center">
-          <a
-            href={journalUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:opacity-80 transition"
-            aria-label="Visit IJPNaCS Journal"
-            title="Visit IJPNaCS Journal"
-          >
+          <a href={journalUrl} target="_blank" rel="noopener noreferrer">
             <Image
               src="/ijpnacs.png"
               alt="IJPNaCS Journal"
@@ -91,15 +84,13 @@ export default function RegistrationPage() {
         </div>
 
         <div className="space-y-10">
-          {/* Abstract Format (clickable like View Guidelines) */}
+          {/* Abstract Format */}
           <div>
             <a
               href={guidelineUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-xl font-bold text-brand-900 hover:opacity-80 transition"
-              aria-label="View Abstract Submission Guidelines"
-              title="View Abstract Submission Guidelines"
             >
               Abstract Format
               <span className="text-sm font-semibold text-slate-500">
@@ -124,10 +115,21 @@ export default function RegistrationPage() {
               <li>
                 <span className="font-semibold">Keywords:</span> Up to 5 keywords
               </li>
+              <li>
+                <span className="font-semibold">Template:</span> Authors must follow the official abstract template provided{" "}
+                <a
+                  href={templateUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-semibold text-slate-500 hover:underline"
+                >
+                  (View template)
+                </a>
+              </li>
             </ul>
           </div>
 
-          {/* Tracks */}
+          {/* Submission Categories */}
           <div>
             <h2 className="text-xl font-bold text-brand-900">
               Submission Categories
@@ -135,10 +137,7 @@ export default function RegistrationPage() {
 
             <div className="mt-5 grid gap-4 sm:grid-cols-2">
               {tracks.map((t) => (
-                <div
-                  key={t.title}
-                  className="rounded-lg border border-slate-200 p-5"
-                >
+                <div key={t.title} className="rounded-lg border border-slate-200 p-5">
                   <h3 className="font-semibold text-slate-900">{t.title}</h3>
                   <p className="mt-2 text-sm text-slate-600">{t.desc}</p>
                 </div>
@@ -161,7 +160,7 @@ export default function RegistrationPage() {
             </ul>
           </div>
 
-          {/* Process */}
+          {/* Submission Process */}
           <div>
             <h2 className="text-xl font-bold text-brand-900">
               Submission Process
@@ -172,16 +171,11 @@ export default function RegistrationPage() {
               <li>Each abstract will be peer reviewed by the Scientific Committee.</li>
               <li>Accepted abstracts will be published in the Abstract Book / Conference Proceedings.</li>
             </ol>
-            <p className="mt-3 text-sm text-slate-600">
-              Note: The submission portal link will be officially announced in March.
-            </p>
           </div>
 
           {/* Awards */}
           <div>
-            <h2 className="text-xl font-bold text-brand-900">
-              Awards
-            </h2>
+            <h2 className="text-xl font-bold text-brand-900">Awards</h2>
             <ul className="mt-4 list-disc space-y-2 pl-5 text-slate-700">
               <li>Best Oral Presentation (Undergraduate, Postgraduate, International)</li>
               <li>Best Poster Presentation</li>
@@ -189,8 +183,8 @@ export default function RegistrationPage() {
             </ul>
           </div>
 
-          {/* CTAs */}
-          <div className="pt-2 flex flex-col gap-4 sm:flex-row sm:justify-center sm:items-center">
+          {/* FINAL CTA ROW (3 buttons) */}
+          <div className="pt-4 flex flex-col gap-4 sm:flex-row sm:justify-center sm:items-center">
             <a
               href={guidelineUrl}
               target="_blank"
@@ -198,6 +192,15 @@ export default function RegistrationPage() {
               className="w-full sm:w-auto sm:min-w-[220px] inline-flex items-center justify-center rounded-md border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-800 shadow-sm hover:bg-slate-50 text-center"
             >
               View Guidelines
+            </a>
+
+            <a
+              href={templateUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto sm:min-w-[220px] inline-flex items-center justify-center rounded-md border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-800 shadow-sm hover:bg-slate-50 text-center"
+            >
+              Download Abstract Template
             </a>
 
             <a
