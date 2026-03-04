@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function RegistrationPage() {
   const fees = [
     {
@@ -38,9 +40,8 @@ export default function RegistrationPage() {
           <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Registration is conducted via the official conference registration form.
             Please complete the form and follow the payment instructions according
-            to your selected participant category. Kindly ensure that the selected
-            category corresponds to your participant status. Confirmation and receipt
-            will be issued upon successful payment verification.
+            to your selected participant category. Confirmation and receipt will be
+            issued upon successful payment verification.
           </p>
 
           <div className="mt-10 flex items-center justify-center">
@@ -56,67 +57,104 @@ export default function RegistrationPage() {
         </div>
       </section>
 
-      {/* Fee Cards */}
+      {/* Body */}
       <section className="py-16 md:py-20">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl md:text-3xl font-semibold text-[#0F2A4D]">
-              Registration Fees
-            </h2>
-            <div className="mx-auto mt-3 h-1 w-12 rounded bg-[#E5B82E]" />
+        <div className="max-w-6xl mx-auto px-6 space-y-14 md:space-y-16">
+          {/* Registration Fees */}
+          <div>
+            <div className="text-center mb-10">
+              <h2 className="text-2xl md:text-3xl font-semibold text-[#0F2A4D]">
+                Registration Fees
+              </h2>
+              <div className="mx-auto mt-3 h-1 w-12 rounded bg-[#E5B82E]" />
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-3">
+              {fees.map((f) => (
+                <div
+                  key={f.title}
+                  className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition"
+                >
+                  <h3 className="text-lg font-semibold">{f.title}</h3>
+
+                  <div className="mt-6 space-y-3">
+                    {f.rows.map((row) => (
+                      <div
+                        key={row.label}
+                        className="flex items-center justify-between rounded-xl border border-gray-200 bg-[#F7F8FA] px-5 py-4"
+                      >
+                        <div className="text-sm font-semibold text-[#0F2A4D]">
+                          {row.label}
+                        </div>
+
+                        <div className="text-base font-bold text-[#0F2A4D]">
+                          {row.rm}
+                          {row.usd ? (
+                            <span className="text-sm font-semibold text-gray-500">
+                              {" "}
+                              / {row.usd}
+                            </span>
+                          ) : null}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  <p className="mt-5 text-sm text-gray-600 leading-relaxed">
+                    {f.note}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-3">
-            {fees.map((f) => (
-              <div
-                key={f.title}
-                className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-md transition"
-              >
-                <h2 className="text-lg font-semibold">{f.title}</h2>
+          {/* Registration Process */}
+          <div>
+            <div className="text-center mb-10">
+              <h2 className="text-2xl md:text-3xl font-semibold text-[#0F2A4D]">
+                Registration Process
+              </h2>
+              <div className="mx-auto mt-3 h-1 w-12 rounded bg-[#E5B82E]" />
+              <p className="mt-4 text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                Please follow the pathway based on your participation type.
+              </p>
+            </div>
 
-                <div className="mt-6 space-y-3">
-                  {f.rows.map((row) => (
-                    <div
-                      key={row.label}
-                      className="flex items-center justify-between rounded-xl border border-gray-200 bg-[#F7F8FA] px-5 py-4"
-                    >
-                      <div className="text-sm font-semibold text-[#0F2A4D]">
-                        {row.label}
-                      </div>
+            <div className="bg-white border border-gray-200 rounded-2xl p-4 sm:p-6 md:p-8 shadow-sm">
+              <Image
+                src="/flowchart.png"
+                alt="Conference Registration Process Flowchart"
+                width={1200}
+                height={1800}
+                priority
+                className="mx-auto h-auto w-full max-w-3xl"
+              />
+            </div>
+          </div>
 
-                      <div className="text-base font-bold text-[#0F2A4D]">
-                        {row.rm}
-                        {row.usd ? (
-                          <span className="text-sm font-semibold text-gray-500">
-                            {" "}
-                            / {row.usd}
-                          </span>
-                        ) : null}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                <p className="mt-5 text-sm text-gray-600 leading-relaxed">
-                  {f.note}
+          {/* Important Notes */}
+          <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
+            <div className="flex items-start justify-between gap-6">
+              <div>
+                <h3 className="text-lg font-semibold">Important Notes</h3>
+                <p className="mt-1 text-sm text-gray-600">
+                  Kindly ensure your registration details and category selection are accurate.
                 </p>
               </div>
-            ))}
-          </div>
+            </div>
 
-          {/* Notes */}
-          <div className="mt-14 bg-white border border-gray-200 rounded-2xl p-8">
-            <h3 className="text-lg font-semibold mb-3">Important Notes</h3>
-            <ul className="list-disc list-inside text-gray-600 space-y-2">
-              <li>Early bird rates are offered based on slot availability.</li>
-              <li>Student category requires a valid student ID.</li>
-              <li>
-                Participants are responsible for selecting the appropriate category.
-              </li>
-              <li>
-                The organiser reserves the right to verify eligibility and request
-                supporting documentation where necessary.
-              </li>
+            <ul className="mt-5 space-y-3 text-gray-600">
+              {[
+                "Early bird rates are offered based on slot availability.",
+                "Student category requires a valid student ID.",
+                "Participants are responsible for selecting the appropriate category.",
+                "The organiser reserves the right to verify eligibility and request supporting documentation where necessary.",
+              ].map((item) => (
+                <li key={item} className="flex gap-3">
+                  <span className="mt-2 h-2 w-2 rounded-full bg-[#E5B82E] flex-shrink-0" />
+                  <span className="leading-relaxed">{item}</span>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
