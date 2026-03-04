@@ -1,5 +1,3 @@
-// app/speakers/page.tsx
-
 import Image from "next/image";
 
 type SpeakerCategory = "Plenary" | "Invited" | "Professorial Lecture";
@@ -7,7 +5,7 @@ type SpeakerCategory = "Plenary" | "Invited" | "Professorial Lecture";
 type Speaker = {
   name: string;
   affiliationFull: string;
-  affiliationShort: string;
+  affiliationShort?: string;
   category: SpeakerCategory;
   title?: string;
   image?: string;
@@ -26,7 +24,6 @@ const speakers: Speaker[] = [
   {
     name: "TBC",
     affiliationFull: "TBC",
-    affiliationShort: "TBC",
     category: "Plenary",
     title: "TBC",
   },
@@ -134,11 +131,18 @@ const speakers: Speaker[] = [
 ];
 
 function SpeakerCard({ s }: { s: Speaker }) {
+
   const displayTitle =
     s.title && s.title.trim().length > 0 ? s.title.trim() : "TBC";
 
+  const affiliation =
+    s.affiliationShort && s.affiliationShort.trim() !== ""
+      ? `${s.affiliationFull} (${s.affiliationShort})`
+      : s.affiliationFull;
+
   return (
-    <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+    <div className="flex flex-col rounded-xl border border-slate-200 bg-white p-6 shadow-sm min-h-[340px]">
+
       <div className="flex justify-center">
         <Image
           src="/speaker-placeholder.png"
@@ -149,7 +153,7 @@ function SpeakerCard({ s }: { s: Speaker }) {
         />
       </div>
 
-      <div className="mt-6 text-center">
+      <div className="mt-6 text-center flex flex-col flex-grow">
 
         <p className="text-sm font-semibold text-brand-900">
           {s.category === "Professorial Lecture"
@@ -162,7 +166,7 @@ function SpeakerCard({ s }: { s: Speaker }) {
         </h3>
 
         <p className="mt-1 text-sm text-slate-600">
-          {s.affiliationFull} ({s.affiliationShort})
+          {affiliation}
         </p>
 
         <p className="mt-3 text-sm italic text-slate-700">
