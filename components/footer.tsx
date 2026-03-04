@@ -12,8 +12,6 @@ export function Footer() {
 
           {/* Left - Conference */}
           <div>
-
-            {/* Evolusi + Title */}
             <div className="flex items-center gap-4">
               <Image
                 src="/evolusi.png"
@@ -93,6 +91,22 @@ export function Footer() {
                 <FaInstagram />
               </a>
             </div>
+
+            {/* Visitor Counter */}
+            <div className="mt-6">
+              <a
+                href="https://visitorbadge.io/status?path=https%3A%2F%2Fipnacs-ipops.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex"
+              >
+                <img
+                  src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fipnacs-ipops.com&countColor=%230F2A4D"
+                  alt="Visitors"
+                />
+              </a>
+            </div>
+
           </div>
         </div>
 
