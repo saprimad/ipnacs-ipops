@@ -70,6 +70,7 @@ export default function RegistrationPage() {
       </header>
 
       <section className="mt-14 rounded-xl border border-slate-200 bg-white p-10 shadow-sm">
+        
         {/* Journal Logo */}
         <div className="mb-10 flex justify-center">
           <a href={journalUrl} target="_blank" rel="noopener noreferrer">
@@ -84,6 +85,7 @@ export default function RegistrationPage() {
         </div>
 
         <div className="space-y-10">
+
           {/* Abstract Format */}
           <div>
             <a
@@ -176,15 +178,21 @@ export default function RegistrationPage() {
           {/* Awards */}
           <div>
             <h2 className="text-xl font-bold text-brand-900">Awards</h2>
+
             <ul className="mt-4 list-disc space-y-2 pl-5 text-slate-700">
-              <li>Best Oral Presentation (Undergraduate, Postgraduate, International)</li>
+              <li>Best Oral Presentation</li>
               <li>Best Poster Presentation</li>
-              <li>Recognition during the Closing Plenary &amp; Prize-Giving Ceremony</li>
+              <li>Recognition during the Prize-Giving Ceremony</li>
             </ul>
+
+            <p className="mt-4 text-sm text-slate-600">
+              The conference will present monetary prizes to the best oral and poster presentation.
+            </p>
           </div>
 
-          {/* FINAL CTA ROW (3 buttons) */}
+          {/* FINAL CTA ROW */}
           <div className="pt-4 flex flex-col gap-4 sm:flex-row sm:justify-center sm:items-center">
+            
             <a
               href={guidelineUrl}
               target="_blank"
@@ -211,6 +219,7 @@ export default function RegistrationPage() {
             >
               Submit Abstract
             </a>
+
           </div>
         </div>
       </section>
