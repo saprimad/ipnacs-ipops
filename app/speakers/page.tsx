@@ -28,7 +28,7 @@ const speakers: Speaker[] = [
     title: "TBC",
   },
   {
-    name: "Prof. Dr. Rohana Abd Ghani",
+    name: "Professor Dr Rohana Abd Ghani",
     affiliationFull: "Universiti Teknologi MARA",
     affiliationShort: "UiTM",
     category: "Plenary",
@@ -36,14 +36,14 @@ const speakers: Speaker[] = [
       "Digital Frontier in Obesity Management: Leveraging Digital Transformation for Better Outcomes.",
   },
   {
-    name: "Prof. Dr. Kazunori Akimoto",
+    name: "Professor Dr Kazunori Akimoto",
     affiliationFull: "Tokyo University of Science",
     affiliationShort: "TUS",
     category: "Plenary",
     title: "TBC",
   },
   {
-    name: "Prof. Dr. Varisa Pongrakhananon",
+    name: "Professor Dr Varisa Pongrakhananon",
     affiliationFull: "Chulalongkorn University",
     affiliationShort: "CU",
     category: "Plenary",
@@ -59,21 +59,21 @@ const speakers: Speaker[] = [
 
   // INVITED SPEAKERS
   {
-    name: "AP Dr Shazia Jamshed",
+    name: "Associate Professor Dr Shazia Jamshed",
     affiliationFull: "International Medical University",
     affiliationShort: "IMU",
     category: "Invited",
     title: "TBC",
   },
   {
-    name: "AP Dr. Kosuke Kusamori",
+    name: "Associate Professor Dr Kosuke Kusamori",
     affiliationFull: "Tokyo University of Science",
     affiliationShort: "TUS",
     category: "Invited",
     title: "Regenerative cell-based therapy for lymph node reconstruction",
   },
   {
-    name: "Prof. Wong Tin Wui",
+    name: "Professor Dr Wong Tin Wui",
     affiliationFull: "Universiti Teknologi MARA",
     affiliationShort: "UiTM",
     category: "Invited",
@@ -96,7 +96,7 @@ const speakers: Speaker[] = [
       "Connected data, transforming pharma: Lessons from MyHDW and AI potential",
   },
   {
-    name: "Prof. Teh Lay Kek",
+    name: "Professor Dr Teh Lay Kek",
     affiliationFull: "Universiti Teknologi MARA",
     affiliationShort: "UiTM",
     category: "Invited",
@@ -104,7 +104,7 @@ const speakers: Speaker[] = [
       "From Pharmacogenomics to Pharmacophytogenomics: Diversity Driven Pathways in Precision Health",
   },
   {
-    name: "Prof. Dr. Takehisa Hanawa",
+    name: "Professor Dr Takehisa Hanawa",
     affiliationFull: "Tokyo University of Science",
     affiliationShort: "TUS",
     category: "Invited",
@@ -112,7 +112,7 @@ const speakers: Speaker[] = [
       "Pharmaceutical Technology for the Improvement of the Bioavailability of Drugs",
   },
   {
-    name: "Prof. Aleth Therese Dacanay",
+    name: "Professor Dr Aleth Therese Dacanay",
     affiliationFull: "University of Santo Tomas",
     affiliationShort: "UST",
     category: "Invited",
@@ -122,7 +122,7 @@ const speakers: Speaker[] = [
 
   // PROFESSORIAL LECTURE
   {
-    name: "Prof. Kalavathy Ramasamy",
+    name: "Professor Dr Kalavathy Ramasamy",
     affiliationFull: "Universiti Teknologi MARA",
     affiliationShort: "UiTM",
     category: "Professorial Lecture",
@@ -154,12 +154,6 @@ function SpeakerCard({ s }: { s: Speaker }) {
       </div>
 
       <div className="mt-6 text-center flex flex-col flex-grow">
-
-        <p className="text-sm font-semibold text-brand-900">
-          {s.category === "Professorial Lecture"
-            ? "Professorial Lecture"
-            : `${s.category} Speaker`}
-        </p>
 
         <h3 className="mt-2 text-lg font-semibold text-slate-900">
           {s.name}
