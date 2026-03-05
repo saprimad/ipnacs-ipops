@@ -4,9 +4,7 @@ import Image from "next/image";
 export default function RegistrationPage() {
   const guidelineUrl =
     "https://docs.google.com/document/d/1Yea2exzZ5vBD5m4FRFs6ZEk3xIcFGlij/view";
-  const submitFormUrl = "https://forms.gle/7sjqhQRtzvVKyziB7";
-  const journalUrl =
-    "https://ijpncs.uitm.edu.my/index.php/en/ijpncs-journal";
+  const journalUrl = "https://ijpncs.uitm.edu.my/index.php/en/ijpncs-journal";
   const templateUrl =
     "https://docs.google.com/document/d/1E-WDXbnvg_10dme_OJGhn1I6df48r6cB/edit?usp=drive_link&ouid=115603475847449834026&rtpof=true&sd=true";
 
@@ -48,7 +46,6 @@ export default function RegistrationPage() {
   return (
     <main className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
       <header className="space-y-4 text-center">
-
         <h1 className="text-4xl font-extrabold tracking-tight text-brand-900 sm:text-5xl">
           Submit Abstract
         </h1>
@@ -58,13 +55,14 @@ export default function RegistrationPage() {
           with the conference theme and tracks. Selected accepted abstracts may
           be considered for publication as a full paper in the{" "}
           <span className="font-semibold">
-            International Journal of Pharmaceuticals, Nutraceuticals and Cosmetic Science (IJPNaCS)
-          </span>.
+            International Journal of Pharmaceuticals, Nutraceuticals and Cosmetic
+            Science (IJPNaCS)
+          </span>
+          .
         </p>
       </header>
 
       <section className="mt-14 rounded-xl border border-slate-200 bg-white p-10 shadow-sm">
-        
         {/* Journal Logo */}
         <div className="mb-10 flex justify-center">
           <a href={journalUrl} target="_blank" rel="noopener noreferrer">
@@ -79,7 +77,6 @@ export default function RegistrationPage() {
         </div>
 
         <div className="space-y-10">
-
           {/* Abstract Format */}
           <div>
             <a
@@ -100,19 +97,23 @@ export default function RegistrationPage() {
                 (excluding title, authors, and affiliations)
               </li>
               <li>
-                <span className="font-semibold">Font &amp; spacing:</span> Times New Roman, 12 pt, single spacing
+                <span className="font-semibold">Font &amp; spacing:</span> Times
+                New Roman, 12 pt, single spacing
               </li>
               <li>
-                <span className="font-semibold">Title:</span> Concise, informative, up to 20 words
+                <span className="font-semibold">Title:</span> Concise,
+                informative, up to 20 words
               </li>
               <li>
-                <span className="font-semibold">Structure:</span> Background/Rationale, Objectives, Methods, Results, Conclusion
+                <span className="font-semibold">Structure:</span>{" "}
+                Background/Rationale, Objectives, Methods, Results, Conclusion
               </li>
               <li>
                 <span className="font-semibold">Keywords:</span> Up to 5 keywords
               </li>
               <li>
-                <span className="font-semibold">Template:</span> Authors must follow the official abstract template provided{" "}
+                <span className="font-semibold">Template:</span> Authors must
+                follow the official abstract template provided{" "}
                 <a
                   href={templateUrl}
                   target="_blank"
@@ -133,7 +134,10 @@ export default function RegistrationPage() {
 
             <div className="mt-5 grid gap-4 sm:grid-cols-2">
               {tracks.map((t) => (
-                <div key={t.title} className="rounded-lg border border-slate-200 p-5">
+                <div
+                  key={t.title}
+                  className="rounded-lg border border-slate-200 p-5"
+                >
                   <h3 className="font-semibold text-slate-900">{t.title}</h3>
                   <p className="mt-2 text-sm text-slate-600">{t.desc}</p>
                 </div>
@@ -148,10 +152,12 @@ export default function RegistrationPage() {
             </h2>
             <ul className="mt-4 list-disc space-y-2 pl-5 text-slate-700">
               <li>
-                <span className="font-semibold">Oral Presentation:</span> 10–12 minutes presentation + Q&amp;A (total 15 minutes)
+                <span className="font-semibold">Oral Presentation:</span> 10–12
+                minutes presentation + Q&amp;A (total 15 minutes)
               </li>
               <li>
-                <span className="font-semibold">Poster Presentation:</span> Visual display with dedicated judging time (Tea break)
+                <span className="font-semibold">Poster Presentation:</span>{" "}
+                Visual display with dedicated judging time (Tea break)
               </li>
             </ul>
           </div>
@@ -164,8 +170,13 @@ export default function RegistrationPage() {
             <ol className="mt-4 list-decimal space-y-2 pl-5 text-slate-700">
               <li>Prepare your abstract according to the guidelines.</li>
               <li>Proceed to presenter registration.</li>
-              <li>Each abstract will be peer reviewed by the Scientific Committee.</li>
-              <li>Accepted abstracts will be published in the Abstract Book / Conference Proceedings.</li>
+              <li>
+                Each abstract will be peer reviewed by the Scientific Committee.
+              </li>
+              <li>
+                Accepted abstracts will be published in the Abstract Book /
+                Conference Proceedings.
+              </li>
             </ol>
           </div>
 
@@ -180,13 +191,13 @@ export default function RegistrationPage() {
             </ul>
 
             <p className="mt-4 text-sm text-slate-600">
-              The conference will present monetary prizes to the best oral and poster presentation.
+              The conference will present monetary prizes to the best oral and
+              poster presentation.
             </p>
           </div>
 
           {/* FINAL CTA ROW */}
           <div className="pt-4 flex flex-col gap-4 sm:flex-row sm:justify-center sm:items-center">
-            
             <a
               href={guidelineUrl}
               target="_blank"
@@ -211,7 +222,6 @@ export default function RegistrationPage() {
             >
               Presenter Registration
             </a>
-
           </div>
         </div>
       </section>
