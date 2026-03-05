@@ -20,17 +20,21 @@ export default function RegistrationPage() {
     },
     {
       title: "IPNaCS–IPoPS Networking Dinner",
-      note: "An exclusive networking evening fostering scientific dialogue, interdisciplinary collaboration and strategic partnerships among conference delegates.",
+      note:
+        "An exclusive networking evening fostering scientific dialogue, interdisciplinary collaboration and strategic partnerships among conference delegates.",
       rows: [{ label: "Dinner Fee", rm: "MYR 200", usd: "USD 60" }],
     },
   ] as const;
 
-  const registrationLink =
+  const nonPresenterLink =
     "https://docs.google.com/forms/d/e/1FAIpQLSd8Ox39E2kydjQNtu2P8CgEVL9de6CRQ7q6jBF_YL9uInR4mw/formResponse?pli=1";
+
+  const presenterLink =
+    "https://docs.google.com/forms/d/e/1FAIpQLSelJjnhh5f_2v1mZKHfod1P-RAXWdl-3-UDOa6P8zfAmDcNuQ/viewform";
 
   return (
     <main className="bg-[#F7F8FA] text-[#0F2A4D]">
-      {/* Header */}
+      {/* ================= HEADER ================= */}
       <section className="bg-white py-16 md:py-20 border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Registration</h1>
@@ -38,29 +42,21 @@ export default function RegistrationPage() {
           <div className="mx-auto h-1 w-16 rounded bg-[#E5B82E] mb-6" />
 
           <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Registration is conducted via the official conference registration form.
-            Please complete the form and follow the payment instructions according
-            to your selected participant category. Confirmation and receipt will be
-            issued upon successful payment verification.
+            Registration is categorised into two participation types: Presenter
+            and Non-Presenter. Participants are advised to review the
+            registration process flowchart below before proceeding with
+            registration. Presenters must complete the Presenter form, which
+            includes abstract submission, while Non-Presenters may register
+            through the standard registration form. Registration confirmation
+            and receipt will be issued upon payment verification.
           </p>
-
-          <div className="mt-10 flex items-center justify-center">
-            <a
-              href={registrationLink}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center justify-center rounded-xl px-12 py-4 text-lg font-semibold text-white bg-[#0F2A4D] hover:bg-[#0C223F] shadow-md hover:shadow-lg transition"
-            >
-              Register Now
-            </a>
-          </div>
         </div>
       </section>
 
-      {/* Body */}
+      {/* ================= BODY ================= */}
       <section className="py-16 md:py-20">
         <div className="max-w-6xl mx-auto px-6 space-y-14 md:space-y-16">
-          {/* Registration Fees */}
+          {/* ================= REGISTRATION FEES ================= */}
           <div>
             <div className="text-center mb-10">
               <h2 className="text-2xl md:text-3xl font-semibold text-[#0F2A4D]">
@@ -108,7 +104,7 @@ export default function RegistrationPage() {
             </div>
           </div>
 
-          {/* Registration Process */}
+          {/* ================= REGISTRATION PROCESS ================= */}
           <div>
             <div className="text-center mb-10">
               <h2 className="text-2xl md:text-3xl font-semibold text-[#0F2A4D]">
@@ -129,16 +125,43 @@ export default function RegistrationPage() {
                 priority
                 className="mx-auto h-auto w-full max-w-3xl"
               />
+
+              {/* Buttons under flowchart */}
+              <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center">
+                <a
+                  href={presenterLink}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-full sm:w-[280px] text-center rounded-xl px-8 py-4 text-base font-semibold text-white bg-[#0F2A4D] hover:bg-[#0C223F] shadow-md hover:shadow-lg transition"
+                >
+                  Presenter (Abstract Submission)
+                </a>
+
+                <a
+                  href={nonPresenterLink}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-full sm:w-[280px] text-center rounded-xl px-8 py-4 text-base font-semibold text-[#0F2A4D] border border-gray-200 bg-white hover:bg-gray-50 shadow-sm transition"
+                >
+                  Non-Presenter Registration
+                </a>
+              </div>
+
+              <p className="mt-4 text-center text-sm text-gray-600">
+                Please select the appropriate pathway according to your
+                participation category.
+              </p>
             </div>
           </div>
 
-          {/* Important Notes */}
+          {/* ================= IMPORTANT NOTES ================= */}
           <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
             <div className="flex items-start justify-between gap-6">
               <div>
                 <h3 className="text-lg font-semibold">Important Notes</h3>
                 <p className="mt-1 text-sm text-gray-600">
-                  Kindly ensure your registration details and category selection are accurate.
+                  Kindly ensure your registration details and category selection
+                  are accurate.
                 </p>
               </div>
             </div>
