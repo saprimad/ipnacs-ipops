@@ -48,16 +48,10 @@ export default function RegistrationPage() {
   return (
     <main className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
       <header className="space-y-4 text-center">
-        <a
-          href={submitFormUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block"
-        >
-          <h1 className="text-4xl font-extrabold tracking-tight text-brand-900 sm:text-5xl hover:opacity-90 transition">
-            Submit Abstract
-          </h1>
-        </a>
+
+        <h1 className="text-4xl font-extrabold tracking-tight text-brand-900 sm:text-5xl">
+          Submit Abstract
+        </h1>
 
         <p className="mx-auto max-w-2xl text-base text-slate-600">
           IPNaCS &amp; IPoPS 2026 welcomes high-quality research abstracts aligned
@@ -169,7 +163,7 @@ export default function RegistrationPage() {
             </h2>
             <ol className="mt-4 list-decimal space-y-2 pl-5 text-slate-700">
               <li>Prepare your abstract according to the guidelines.</li>
-              <li>Submit via the online submission form.</li>
+              <li>Proceed to presenter registration.</li>
               <li>Each abstract will be peer reviewed by the Scientific Committee.</li>
               <li>Accepted abstracts will be published in the Abstract Book / Conference Proceedings.</li>
             </ol>
@@ -212,12 +206,10 @@ export default function RegistrationPage() {
             </a>
 
             <a
-              href={submitFormUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/registration"
               className="w-full sm:w-auto sm:min-w-[220px] inline-flex items-center justify-center rounded-md bg-brand-900 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:opacity-90 text-center"
             >
-              Submit Abstract
+              Presenter Registration
             </a>
 
           </div>
