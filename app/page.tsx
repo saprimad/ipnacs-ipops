@@ -1,6 +1,16 @@
 import { Countdown } from "@/components/countdown";
 
 export default function HomePage() {
+  const importantDates = [
+    ["First Announcement", "Feb 2026"],
+    ["Abstract Submission Opens", "Mar 2026"],
+    ["Abstract Deadline", "May 2026"],
+    ["Acceptance Notification", "Jun 2026"],
+    ["Early Bird Registration", "30 Jun 2026"],
+    ["Conference Dates", "13–14 Aug 2026"],
+    ["Full Paper Submission", "31 Aug 2026"],
+  ];
+
   return (
     <main className="bg-[#F7F8FA] text-[#0F2A4D]">
       {/* ================= HERO ================= */}
@@ -63,9 +73,7 @@ export default function HomePage() {
       <section className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold">
-              About the Conference
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold">About the Conference</h2>
             <div className="mx-auto mt-4 h-1 w-16 rounded bg-[#0F2A4D]" />
           </div>
 
@@ -126,9 +134,7 @@ export default function HomePage() {
       <section className="py-24">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold">
-              Conference Tracks
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold">Conference Tracks</h2>
             <div className="mx-auto mt-4 h-1 w-16 rounded bg-[#0F2A4D]" />
           </div>
 
@@ -171,52 +177,61 @@ export default function HomePage() {
                 key={track.title}
                 className="bg-white border border-gray-200 rounded-xl p-8 shadow-sm hover:shadow-md transition"
               >
-                <h3 className="text-lg font-semibold mb-3">
-                  {track.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {track.desc}
-                </p>
+                <h3 className="text-lg font-semibold mb-3">{track.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{track.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ================= IMPORTANT DATES ================= */}
+      {/* ================= IMPORTANT DATES (HIGHLIGHTS + DETAILS) ================= */}
       <section className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold">
-              Important Dates
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold">Important Dates</h2>
             <div className="mx-auto mt-4 h-1 w-16 rounded bg-[#0F2A4D]" />
           </div>
 
-          <div className="overflow-hidden rounded-xl border border-gray-200 bg-white">
-            <table className="w-full text-left">
-              <tbody>
-                {[
-                  ["First Announcement", "Feb 2026"],
-                  ["Abstract Submission Opens", "Mar 2026"],
-                  ["Abstract Deadline", "May 2026"],
-                  ["Acceptance Notification", "Jun 2026"],
-                  ["Early Bird Registration", "30 Jun 2026"],
-                  ["Full Paper Submission", "31 Aug 2026"],
-                  ["Conference Dates", "13–14 Aug 2026"],
-                ].map(([label, date]) => (
-                  <tr key={label} className="border-t border-gray-200">
-                    <td className="w-2/3 bg-gray-50 px-6 py-5 font-semibold">
-                      {label}
-                    </td>
-                    <td className="px-6 py-5 text-gray-700">
-                      {date}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          {/* Highlights */}
+          <div className="grid gap-6 md:grid-cols-3">
+            {[
+              { label: "ABSTRACT DEADLINE", value: "May 2026" },
+              { label: "EARLY BIRD ENDS", value: "30 Jun 2026" },
+              { label: "CONFERENCE", value: "13–14 Aug 2026" },
+            ].map((item) => (
+              <div
+                key={item.label}
+                className="rounded-xl border border-gray-200 bg-white p-7 text-center shadow-sm hover:shadow-md transition"
+              >
+                <p className="text-xs font-semibold tracking-widest text-gray-500">
+                  {item.label}
+                </p>
+                <p className="mt-3 text-2xl md:text-3xl font-extrabold text-[#0F2A4D]">
+                  {item.value}
+                </p>
+              </div>
+            ))}
           </div>
+
+          {/* Details */}
+          <div className="mt-8 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
+            <div className="grid grid-cols-1 divide-y divide-gray-200">
+              {importantDates.map(([label, date], idx) => (
+                <div
+                  key={`${label}-${idx}`}
+                  className="flex items-center justify-between gap-6 px-6 py-5"
+                >
+                  <p className="font-semibold text-gray-900">{label}</p>
+                  <p className="text-gray-700">{date}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <p className="mt-4 text-sm text-gray-500">
+            Dates are subject to change. Updates will be announced on this website.
+          </p>
         </div>
       </section>
     </main>
