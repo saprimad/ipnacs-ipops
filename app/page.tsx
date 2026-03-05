@@ -3,10 +3,8 @@ import { Countdown } from "@/components/countdown";
 export default function HomePage() {
   return (
     <main className="bg-[#F7F8FA] text-[#0F2A4D]">
-
       {/* ================= HERO ================= */}
       <section className="relative overflow-hidden">
-
         <img
           src="/salam.jpeg"
           alt="Shah Alam skyline"
@@ -18,7 +16,6 @@ export default function HomePage() {
 
         <div className="relative z-10 py-28">
           <div className="max-w-6xl mx-auto px-6 text-center text-white">
-
             <h1 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow">
               8th IPNaCS &amp; 11th IPoPS 2026
             </h1>
@@ -44,7 +41,6 @@ export default function HomePage() {
 
             {/* Buttons */}
             <div className="mt-14 flex flex-wrap items-center justify-center gap-4">
-
               <a
                 href="/registration"
                 className="w-full sm:w-auto sm:min-w-[200px] text-center rounded-lg px-8 py-3 font-semibold text-white bg-[#0F2A4D] hover:bg-[#0c2240] transition shadow-md"
@@ -53,30 +49,19 @@ export default function HomePage() {
               </a>
 
               <a
-                href="/faq"
-                className="w-full sm:w-auto sm:min-w-[200px] text-center rounded-lg px-8 py-3 font-semibold text-white border border-white/40 hover:bg-white/10 transition"
-              >
-                Submit Abstract
-              </a>
-
-              <a
                 href="/schedule"
                 className="w-full sm:w-auto sm:min-w-[200px] text-center rounded-lg px-8 py-3 font-semibold text-white border border-white/40 hover:bg-white/10 transition"
               >
                 View Programme
               </a>
-
             </div>
-
           </div>
         </div>
       </section>
 
-
       {/* ================= ABOUT (FULL ORIGINAL TEXT) ================= */}
       <section className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold">
               About the Conference
@@ -85,7 +70,6 @@ export default function HomePage() {
           </div>
 
           <div className="mx-auto max-w-4xl text-base md:text-lg leading-relaxed text-gray-700 space-y-6">
-
             <p>
               Welcome to the official portal for the 8th International Conference on Pharmaceutical,
               Nutraceutical, and Cosmeceutical Sciences (IPNaCS) and the 11th International Postgraduate
@@ -134,17 +118,13 @@ export default function HomePage() {
             <p className="font-semibold text-[#0F2A4D]">
               Join us in 2026 as we honour our past and digitise our future.
             </p>
-
           </div>
-
         </div>
       </section>
-
 
       {/* ================= CONFERENCE TRACKS (FULL 8) ================= */}
       <section className="py-24">
         <div className="max-w-6xl mx-auto px-6">
-
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold">
               Conference Tracks
@@ -200,15 +180,12 @@ export default function HomePage() {
               </div>
             ))}
           </div>
-
         </div>
       </section>
-
 
       {/* ================= IMPORTANT DATES ================= */}
       <section className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold">
               Important Dates
@@ -240,10 +217,8 @@ export default function HomePage() {
               </tbody>
             </table>
           </div>
-
         </div>
       </section>
-
     </main>
   );
 }
