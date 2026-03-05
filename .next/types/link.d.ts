@@ -32,9 +32,9 @@ declare namespace __next_route_internal_types__ {
     | `/`
     | `/about`
     | `/api/contact`
+    | `/contact`
     | `/faq`
     | `/code-of-conduct`
-    | `/contact`
     | `/registration`
     | `/schedule`
     | `/speakers`
