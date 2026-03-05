@@ -42,7 +42,7 @@ export default function HomePage() {
               13–14 Aug 2026 | Concorde Hotel, Shah Alam, Malaysia
             </p>
 
-            {/* Countdown (clean, no box) */}
+            {/* Countdown */}
             <div className="mt-10 flex justify-center text-white">
               <div className="[&_*]:text-white">
                 <Countdown targetDate="2026-08-13T09:00:00+08:00" />
@@ -69,11 +69,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ================= ABOUT (FULL ORIGINAL TEXT) ================= */}
+      {/* ================= ABOUT ================= */}
       <section className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold">About the Conference</h2>
+            <h2 className="text-3xl md:text-4xl font-bold">
+              About the Conference
+            </h2>
             <div className="mx-auto mt-4 h-1 w-16 rounded bg-[#0F2A4D]" />
           </div>
 
@@ -85,16 +87,13 @@ export default function HomePage() {
             </p>
 
             <p>
-              This year is a landmark celebration marking the 25th Anniversary of the Faculty of Pharmacy,
-              Universiti Teknologi MARA. For over two decades, this collaborative spirit has been the
-              heartbeat of our community, and we are thrilled to host this silver jubilee event.
+              This year marks the 25th Anniversary of the Faculty of Pharmacy, Universiti Teknologi MARA.
+              For over two decades, this collaborative spirit has been the heartbeat of our community.
             </p>
 
             <p>
-              The landscape of health and wellness is shifting. As we celebrate 25 years of academic excellence,
-              our focus turns toward the future: Digital Transformation. In 2026, we explore how cutting-edge
-              technology, from AI-driven drug discovery to digital health monitoring, is fundamentally reshaping
-              the fields of:
+              As we celebrate 25 years of academic excellence, our focus turns toward the future:
+              Digital Transformation. In 2026 we explore how cutting-edge technologies reshape:
             </p>
 
             <ul className="list-disc pl-6 space-y-2">
@@ -104,8 +103,7 @@ export default function HomePage() {
             </ul>
 
             <p>
-              IPNaCS and IPoPS are the result of a deep-rooted partnership spanning more than 20 years.
-              This year, we continue our tradition of excellence alongside our esteemed co-organisers:
+              IPNaCS and IPoPS continue our tradition of excellence alongside our co-organisers:
             </p>
 
             <ul className="list-disc pl-6 space-y-2">
@@ -117,12 +115,6 @@ export default function HomePage() {
               <li>Josai University</li>
             </ul>
 
-            <p>
-              Whether you are an established researcher, an industry professional, or a postgraduate
-              student at the start of your journey, this conference offers a unique platform to exchange
-              ideas, forge global partnerships, and celebrate a quarter-century of pharmaceutical progress.
-            </p>
-
             <p className="font-semibold text-[#0F2A4D]">
               Join us in 2026 as we honour our past and digitise our future.
             </p>
@@ -130,11 +122,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ================= CONFERENCE TRACKS (FULL 8) ================= */}
+      {/* ================= CONFERENCE TRACKS ================= */}
       <section className="py-24">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold">Conference Tracks</h2>
+            <h2 className="text-3xl md:text-4xl font-bold">
+              Conference Tracks
+            </h2>
             <div className="mx-auto mt-4 h-1 w-16 rounded bg-[#0F2A4D]" />
           </div>
 
@@ -142,35 +136,35 @@ export default function HomePage() {
             {[
               {
                 title: "Pharmacology & Precision Medicine",
-                desc: "AI-driven drug discovery, digital biomarkers, and tailored therapeutic strategies.",
+                desc: "AI-driven drug discovery, digital biomarkers and tailored therapeutic strategies.",
               },
               {
                 title: "Pharmacy & Digital Health",
-                desc: "Telepharmacy, blockchain supply chains, smart dispensing, IoMT, and gamified platforms.",
+                desc: "Telepharmacy, blockchain supply chains, smart dispensing and IoMT platforms.",
               },
               {
                 title: "Nutraceutical Science",
-                desc: "Personalised nutrition, wearable-linked interventions, and preventive health.",
+                desc: "Personalised nutrition, wearable-linked interventions and preventive health.",
               },
               {
                 title: "Cosmetic Science & Innovation",
-                desc: "AI-powered formulation, virtual diagnostics, and sustainable product development.",
+                desc: "AI-powered formulation and sustainable product development.",
               },
               {
                 title: "Pharmaceutical Technology",
-                desc: "Advanced drug delivery systems, continuous manufacturing, biopharmaceutical production, and QbD approaches.",
+                desc: "Advanced drug delivery systems and biopharmaceutical production.",
               },
               {
                 title: "Pharmaceutical Chemistry",
-                desc: "Medicinal chemistry, green synthesis, computational modelling, and analytical validation.",
+                desc: "Medicinal chemistry, computational modelling and analytical validation.",
               },
               {
                 title: "Regenerative Medicine",
-                desc: "Stem cells, tissue engineering, organoids, and pathways from lab to clinical application.",
+                desc: "Stem cells, tissue engineering and organoid technologies.",
               },
               {
                 title: "Policy, Regulation & Ethics",
-                desc: "Global harmonisation of standards, data privacy, and ethical sourcing.",
+                desc: "Global standards, regulatory frameworks and ethical considerations.",
               },
             ].map((track) => (
               <div
@@ -185,7 +179,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ================= IMPORTANT DATES (HIGHLIGHTS + DETAILS) ================= */}
+      {/* ================= IMPORTANT DATES ================= */}
       <section className="py-24 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
@@ -193,7 +187,6 @@ export default function HomePage() {
             <div className="mx-auto mt-4 h-1 w-16 rounded bg-[#0F2A4D]" />
           </div>
 
-          {/* Highlights */}
           <div className="grid gap-6 md:grid-cols-3">
             {[
               { label: "ABSTRACT DEADLINE", value: "May 2026" },
@@ -214,13 +207,12 @@ export default function HomePage() {
             ))}
           </div>
 
-          {/* Details */}
           <div className="mt-8 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
             <div className="grid grid-cols-1 divide-y divide-gray-200">
               {importantDates.map(([label, date], idx) => (
                 <div
                   key={`${label}-${idx}`}
-                  className="flex items-center justify-between gap-6 px-6 py-5"
+                  className="flex items-center justify-between px-6 py-5"
                 >
                   <p className="font-semibold text-gray-900">{label}</p>
                   <p className="text-gray-700">{date}</p>
@@ -228,10 +220,73 @@ export default function HomePage() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
 
-          <p className="mt-4 text-sm text-gray-500">
-            Dates are subject to change. Updates will be announced on this website.
-          </p>
+      {/* ================= VENUE ================= */}
+      <section className="py-24">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold">
+              Conference Venue
+            </h2>
+            <div className="mx-auto mt-4 h-1 w-16 rounded bg-[#0F2A4D]" />
+          </div>
+
+          <div className="grid gap-8 lg:grid-cols-2 items-stretch">
+            {/* Venue info card */}
+            <div className="bg-white border border-gray-200 rounded-xl p-10 shadow-sm hover:shadow-md transition">
+              <h3 className="text-2xl font-semibold text-[#0F2A4D]">
+                Concorde Hotel Shah Alam
+              </h3>
+
+              <p className="mt-2 text-gray-600">
+                Shah Alam, Selangor, Malaysia
+              </p>
+
+              <div className="mt-8">
+                <p className="text-sm font-semibold text-[#0F2A4D]">
+                  Address
+                </p>
+
+                <p className="mt-2 text-gray-700 leading-relaxed">
+                  No. 3, Jalan Tengku Ampuan Zabedah C9/C, 40100
+                  <br />
+                  Shah Alam, Selangor, Malaysia
+                </p>
+              </div>
+
+              <div className="mt-10 flex flex-col sm:flex-row gap-3">
+                <a
+                  href="https://maps.google.com/?q=Concorde+Hotel+Shah+Alam"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-full sm:w-auto text-center rounded-lg px-6 py-3 font-semibold text-white bg-[#0F2A4D] hover:bg-[#0c2240] transition shadow"
+                >
+                  Open in Google Maps
+                </a>
+
+                <a
+                  href="https://www.concordehotelsresorts.com/concorde-hotel-shah-alam/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-full sm:w-auto text-center rounded-lg px-6 py-3 font-semibold border border-gray-200 text-[#0F2A4D] hover:bg-gray-50 transition"
+                >
+                  Visit Hotel Website
+                </a>
+              </div>
+            </div>
+
+            {/* Map */}
+            <div className="overflow-hidden rounded-xl border border-gray-200 shadow-sm">
+              <iframe
+                title="Concorde Hotel Shah Alam Map"
+                src="https://www.google.com/maps?q=Concorde%20Hotel%20Shah%20Alam&output=embed"
+                className="w-full h-[350px]"
+                loading="lazy"
+              />
+            </div>
+          </div>
         </div>
       </section>
     </main>
