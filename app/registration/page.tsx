@@ -34,6 +34,7 @@ export default function RegistrationPage() {
 
   return (
     <main className="bg-[#F7F8FA] text-[#0F2A4D]">
+
       {/* HEADER */}
       <section className="bg-white py-16 md:py-20 border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-6 text-center">
@@ -97,7 +98,9 @@ export default function RegistrationPage() {
                     ))}
                   </div>
 
-                  <p className="mt-5 text-sm text-gray-600">{f.note}</p>
+                  <p className="mt-5 text-sm text-gray-600">
+                    {f.note}
+                  </p>
                 </div>
               ))}
             </div>
@@ -122,21 +125,21 @@ export default function RegistrationPage() {
                 className="mx-auto h-auto w-full max-w-3xl"
               />
 
-              {/* POWER BUTTONS */}
-              <div className="mt-12 grid gap-4 sm:grid-cols-2">
+              {/* BUTTONS */}
+              <div className="mt-10 grid gap-4 sm:grid-cols-2 max-w-2xl mx-auto">
 
                 {/* Presenter */}
                 <a
                   href={presenterLink}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex flex-col items-center justify-center rounded-xl px-10 py-6 text-white bg-[#0F2A4D] hover:bg-[#0C223F] shadow-lg hover:shadow-xl transition"
+                  className="min-h-[100px] flex flex-col items-center justify-center rounded-xl px-6 py-4 text-white bg-[#0F2A4D] hover:bg-[#0C223F] shadow-md hover:shadow-lg transition"
                 >
-                  <span className="text-2xl mb-2">👥</span>
-                  <span className="text-lg font-semibold">
+                  <span className="text-xl mb-1">🎤</span>
+                  <span className="text-base font-semibold text-center leading-tight">
                     Presenter Registration
                   </span>
-                  <span className="text-sm opacity-90">
+                  <span className="text-xs opacity-90 text-center">
                     (Abstract Submission)
                   </span>
                 </a>
@@ -146,16 +149,17 @@ export default function RegistrationPage() {
                   href={nonPresenterLink}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex flex-col items-center justify-center rounded-xl px-10 py-6 border-2 border-[#0F2A4D] text-[#0F2A4D] bg-white hover:bg-[#0F2A4D] hover:text-white shadow-md transition"
+                  className="min-h-[100px] flex flex-col items-center justify-center rounded-xl px-6 py-4 border border-[#0F2A4D] text-[#0F2A4D] bg-white hover:bg-[#0F2A4D] hover:text-white shadow-sm transition"
                 >
-                  <span className="text-2xl mb-2">👤</span>
-                  <span className="text-lg font-semibold">
+                  <span className="text-xl mb-1">👤</span>
+                  <span className="text-base font-semibold text-center leading-tight">
                     Non-Presenter Registration
                   </span>
                 </a>
+
               </div>
 
-              <p className="mt-6 text-center text-sm text-gray-600">
+              <p className="mt-5 text-center text-sm text-gray-600">
                 Please select the appropriate pathway according to your
                 participation category.
               </p>
@@ -183,6 +187,7 @@ export default function RegistrationPage() {
 
         </div>
       </section>
+
     </main>
   );
 }
