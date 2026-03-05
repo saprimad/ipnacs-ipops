@@ -34,7 +34,7 @@ export default function RegistrationPage() {
 
   return (
     <main className="bg-[#F7F8FA] text-[#0F2A4D]">
-      {/* ================= HEADER ================= */}
+      {/* HEADER */}
       <section className="bg-white py-16 md:py-20 border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Registration</h1>
@@ -42,8 +42,8 @@ export default function RegistrationPage() {
           <div className="mx-auto h-1 w-16 rounded bg-[#E5B82E] mb-6" />
 
           <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Registration is categorised into two participation types: Presenter
-            and Non-Presenter. Participants are advised to review the
+            Registration is categorised into two participation types:
+            Presenter and Non-Presenter. Participants are advised to review the
             registration process flowchart below before proceeding with
             registration. Presenters must complete the Presenter form, which
             includes abstract submission, while Non-Presenters may register
@@ -53,13 +53,14 @@ export default function RegistrationPage() {
         </div>
       </section>
 
-      {/* ================= BODY ================= */}
+      {/* BODY */}
       <section className="py-16 md:py-20">
-        <div className="max-w-6xl mx-auto px-6 space-y-14 md:space-y-16">
-          {/* ================= REGISTRATION FEES ================= */}
+        <div className="max-w-6xl mx-auto px-6 space-y-16">
+
+          {/* REGISTRATION FEES */}
           <div>
             <div className="text-center mb-10">
-              <h2 className="text-2xl md:text-3xl font-semibold text-[#0F2A4D]">
+              <h2 className="text-2xl md:text-3xl font-semibold">
                 Registration Fees
               </h2>
               <div className="mx-auto mt-3 h-1 w-12 rounded bg-[#E5B82E]" />
@@ -79,92 +80,91 @@ export default function RegistrationPage() {
                         key={row.label}
                         className="flex items-center justify-between rounded-xl border border-gray-200 bg-[#F7F8FA] px-5 py-4"
                       >
-                        <div className="text-sm font-semibold text-[#0F2A4D]">
+                        <div className="text-sm font-semibold">
                           {row.label}
                         </div>
 
-                        <div className="text-base font-bold text-[#0F2A4D]">
+                        <div className="text-base font-bold">
                           {row.rm}
-                          {row.usd ? (
-                            <span className="text-sm font-semibold text-gray-500">
+                          {row.usd && (
+                            <span className="text-sm text-gray-500">
                               {" "}
                               / {row.usd}
                             </span>
-                          ) : null}
+                          )}
                         </div>
                       </div>
                     ))}
                   </div>
 
-                  <p className="mt-5 text-sm text-gray-600 leading-relaxed">
-                    {f.note}
-                  </p>
+                  <p className="mt-5 text-sm text-gray-600">{f.note}</p>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* ================= REGISTRATION PROCESS ================= */}
+          {/* REGISTRATION PROCESS */}
           <div>
             <div className="text-center mb-10">
-              <h2 className="text-2xl md:text-3xl font-semibold text-[#0F2A4D]">
+              <h2 className="text-2xl md:text-3xl font-semibold">
                 Registration Process
               </h2>
               <div className="mx-auto mt-3 h-1 w-12 rounded bg-[#E5B82E]" />
-              <p className="mt-4 text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                Please follow the pathway based on your participation type.
-              </p>
             </div>
 
-            <div className="bg-white border border-gray-200 rounded-2xl p-4 sm:p-6 md:p-8 shadow-sm">
+            <div className="bg-white border border-gray-200 rounded-2xl p-6 md:p-8 shadow-sm">
               <Image
                 src="/flowchart.png"
-                alt="Conference Registration Process Flowchart"
+                alt="Conference Registration Flowchart"
                 width={1200}
                 height={1800}
                 priority
                 className="mx-auto h-auto w-full max-w-3xl"
               />
 
-              {/* Buttons under flowchart */}
-              <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center">
+              {/* POWER BUTTONS */}
+              <div className="mt-12 grid gap-4 sm:grid-cols-2">
+
+                {/* Presenter */}
                 <a
                   href={presenterLink}
                   target="_blank"
                   rel="noreferrer"
-                  className="w-full sm:w-[280px] text-center rounded-xl px-8 py-4 text-base font-semibold text-white bg-[#0F2A4D] hover:bg-[#0C223F] shadow-md hover:shadow-lg transition"
+                  className="flex flex-col items-center justify-center rounded-xl px-10 py-6 text-white bg-[#0F2A4D] hover:bg-[#0C223F] shadow-lg hover:shadow-xl transition"
                 >
-                  Presenter (Abstract Submission)
+                  <span className="text-2xl mb-2">👥</span>
+                  <span className="text-lg font-semibold">
+                    Presenter Registration
+                  </span>
+                  <span className="text-sm opacity-90">
+                    (Abstract Submission)
+                  </span>
                 </a>
 
+                {/* Non Presenter */}
                 <a
                   href={nonPresenterLink}
                   target="_blank"
                   rel="noreferrer"
-                  className="w-full sm:w-[280px] text-center rounded-xl px-8 py-4 text-base font-semibold text-[#0F2A4D] border border-gray-200 bg-white hover:bg-gray-50 shadow-sm transition"
+                  className="flex flex-col items-center justify-center rounded-xl px-10 py-6 border-2 border-[#0F2A4D] text-[#0F2A4D] bg-white hover:bg-[#0F2A4D] hover:text-white shadow-md transition"
                 >
-                  Non-Presenter Registration
+                  <span className="text-2xl mb-2">👤</span>
+                  <span className="text-lg font-semibold">
+                    Non-Presenter Registration
+                  </span>
                 </a>
               </div>
 
-              <p className="mt-4 text-center text-sm text-gray-600">
+              <p className="mt-6 text-center text-sm text-gray-600">
                 Please select the appropriate pathway according to your
                 participation category.
               </p>
             </div>
           </div>
 
-          {/* ================= IMPORTANT NOTES ================= */}
+          {/* IMPORTANT NOTES */}
           <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
-            <div className="flex items-start justify-between gap-6">
-              <div>
-                <h3 className="text-lg font-semibold">Important Notes</h3>
-                <p className="mt-1 text-sm text-gray-600">
-                  Kindly ensure your registration details and category selection
-                  are accurate.
-                </p>
-              </div>
-            </div>
+            <h3 className="text-lg font-semibold">Important Notes</h3>
 
             <ul className="mt-5 space-y-3 text-gray-600">
               {[
@@ -174,12 +174,13 @@ export default function RegistrationPage() {
                 "The organiser reserves the right to verify eligibility and request supporting documentation where necessary.",
               ].map((item) => (
                 <li key={item} className="flex gap-3">
-                  <span className="mt-2 h-2 w-2 rounded-full bg-[#E5B82E] flex-shrink-0" />
-                  <span className="leading-relaxed">{item}</span>
+                  <span className="mt-2 h-2 w-2 rounded-full bg-[#E5B82E]" />
+                  <span>{item}</span>
                 </li>
               ))}
             </ul>
           </div>
+
         </div>
       </section>
     </main>
