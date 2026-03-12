@@ -1,4 +1,4 @@
 {
-  "/speakers/[slug]/page": "app/speakers/[slug]/page.js",
-  "/speakers/page": "app/speakers/page.js"
+  "/speakers/page": "app/speakers/page.js",
+  "/speakers/[slug]/page": "app/speakers/[slug]/page.js"
 }
