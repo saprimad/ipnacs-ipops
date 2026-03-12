@@ -46,7 +46,7 @@ const speakers: Speaker[] = [
     category: "Plenary",
     title:
       "Digital Frontier in Obesity Management: Leveraging Digital Transformation for Better Outcomes.",
-    image: "/speakers/rohana-new.jpg",
+    image: "/speakers/rohana.png",
   },
   {
     name: "Professor Dr Kazunori Akimoto",
