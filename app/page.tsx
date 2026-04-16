@@ -1,5 +1,11 @@
 import { Countdown } from "@/components/countdown";
 
+type Partner = {
+  name: string;
+  src: string;
+  url: string;
+};
+
 export default function HomePage() {
   const importantDates = [
     { label: "FIRST ANNOUNCEMENT", value: "February 2026" },
@@ -9,6 +15,44 @@ export default function HomePage() {
     { label: "EARLY BIRD REGISTRATION", value: "30 June 2026" },
     { label: "CONFERENCE DATES", value: "13–14 August 2026" },
     { label: "FULL PAPER SUBMISSION", value: "31 August 2026" },
+  ];
+
+  const partners: Partner[] = [
+    {
+      name: "Universiti Teknologi MARA",
+      src: "/unilogo/uitm.png",
+      url: "https://www.uitm.edu.my/",
+    },
+    {
+      name: "Tokyo University of Science",
+      src: "/unilogo/tus.png",
+      url: "https://www.tus.ac.jp/en/",
+    },
+    {
+      name: "IMU University",
+      src: "/unilogo/imu.png",
+      url: "https://www.imu.edu.my/",
+    },
+    {
+      name: "Chulalongkorn University",
+      src: "/unilogo/chula.png",
+      url: "https://www.chula.ac.th/en/",
+    },
+    {
+      name: "Universitas Indonesia",
+      src: "/unilogo/ui.png",
+      url: "https://www.ui.ac.id/en/",
+    },
+    {
+      name: "University of Santo Tomas",
+      src: "/unilogo/ust.png",
+      url: "https://www.ust.edu.ph/",
+    },
+    {
+      name: "Josai International University",
+      src: "/unilogo/jiu.png",
+      url: "https://www.jiu.ac.jp/en/",
+    },
   ];
 
   return (
@@ -43,14 +87,12 @@ export default function HomePage() {
               Malaysia
             </p>
 
-            {/* Countdown */}
             <div className="mt-10 flex justify-center text-white">
               <div className="[&_*]:text-white">
                 <Countdown targetDate="2026-08-13T09:00:00+08:00" />
               </div>
             </div>
 
-            {/* Buttons */}
             <div className="mt-14 flex flex-wrap items-center justify-center gap-4">
               <a
                 href="/registration"
@@ -80,49 +122,113 @@ export default function HomePage() {
             <div className="mx-auto mt-4 h-1 w-16 rounded bg-[#0F2A4D]" />
           </div>
 
-          <div className="mx-auto max-w-4xl text-base md:text-lg leading-relaxed text-gray-700 space-y-6">
-            <p>
-              Welcome to the official portal for the 8th International Conference
-              on Pharmaceutical, Nutraceutical, and Cosmeceutical Sciences
-              (IPNaCS) and the 11th International Postgraduate Conference on
-              Pharmaceutical Sciences (IPoPS) 2026.
-            </p>
+          <div className="mx-auto max-w-5xl space-y-10">
+            <div className="rounded-xl border border-slate-200 bg-white p-10 shadow-sm">
+              <div className="space-y-5 text-slate-700 leading-relaxed text-base md:text-lg">
+                <p>
+                  Welcome to the official portal for the 8th International Conference
+                  on Pharmaceutical, Nutraceutical, and Cosmeceutical Sciences
+                  (IPNaCS) and the 11th International Postgraduate Conference on
+                  Pharmaceutical Sciences (IPoPS) 2026.
+                </p>
 
-            <p>
-              This year marks the 25th Anniversary of the Faculty of Pharmacy,
-              Universiti Teknologi MARA. For over two decades, this collaborative
-              spirit has been the heartbeat of our community.
-            </p>
+                <p>
+                  This year is a landmark celebration marking the 25th Anniversary
+                  of the Faculty of Pharmacy, Universiti Teknologi MARA. For over
+                  two decades, this collaborative spirit has been the heartbeat of
+                  our community, and we are honoured to host this silver jubilee
+                  event.
+                </p>
 
-            <p>
-              As we celebrate 25 years of academic excellence, our focus turns
-              toward the future: Digital Transformation. In 2026 we explore how
-              cutting-edge technologies reshape:
-            </p>
+                <p>
+                  The landscape of health and wellness is shifting. As we celebrate
+                  25 years of academic excellence, our focus turns toward the future:{" "}
+                  <span className="font-semibold text-[#0F2A4D]">
+                    Digital Transformation
+                  </span>
+                  . In 2026, we explore how cutting-edge technology, from
+                  AI-driven drug discovery to digital health monitoring, is
+                  fundamentally reshaping the fields of:
+                </p>
 
-            <ul className="list-disc pl-6 space-y-2">
-              <li>Pharmacology &amp; Pharmacy Practice</li>
-              <li>Nutraceutical Sciences</li>
-              <li>Cosmeceutical Innovation</li>
-            </ul>
+                <ul className="mt-2 list-disc space-y-2 pl-6 text-slate-700">
+                  <li>Pharmacology &amp; Pharmacy Practice</li>
+                  <li>Nutraceutical Sciences</li>
+                  <li>Cosmeceutical Innovation</li>
+                </ul>
 
-            <p>
-              IPNaCS and IPoPS continue our tradition of excellence alongside our
-              co-organisers:
-            </p>
+                <p>
+                  IPNaCS and IPoPS are the result of a deep-rooted partnership
+                  spanning more than 20 years. Whether you are an established
+                  researcher, an industry professional, or a postgraduate student
+                  at the start of your journey, this conference offers a platform
+                  to exchange ideas, forge global partnerships, and celebrate a
+                  quarter-century of pharmaceutical progress.
+                </p>
 
-            <ul className="list-disc pl-6 space-y-2">
-              <li>Tokyo University of Science</li>
-              <li>IMU University</li>
-              <li>Chulalongkorn University</li>
-              <li>Universitas Indonesia</li>
-              <li>University of Santo Tomas</li>
-              <li>Josai University</li>
-            </ul>
+                <p className="font-semibold text-[#0F2A4D]">
+                  Join us in 2026 as we honour our past and digitise our future.
+                </p>
+              </div>
+            </div>
 
-            <p className="font-semibold text-[#0F2A4D]">
-              Join us in 2026 as we honour our past and digitise our future.
-            </p>
+            <div className="rounded-xl border border-slate-200 bg-white p-10 shadow-sm">
+              <div className="text-center">
+                <h3 className="text-2xl font-bold tracking-tight text-[#0F2A4D] sm:text-3xl">
+                  Partner Institutions
+                </h3>
+                <p className="mx-auto mt-3 max-w-3xl text-slate-600">
+                  Our conference is supported by a network of universities and
+                  academic partners. Click a logo to visit the official institution
+                  website.
+                </p>
+              </div>
+
+              <div className="mt-10 grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
+                {partners.map((p) => (
+                  <a
+                    key={p.name}
+                    href={p.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex h-28 items-center justify-center rounded-xl border border-slate-200 bg-white px-4 py-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+                    title={p.name}
+                  >
+                    <img
+                      src={p.src}
+                      alt={p.name}
+                      className="max-h-16 w-auto object-contain"
+                      loading="lazy"
+                    />
+                  </a>
+                ))}
+              </div>
+
+              <p className="mt-8 text-center text-sm text-slate-500">
+                Logos are displayed for identification of collaborating institutions.
+              </p>
+            </div>
+
+            <div className="rounded-xl border border-slate-200 bg-white p-10 shadow-sm">
+              <h3 className="text-center text-2xl font-bold tracking-tight text-[#0F2A4D] sm:text-3xl">
+                Who Should Attend
+              </h3>
+
+              <div className="mt-6 space-y-5 text-slate-700 leading-relaxed text-base md:text-lg">
+                <p>
+                  IPNaCS &amp; IPoPS 2026 welcomes researchers, academics,
+                  healthcare professionals, industry partners and postgraduate
+                  students across pharmaceutical, nutraceutical, cosmeceutical and
+                  health sciences.
+                </p>
+                <p>
+                  Participants will gain opportunities to share findings, connect
+                  with international collaborators, and explore how digital
+                  transformation is reshaping research, education and practice in
+                  health and wellness.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -221,7 +327,6 @@ export default function HomePage() {
           </div>
 
           <div className="grid gap-8 lg:grid-cols-2 items-stretch">
-            {/* Venue info card */}
             <div className="bg-white border border-gray-200 rounded-xl p-10 shadow-sm hover:shadow-md transition">
               <h3 className="text-2xl font-semibold text-[#0F2A4D]">
                 Mercure Kuala Lumpur Glenmarie
@@ -264,7 +369,6 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Map */}
             <div className="overflow-hidden rounded-xl border border-gray-200 shadow-sm">
               <iframe
                 title="Mercure Kuala Lumpur Glenmarie Map"
