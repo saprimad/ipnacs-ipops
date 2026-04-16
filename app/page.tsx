@@ -39,7 +39,7 @@ export default function HomePage() {
             </p>
 
             <p className="mt-6 text-sm md:text-base text-white/90">
-              13–14 Aug 2026 | Concorde Hotel, Shah Alam, Malaysia
+              13–14 Aug 2026 | Mercure Kuala Lumpur Glenmarie, Shah Alam, Malaysia
             </p>
 
             {/* Countdown */}
@@ -237,7 +237,7 @@ export default function HomePage() {
             {/* Venue info card */}
             <div className="bg-white border border-gray-200 rounded-xl p-10 shadow-sm hover:shadow-md transition">
               <h3 className="text-2xl font-semibold text-[#0F2A4D]">
-                Concorde Hotel Shah Alam
+                Mercure Kuala Lumpur Glenmarie
               </h3>
 
               <p className="mt-2 text-gray-600">
@@ -250,7 +250,7 @@ export default function HomePage() {
                 </p>
 
                 <p className="mt-2 text-gray-700 leading-relaxed">
-                  No. 3, Jalan Tengku Ampuan Zabedah C9/C, 40100
+                  Jalan Usahawan U1/8, Seksyen U1, 40150
                   <br />
                   Shah Alam, Selangor, Malaysia
                 </p>
@@ -258,7 +258,7 @@ export default function HomePage() {
 
               <div className="mt-10 flex flex-col sm:flex-row gap-3">
                 <a
-                  href="https://maps.google.com/?q=Concorde+Hotel+Shah+Alam"
+                  href="https://maps.google.com/?q=Mercure+Kuala+Lumpur+Glenmarie"
                   target="_blank"
                   rel="noreferrer"
                   className="w-full sm:w-auto text-center rounded-lg px-6 py-3 font-semibold text-white bg-[#0F2A4D] hover:bg-[#0c2240] transition shadow"
@@ -267,7 +267,7 @@ export default function HomePage() {
                 </a>
 
                 <a
-                  href="https://www.concordehotelsresorts.com/concorde-hotel-shah-alam/"
+                  href="https://all.accor.com/hotel/9938/index.en.shtml"
                   target="_blank"
                   rel="noreferrer"
                   className="w-full sm:w-auto text-center rounded-lg px-6 py-3 font-semibold border border-gray-200 text-[#0F2A4D] hover:bg-gray-50 transition"
@@ -280,8 +280,8 @@ export default function HomePage() {
             {/* Map */}
             <div className="overflow-hidden rounded-xl border border-gray-200 shadow-sm">
               <iframe
-                title="Concorde Hotel Shah Alam Map"
-                src="https://www.google.com/maps?q=Concorde%20Hotel%20Shah%20Alam&output=embed"
+                title="Mercure Kuala Lumpur Glenmarie Map"
+                src="https://www.google.com/maps?q=Mercure%20Kuala%20Lumpur%20Glenmarie&output=embed"
                 className="w-full h-[350px]"
                 loading="lazy"
               />
