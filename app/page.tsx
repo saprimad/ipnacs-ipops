@@ -2,13 +2,13 @@ import { Countdown } from "@/components/countdown";
 
 export default function HomePage() {
   const importantDates = [
-    ["First Announcement", "Feb 2026"],
-    ["Abstract Submission Opens", "Mar 2026"],
-    ["Abstract Deadline", "May 2026"],
-    ["Acceptance Notification", "Jun 2026"],
-    ["Early Bird Registration", "30 Jun 2026"],
-    ["Conference Dates", "13–14 Aug 2026"],
-    ["Full Paper Submission", "31 Aug 2026"],
+    { label: "FIRST ANNOUNCEMENT", value: "February 2026" },
+    { label: "ABSTRACT SUBMISSION OPENS", value: "March 2026" },
+    { label: "ABSTRACT DEADLINE", value: "15 May 2026" },
+    { label: "ACCEPTANCE NOTIFICATION", value: "1 June 2026" },
+    { label: "EARLY BIRD REGISTRATION", value: "30 June 2026" },
+    { label: "CONFERENCE DATES", value: "13–14 August 2026" },
+    { label: "FULL PAPER SUBMISSION", value: "31 August 2026" },
   ];
 
   return (
@@ -39,7 +39,8 @@ export default function HomePage() {
             </p>
 
             <p className="mt-6 text-sm md:text-base text-white/90">
-              13–14 Aug 2026 | Mercure Kuala Lumpur Glenmarie, Shah Alam, Malaysia
+              13–14 August 2026 | Mercure Kuala Lumpur Glenmarie, Shah Alam,
+              Malaysia
             </p>
 
             {/* Countdown */}
@@ -81,19 +82,22 @@ export default function HomePage() {
 
           <div className="mx-auto max-w-4xl text-base md:text-lg leading-relaxed text-gray-700 space-y-6">
             <p>
-              Welcome to the official portal for the 8th International Conference on Pharmaceutical,
-              Nutraceutical, and Cosmeceutical Sciences (IPNaCS) and the 11th International Postgraduate
-              Conference on Pharmaceutical Sciences (IPoPS) 2026.
+              Welcome to the official portal for the 8th International Conference
+              on Pharmaceutical, Nutraceutical, and Cosmeceutical Sciences
+              (IPNaCS) and the 11th International Postgraduate Conference on
+              Pharmaceutical Sciences (IPoPS) 2026.
             </p>
 
             <p>
-              This year marks the 25th Anniversary of the Faculty of Pharmacy, Universiti Teknologi MARA.
-              For over two decades, this collaborative spirit has been the heartbeat of our community.
+              This year marks the 25th Anniversary of the Faculty of Pharmacy,
+              Universiti Teknologi MARA. For over two decades, this collaborative
+              spirit has been the heartbeat of our community.
             </p>
 
             <p>
-              As we celebrate 25 years of academic excellence, our focus turns toward the future:
-              Digital Transformation. In 2026 we explore how cutting-edge technologies reshape:
+              As we celebrate 25 years of academic excellence, our focus turns
+              toward the future: Digital Transformation. In 2026 we explore how
+              cutting-edge technologies reshape:
             </p>
 
             <ul className="list-disc pl-6 space-y-2">
@@ -103,7 +107,8 @@ export default function HomePage() {
             </ul>
 
             <p>
-              IPNaCS and IPoPS continue our tradition of excellence alongside our co-organisers:
+              IPNaCS and IPoPS continue our tradition of excellence alongside our
+              co-organisers:
             </p>
 
             <ul className="list-disc pl-6 space-y-2">
@@ -187,12 +192,8 @@ export default function HomePage() {
             <div className="mx-auto mt-4 h-1 w-16 rounded bg-[#0F2A4D]" />
           </div>
 
-          <div className="grid gap-6 md:grid-cols-3">
-            {[
-              { label: "ABSTRACT DEADLINE", value: "May 2026" },
-              { label: "EARLY BIRD ENDS", value: "30 Jun 2026" },
-              { label: "CONFERENCE", value: "13–14 Aug 2026" },
-            ].map((item) => (
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {importantDates.map((item) => (
               <div
                 key={item.label}
                 className="rounded-xl border border-gray-200 bg-white p-7 text-center shadow-sm hover:shadow-md transition"
@@ -205,20 +206,6 @@ export default function HomePage() {
                 </p>
               </div>
             ))}
-          </div>
-
-          <div className="mt-8 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
-            <div className="grid grid-cols-1 divide-y divide-gray-200">
-              {importantDates.map(([label, date], idx) => (
-                <div
-                  key={`${label}-${idx}`}
-                  className="flex items-center justify-between px-6 py-5"
-                >
-                  <p className="font-semibold text-gray-900">{label}</p>
-                  <p className="text-gray-700">{date}</p>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
@@ -267,7 +254,7 @@ export default function HomePage() {
                 </a>
 
                 <a
-                  href="https://all.accor.com/hotel/9938/index.en.shtml"
+                  href="https://all.accor.com/hotel/A7M8/index.en.shtml"
                   target="_blank"
                   rel="noreferrer"
                   className="w-full sm:w-auto text-center rounded-lg px-6 py-3 font-semibold border border-gray-200 text-[#0F2A4D] hover:bg-gray-50 transition"
