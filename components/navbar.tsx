@@ -5,14 +5,10 @@ import { useState } from "react";
 
 const links = [
   ["Home", "/"],
-  ["About", "/about"],
   ["Speakers", "/speakers"],
   ["Schedule", "/schedule"],
   ["Venue", "/venue"],
-  ["Registration", "/registration"],
-  ["Sponsors", "/sponsors"],
   ["Submit Abstract", "/faq"],
-  ["Code of Conduct", "/code-of-conduct"],
   ["Contact", "/contact"],
 ] as const;
 
@@ -29,7 +25,10 @@ export function Navbar() {
         <ul className="hidden items-center gap-6 text-sm md:flex">
           {links.map(([label, href]) => (
             <li key={href}>
-              <Link href={href} className="text-slate-600 hover:text-[#0F2A4D] transition">
+              <Link
+                href={href}
+                className="text-slate-600 transition hover:text-[#0F2A4D]"
+              >
                 {label}
               </Link>
             </li>
@@ -38,7 +37,7 @@ export function Navbar() {
           <li>
             <Link
               href="/registration"
-              className="ml-2 rounded-lg bg-[#0F2A4D] px-4 py-2 text-white font-medium hover:opacity-90 transition"
+              className="ml-2 rounded-lg bg-[#0F2A4D] px-4 py-2 font-medium text-white transition hover:opacity-90"
             >
               Register
             </Link>
@@ -57,7 +56,10 @@ export function Navbar() {
       </nav>
 
       {open && (
-        <ul id="mobile-menu" className="space-y-1 border-t border-gray-200 bg-white px-6 py-4 md:hidden">
+        <ul
+          id="mobile-menu"
+          className="space-y-1 border-t border-gray-200 bg-white px-6 py-4 md:hidden"
+        >
           {links.map(([label, href]) => (
             <li key={href}>
               <Link
@@ -73,7 +75,7 @@ export function Navbar() {
           <li>
             <Link
               href="/registration"
-              className="block rounded bg-[#0F2A4D] px-4 py-2 text-center text-white font-medium hover:opacity-90 transition"
+              className="block rounded bg-[#0F2A4D] px-4 py-2 text-center font-medium text-white transition hover:opacity-90"
               onClick={() => setOpen(false)}
             >
               Register
