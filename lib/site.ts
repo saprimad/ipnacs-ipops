@@ -28,7 +28,6 @@ export const schedule = [
         title: "Keynote Lecture",
         descriptionLines: [
           "Dr Azuana Ramli",
-          "Invitation completed via email and agreed",
           "Title: _TBC_",
         ],
       },
