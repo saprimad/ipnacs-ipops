@@ -21,8 +21,8 @@ export default function RegistrationPage() {
     {
       title: "IPNaCS–IPoPS Networking Dinner",
       note:
-        "An exclusive networking evening fostering scientific dialogue, interdisciplinary collaboration and strategic partnerships among conference delegates.",
-      rows: [{ label: "Dinner Fee", rm: "MYR 200", usd: "USD 60" }],
+        "Every participant is invited to join the gala dinner celebrating 25 years of the Faculty of Pharmacy at UiTM, commemorating the faculty’s milestone and achievements.",
+      rows: [],
     },
   ] as const;
 
