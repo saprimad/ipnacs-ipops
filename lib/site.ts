@@ -89,9 +89,9 @@ export const schedule = [
           },
           {
             label: "Track 4",
-            name: "TBC",
-            role: "TBC",
-            title: "_TBC_",
+            name: "Assoc Prof Ho Ket Li",
+            role: "International Medical University (IMU)",
+            title: "AI Revolution: Transformation of Health Education",
           },
         ],
       },
