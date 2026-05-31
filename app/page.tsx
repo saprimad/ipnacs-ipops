@@ -10,8 +10,8 @@ export default function HomePage() {
   const importantDates = [
     { label: "FIRST ANNOUNCEMENT", value: "February 2026" },
     { label: "ABSTRACT SUBMISSION OPENS", value: "March 2026" },
-    { label: "ABSTRACT SUBMISSION (Extended)", value: "31 May 2026" },
-    { label: "ACCEPTANCE NOTIFICATION (Extended)", value: "15 June 2026" },
+    { label: "ABSTRACT SUBMISSION (Extended)", value: "30 June 2026" },
+    { label: "ACCEPTANCE NOTIFICATION (Extended)", value: "15 July 2026" },
     { label: "EARLY BIRD REGISTRATION", value: "30 June 2026" },
     { label: "CONFERENCE DATES", value: "13–14 August 2026" },
     { label: "FULL PAPER SUBMISSION", value: "31 August 2026" },
