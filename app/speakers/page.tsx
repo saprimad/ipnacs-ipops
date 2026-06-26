@@ -1,4 +1,13 @@
+// app/speakers/page.tsx
 import Image from "next/image";
+import Link from "next/link";
+import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/metadata";
+
+export const metadata: Metadata = buildMetadata(
+  "Speakers",
+  "Meet the plenary, invited and professorial lecture speakers for IPNaCS–IPoPS 2026."
+);
 
 type SpeakerCategory = "Plenary" | "Invited" | "Professorial Lecture";
 
@@ -8,23 +17,35 @@ type Speaker = {
   affiliationShort?: string;
   category: SpeakerCategory;
   title?: string;
-  image?: string; // /public path e.g. /speakers/rohana.jpg
+  image?: string;
 };
 
+function slugify(input: string) {
+  return input
+    .toLowerCase()
+    .replace(/&/g, "and")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
 const speakers: Speaker[] = [
-  // PLENARY SPEAKERS
+  // PLENARY / KEYNOTE SPEAKERS
   {
     name: "Dr Azuana Ramli",
     affiliationFull: "Ministry of Health Malaysia",
     affiliationShort: "MOH",
     category: "Plenary",
-    title: "",
+    title:
+      "Stewarding Connected Innovation: Advancing Digital Transformation Across the Pharmaceutical Ecosystem",
+    image: undefined,
   },
   {
-    name: "TBC",
+    name: "Professor Dr Suzana Shahar",
     affiliationFull: "TBC",
     category: "Plenary",
-    title: "TBC",
+    title:
+      "Neuroprotective Model for Healthy Aging: The Value of Nutraceutical and Lifestyle Modification",
+    image: undefined,
   },
   {
     name: "Professor Dr Rohana Abd Ghani",
@@ -32,39 +53,47 @@ const speakers: Speaker[] = [
     affiliationShort: "UiTM",
     category: "Plenary",
     title:
-      "Digital Frontier in Obesity Management: Leveraging Digital Transformation for Better Outcomes.",
-    image: "/speakers/rohana.png",
-  },
-  {
-    name: "Professor Dr Kazunori Akimoto",
-    affiliationFull: "Tokyo University of Science",
-    affiliationShort: "TUS",
-    category: "Plenary",
-    title: "TBC",
+      "Digital Frontier in Obesity Management: Leveraging Digital Transformation for Better Outcomes",
+    image: "/speakers/rohana-new.JPG",
   },
   {
     name: "Professor Dr Varisa Pongrakhananon",
     affiliationFull: "Chulalongkorn University",
     affiliationShort: "CU",
     category: "Plenary",
-    title: "TBC",
+    title:
+      "Reprogramming Cancer through Integrative Omics and Computational Pharmacology: From Biomarker Discovery to Precision Targeting of Cellular Signaling",
+    image: undefined,
   },
   {
-    name: "TBC",
-    affiliationFull: "Kyoto University",
-    affiliationShort: "Kyoto",
+    name: "Professor Dr Kazunori Akimoto",
+    affiliationFull: "Tokyo University of Science",
+    affiliationShort: "TUS",
     category: "Plenary",
-    title: "TBC",
+    title:
+      "Data-Driven Integrative Cancer Research: Bridging Computational Discovery, Molecular Mechanisms, and Clinical Outcomes",
+    image: "/speakers/Akimoto.jpeg",
+  },
+  {
+    name: "Associate Professor Ee Pui Lai, Rachel",
+    affiliationFull:
+      "Department of Pharmacy and Pharmaceutical Sciences, National University of Singapore",
+    affiliationShort: "NUS",
+    category: "Plenary",
+    title:
+      "Precision Design and Programming Trap-and-Kill Peptide Nanonets for Novel Antimicrobial Therapy",
+    image: undefined,
   },
 
   // INVITED SPEAKERS
   {
-    name: "Associate Professor Dr Shazia Jamshed",
-    affiliationFull: "International Medical University",
-    affiliationShort: "IMU",
+    name: "Dr Ismat binti Mohd Sulaiman",
+    affiliationFull: "Ministry of Health Malaysia",
+    affiliationShort: "MOH",
     category: "Invited",
-    title: "TBC",
-    image: "/speakers/shazia.jpg",
+    title:
+      "Connected data, transforming pharma: Lessons from MyHDW and AI potential",
+    image: "/speakers/ismat.jpg",
   },
   {
     name: "Associate Professor Dr Kosuke Kusamori",
@@ -72,6 +101,7 @@ const speakers: Speaker[] = [
     affiliationShort: "TUS",
     category: "Invited",
     title: "Regenerative cell-based therapy for lymph node reconstruction",
+    image: undefined,
   },
   {
     name: "Professor Dr Wong Tin Wui",
@@ -83,20 +113,21 @@ const speakers: Speaker[] = [
     image: "/speakers/wong.jpg",
   },
   {
-    name: "TBA",
-    affiliationFull: "Universitas Indonesia",
-    affiliationShort: "UI",
+    name: "Associate Professor Ho Ket Li",
+    affiliationFull: "International Medical University",
+    affiliationShort: "IMU",
     category: "Invited",
-    title: "TBC",
+    title: "AI Revolution: Transformation of Health Education",
+    image: undefined,
   },
   {
-    name: "Dr Ismat binti Mohd Sulaiman",
-    affiliationFull: "Ministry of Health Malaysia",
-    affiliationShort: "MOH",
+    name: "Associate Professor Dr Shazia Jamshed",
+    affiliationFull: "International Medical University",
+    affiliationShort: "IMU",
     category: "Invited",
     title:
-      "Connected data, transforming pharma: Lessons from MyHDW and AI potential",
-    image: "/speakers/ismat.jpg",
+      "Applications of Digital Health: Current Insights and Future Directions",
+    image: "/speakers/shazia.jpg",
   },
   {
     name: "Professor Dr Teh Lay Kek",
@@ -114,6 +145,7 @@ const speakers: Speaker[] = [
     category: "Invited",
     title:
       "Pharmaceutical Technology for the Improvement of the Bioavailability of Drugs",
+    image: undefined,
   },
   {
     name: "Professor Dr Aleth Therese Dacanay",
@@ -131,100 +163,108 @@ const speakers: Speaker[] = [
     affiliationFull: "Universiti Teknologi MARA",
     affiliationShort: "UiTM",
     category: "Professorial Lecture",
-    title: "TBC",
+    title: "Professorial Lecture",
     image: "/speakers/kala.png",
   },
 ];
 
-function SpeakerCard({ s }: { s: Speaker }) {
-  const displayTitle =
-    s.title && s.title.trim().length > 0 ? s.title.trim() : "TBC";
+const categories: SpeakerCategory[] = [
+  "Plenary",
+  "Invited",
+  "Professorial Lecture",
+];
 
+function SpeakerCard({ speaker }: { speaker: Speaker }) {
   const affiliation =
-    s.affiliationShort && s.affiliationShort.trim() !== ""
-      ? `${s.affiliationFull} (${s.affiliationShort})`
-      : s.affiliationFull;
+    speaker.affiliationShort && speaker.affiliationShort.trim() !== ""
+      ? `${speaker.affiliationFull} (${speaker.affiliationShort})`
+      : speaker.affiliationFull;
+
+  const talkTitle =
+    speaker.title && speaker.title.trim() !== "" ? speaker.title.trim() : "TBC";
 
   return (
-    <div className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:shadow-md">
-      {/* Image frame (rounded-square, not circle) */}
-      <div className="p-4">
-        <div className="relative aspect-square w-full overflow-hidden rounded-2xl bg-slate-100 ring-1 ring-slate-200">
-          {s.image ? (
-            <Image
-              src={s.image}
-              alt={s.name}
-              fill
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              className="object-cover transition duration-300 group-hover:scale-[1.02]"
-            />
-          ) : (
-            <div className="flex h-full w-full items-center justify-center">
-              <div className="text-center">
-                <div className="mx-auto mb-2 h-12 w-12 rounded-full bg-slate-200" />
-                <div className="text-sm font-semibold text-slate-600">TBC</div>
-              </div>
+    <Link
+      href={`/speakers/${slugify(speaker.name)}`}
+      className="group block overflow-hidden rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+    >
+      <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-slate-100 ring-1 ring-slate-200">
+        {speaker.image ? (
+          <Image
+            src={speaker.image}
+            alt={speaker.name}
+            fill
+            sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 30vw"
+            className="object-cover transition duration-300 group-hover:scale-105"
+          />
+        ) : (
+          <div className="flex h-full w-full items-center justify-center text-sm font-semibold text-slate-600">
+            <div className="text-center">
+              <div className="mx-auto mb-3 h-12 w-12 rounded-full bg-slate-200" />
+              <p>TBC</p>
             </div>
-          )}
-        </div>
+          </div>
+        )}
       </div>
 
-      {/* Text */}
-      <div className="px-5 pb-6">
-        <h3 className="text-base font-bold text-slate-900">{s.name}</h3>
+      <div className="mt-5 space-y-2">
+        <h2 className="text-base font-bold leading-snug text-slate-950">
+          {speaker.name}
+        </h2>
 
-        <p className="mt-1 text-sm text-slate-600">{affiliation}</p>
+        <p className="text-sm text-slate-600">{affiliation}</p>
 
-        <p className="mt-3 text-sm italic leading-relaxed text-slate-700 line-clamp-4">
-          {displayTitle}
+        <p className="text-sm italic leading-relaxed text-slate-700">
+          {talkTitle}
         </p>
       </div>
-    </div>
-  );
-}
-
-function Section({ title, items }: { title: string; items: Speaker[] }) {
-  return (
-    <section className="mt-14">
-      <h2 className="text-xl font-bold tracking-tight text-slate-900">
-        {title}
-      </h2>
-
-      <div className="mt-6 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        {items.map((s, idx) => (
-          <SpeakerCard key={`${s.name}-${idx}`} s={s} />
-        ))}
-      </div>
-    </section>
+    </Link>
   );
 }
 
 export default function SpeakersPage() {
-  const plenary = speakers.filter((s) => s.category === "Plenary");
-  const invited = speakers.filter((s) => s.category === "Invited");
-  const professorial = speakers.filter(
-    (s) => s.category === "Professorial Lecture"
-  );
-
   return (
-    <main className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
-      <header className="space-y-4 text-center">
-        <h1 className="text-4xl font-extrabold tracking-tight text-brand-900 sm:text-5xl">
-          Conference Speakers
-        </h1>
+    <main className="section">
+      <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+        <header className="space-y-3">
+          <h1 className="text-3xl font-bold text-[#0F2A4D] sm:text-4xl">
+            Speakers
+          </h1>
 
-        <p className="mx-auto max-w-3xl text-base text-slate-600">
-          We are excited to welcome a distinguished lineup of speakers who will
-          share their expertise and insights at this conference. Additional
-          speakers will be announced progressively. Please check back here for
-          updates as we unveil the academics and professionals who will be
-          joining us.
-        </p>
-      </header>
+          <p className="max-w-3xl text-slate-700">
+            Meet the plenary, invited and professorial lecture speakers for
+            IPNaCS–IPoPS 2026.
+          </p>
+        </header>
 
-      <Section title="Plenary Speakers" items={plenary} />
-      <Section title="Invited Speakers" items={invited} />
-      <Section title="Professorial Lecture" items={professorial} />
+        <div className="mt-10 space-y-14">
+          {categories.map((category) => {
+            const categorySpeakers = speakers.filter(
+              (speaker) => speaker.category === category
+            );
+
+            if (categorySpeakers.length === 0) return null;
+
+            return (
+              <section key={category} className="space-y-6">
+                <h2 className="text-2xl font-bold text-[#0F2A4D]">
+                  {category === "Plenary"
+                    ? "Plenary Speakers"
+                    : category === "Invited"
+                      ? "Invited Speakers"
+                      : "Professorial Lecture"}
+                </h2>
+
+                <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                  {categorySpeakers.map((speaker) => (
+                    <SpeakerCard key={speaker.name} speaker={speaker} />
+                  ))}
+                </div>
+              </section>
+            );
+          })}
+        </div>
+      </div>
     </main>
   );
 }

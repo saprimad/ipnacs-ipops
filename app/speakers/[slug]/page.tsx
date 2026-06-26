@@ -10,7 +10,7 @@ type Speaker = {
   affiliationShort?: string;
   category: SpeakerCategory;
   title?: string;
-  image?: string; // path dalam public, contoh "/speakers/rohana.jpg"
+  image?: string;
 };
 
 function slugify(input: string) {
@@ -21,22 +21,23 @@ function slugify(input: string) {
     .replace(/^-+|-+$/g, "");
 }
 
-// IMPORTANT: guna senarai sama macam app/speakers/page.tsx
 const speakers: Speaker[] = [
-  // PLENARY SPEAKERS
+  // PLENARY / KEYNOTE SPEAKERS
   {
     name: "Dr Azuana Ramli",
     affiliationFull: "Ministry of Health Malaysia",
     affiliationShort: "MOH",
     category: "Plenary",
-    title: "TBC",
+    title:
+      "Stewarding Connected Innovation: Advancing Digital Transformation Across the Pharmaceutical Ecosystem",
     image: undefined,
   },
   {
-    name: "TBC",
+    name: "Professor Dr Suzana Shahar",
     affiliationFull: "TBC",
     category: "Plenary",
-    title: "TBC",
+    title:
+      "Neuroprotective Model for Healthy Aging: The Value of Nutraceutical and Lifestyle Modification",
     image: undefined,
   },
   {
@@ -45,42 +46,47 @@ const speakers: Speaker[] = [
     affiliationShort: "UiTM",
     category: "Plenary",
     title:
-      "Digital Frontier in Obesity Management: Leveraging Digital Transformation for Better Outcomes.",
-    image: "/speakers/rohana.png",
-  },
-  {
-    name: "Professor Dr Kazunori Akimoto",
-    affiliationFull: "Tokyo University of Science",
-    affiliationShort: "TUS",
-    category: "Plenary",
-    title: "TBC",
-    image: undefined,
+      "Digital Frontier in Obesity Management: Leveraging Digital Transformation for Better Outcomes",
+    image: "/speakers/rohana-new.JPG",
   },
   {
     name: "Professor Dr Varisa Pongrakhananon",
     affiliationFull: "Chulalongkorn University",
     affiliationShort: "CU",
     category: "Plenary",
-    title: "TBC",
+    title:
+      "Reprogramming Cancer through Integrative Omics and Computational Pharmacology: From Biomarker Discovery to Precision Targeting of Cellular Signaling",
     image: undefined,
   },
   {
-    name: "TBC",
-    affiliationFull: "Kyoto University",
-    affiliationShort: "Kyoto",
+    name: "Professor Dr Kazunori Akimoto",
+    affiliationFull: "Tokyo University of Science",
+    affiliationShort: "TUS",
     category: "Plenary",
-    title: "TBC",
+    title:
+      "Data-Driven Integrative Cancer Research: Bridging Computational Discovery, Molecular Mechanisms, and Clinical Outcomes",
+    image: "/speakers/Akimoto.jpeg",
+  },
+  {
+    name: "Associate Professor Ee Pui Lai, Rachel",
+    affiliationFull:
+      "Department of Pharmacy and Pharmaceutical Sciences, National University of Singapore",
+    affiliationShort: "NUS",
+    category: "Plenary",
+    title:
+      "Precision Design and Programming Trap-and-Kill Peptide Nanonets for Novel Antimicrobial Therapy",
     image: undefined,
   },
 
   // INVITED SPEAKERS
   {
-    name: "Associate Professor Dr Shazia Jamshed",
-    affiliationFull: "International Medical University",
-    affiliationShort: "IMU",
+    name: "Dr Ismat binti Mohd Sulaiman",
+    affiliationFull: "Ministry of Health Malaysia",
+    affiliationShort: "MOH",
     category: "Invited",
-    title: "TBC",
-    image: "/speakers/shazia.jpg",
+    title:
+      "Connected data, transforming pharma: Lessons from MyHDW and AI potential",
+    image: "/speakers/ismat.jpg",
   },
   {
     name: "Associate Professor Dr Kosuke Kusamori",
@@ -100,20 +106,21 @@ const speakers: Speaker[] = [
     image: "/speakers/wong.jpg",
   },
   {
-    name: "TBA",
-    affiliationFull: "Universitas Indonesia",
-    affiliationShort: "UI",
+    name: "Associate Professor Ho Ket Li",
+    affiliationFull: "International Medical University",
+    affiliationShort: "IMU",
     category: "Invited",
-    title: "TBC",
+    title: "AI Revolution: Transformation of Health Education",
     image: undefined,
   },
   {
-    name: "Dr Ismat binti Mohd Sulaiman",
-    affiliationFull: "Ministry of Health Malaysia",
-    affiliationShort: "MOH",
+    name: "Associate Professor Dr Shazia Jamshed",
+    affiliationFull: "International Medical University",
+    affiliationShort: "IMU",
     category: "Invited",
-    title: "Connected data, transforming pharma: Lessons from MyHDW and AI potential",
-    image: "/speakers/ismat.jpg",
+    title:
+      "Applications of Digital Health: Current Insights and Future Directions",
+    image: "/speakers/shazia.jpg",
   },
   {
     name: "Professor Dr Teh Lay Kek",
@@ -129,7 +136,8 @@ const speakers: Speaker[] = [
     affiliationFull: "Tokyo University of Science",
     affiliationShort: "TUS",
     category: "Invited",
-    title: "Pharmaceutical Technology for the Improvement of the Bioavailability of Drugs",
+    title:
+      "Pharmaceutical Technology for the Improvement of the Bioavailability of Drugs",
     image: undefined,
   },
   {
@@ -148,17 +156,19 @@ const speakers: Speaker[] = [
     affiliationFull: "Universiti Teknologi MARA",
     affiliationShort: "UiTM",
     category: "Professorial Lecture",
-    title: "TBC",
+    title: "Professorial Lecture",
     image: "/speakers/kala.png",
   },
 ];
 
 function getSpeakerBySlug(slug: string) {
-  return speakers.find((s) => slugify(s.name) === slug);
+  return speakers.find((speaker) => slugify(speaker.name) === slug);
 }
 
 export async function generateStaticParams() {
-  return speakers.map((s) => ({ slug: slugify(s.name) }));
+  return speakers.map((speaker) => ({
+    slug: slugify(speaker.name),
+  }));
 }
 
 export default async function SpeakerSlugPage({
@@ -182,10 +192,14 @@ export default async function SpeakerSlugPage({
   return (
     <main className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
       <header className="text-center space-y-3">
-        <p className="text-sm font-semibold text-slate-500">{speaker.category}</p>
+        <p className="text-sm font-semibold text-slate-500">
+          {speaker.category}
+        </p>
+
         <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
           {speaker.name}
         </h1>
+
         <p className="text-slate-600">{affiliation}</p>
       </header>
 
@@ -209,8 +223,13 @@ export default async function SpeakerSlugPage({
           </div>
 
           <div className="mt-8 rounded-xl border border-slate-200 bg-slate-50 p-5">
-            <h2 className="text-sm font-semibold text-slate-700">Talk Title</h2>
-            <p className="mt-2 text-slate-800 italic leading-relaxed">{talkTitle}</p>
+            <h2 className="text-sm font-semibold text-slate-700">
+              Talk Title
+            </h2>
+
+            <p className="mt-2 text-slate-800 italic leading-relaxed">
+              {talkTitle}
+            </p>
           </div>
         </div>
       </section>
