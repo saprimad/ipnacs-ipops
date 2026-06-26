@@ -41,7 +41,7 @@ const speakers: Speaker[] = [
   },
   {
     name: "Professor Dr Suzana Shahar",
-    affiliationFull: "TBC",
+    affiliationFull: "Univesiti Kebangsaan Malaysia (UKM)",
     category: "Plenary",
     title:
       "Neuroprotective Model for Healthy Aging: The Value of Nutraceutical and Lifestyle Modification",
