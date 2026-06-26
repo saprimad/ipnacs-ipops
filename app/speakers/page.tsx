@@ -72,7 +72,7 @@ const speakers: Speaker[] = [
     category: "Plenary",
     title:
       "Data-Driven Integrative Cancer Research: Bridging Computational Discovery, Molecular Mechanisms, and Clinical Outcomes",
-    image: "/speakers/Akimoto.jpeg",
+    image: "/speakers/akimoto.jpeg",
   },
   {
     name: "Associate Professor Ee Pui Lai, Rachel",
