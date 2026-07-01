@@ -30,11 +30,12 @@ const speakers: Speaker[] = [
     category: "Plenary",
     title:
       "Stewarding Connected Innovation: Advancing Digital Transformation Across the Pharmaceutical Ecosystem",
-    image: undefined,
+    image: "/speakers/azuana.jpg",
   },
   {
     name: "Professor Dr Suzana Shahar",
-    affiliationFull: "TBC",
+    affiliationFull: "Universiti Kebangsaan Malaysia",
+    affiliationShort: "UKM",
     category: "Plenary",
     title:
       "Neuroprotective Model for Healthy Aging: The Value of Nutraceutical and Lifestyle Modification",
@@ -56,7 +57,7 @@ const speakers: Speaker[] = [
     category: "Plenary",
     title:
       "Reprogramming Cancer through Integrative Omics and Computational Pharmacology: From Biomarker Discovery to Precision Targeting of Cellular Signaling",
-    image: undefined,
+    image: "/speakers/Varissa.png",
   },
   {
     name: "Professor Dr Kazunori Akimoto",
@@ -75,7 +76,7 @@ const speakers: Speaker[] = [
     category: "Plenary",
     title:
       "Precision Design and Programming Trap-and-Kill Peptide Nanonets for Novel Antimicrobial Therapy",
-    image: undefined,
+    image: "/speakers/ee.jpg",
   },
 
   // INVITED SPEAKERS
@@ -94,7 +95,7 @@ const speakers: Speaker[] = [
     affiliationShort: "TUS",
     category: "Invited",
     title: "Regenerative cell-based therapy for lymph node reconstruction",
-    image: undefined,
+    image: "/speakers/kosuke.jpg",
   },
   {
     name: "Professor Dr Wong Tin Wui",
@@ -111,7 +112,7 @@ const speakers: Speaker[] = [
     affiliationShort: "IMU",
     category: "Invited",
     title: "AI Revolution: Transformation of Health Education",
-    image: undefined,
+    image: "/speakers/ho.jpg",
   },
   {
     name: "Associate Professor Dr Shazia Jamshed",
@@ -129,7 +130,7 @@ const speakers: Speaker[] = [
     category: "Invited",
     title:
       "From Pharmacogenomics to Pharmacophytogenomics: Diversity Driven Pathways in Precision Health",
-    image: "/speakers/teh.png",
+    image: "/speakers/teh.jpeg",
   },
   {
     name: "Professor Dr Takehisa Hanawa",
@@ -157,7 +158,7 @@ const speakers: Speaker[] = [
     affiliationShort: "UiTM",
     category: "Professorial Lecture",
     title: "Professorial Lecture",
-    image: "/speakers/kala.png",
+    image: "/speakers/kala.jpeg",
   },
 ];
 
@@ -191,12 +192,12 @@ export default async function SpeakerSlugPage({
 
   return (
     <main className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
-      <header className="text-center space-y-3">
+      <header className="space-y-3 text-center">
         <p className="text-sm font-semibold text-slate-500">
           {speaker.category}
         </p>
 
-        <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">
+        <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
           {speaker.name}
         </h1>
 
@@ -205,7 +206,7 @@ export default async function SpeakerSlugPage({
 
       <section className="mt-10 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
         <div className="p-6 sm:p-8">
-          <div className="relative mx-auto w-full max-w-[560px] overflow-hidden rounded-2xl bg-slate-100 ring-1 ring-slate-200 aspect-[4/5]">
+          <div className="relative mx-auto aspect-[4/5] w-full max-w-[560px] overflow-hidden rounded-2xl bg-slate-100 ring-1 ring-slate-200">
             {speaker.image ? (
               <Image
                 src={speaker.image}
@@ -216,7 +217,7 @@ export default async function SpeakerSlugPage({
                 priority
               />
             ) : (
-              <div className="flex h-full w-full items-center justify-center text-slate-600 font-semibold">
+              <div className="flex h-full w-full items-center justify-center font-semibold text-slate-600">
                 Photo to be announced
               </div>
             )}
@@ -227,7 +228,7 @@ export default async function SpeakerSlugPage({
               Talk Title
             </h2>
 
-            <p className="mt-2 text-slate-800 italic leading-relaxed">
+            <p className="mt-2 italic leading-relaxed text-slate-800">
               {talkTitle}
             </p>
           </div>

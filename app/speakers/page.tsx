@@ -37,11 +37,12 @@ const speakers: Speaker[] = [
     category: "Plenary",
     title:
       "Stewarding Connected Innovation: Advancing Digital Transformation Across the Pharmaceutical Ecosystem",
-    image: undefined,
+    image: "/speakers/azuana.jpg",
   },
   {
     name: "Professor Dr Suzana Shahar",
-    affiliationFull: "Univesiti Kebangsaan Malaysia (UKM)",
+    affiliationFull: "Universiti Kebangsaan Malaysia",
+    affiliationShort: "UKM",
     category: "Plenary",
     title:
       "Neuroprotective Model for Healthy Aging: The Value of Nutraceutical and Lifestyle Modification",
@@ -63,7 +64,7 @@ const speakers: Speaker[] = [
     category: "Plenary",
     title:
       "Reprogramming Cancer through Integrative Omics and Computational Pharmacology: From Biomarker Discovery to Precision Targeting of Cellular Signaling",
-    image: undefined,
+    image: "/speakers/Varissa.png",
   },
   {
     name: "Professor Dr Kazunori Akimoto",
@@ -82,7 +83,7 @@ const speakers: Speaker[] = [
     category: "Plenary",
     title:
       "Precision Design and Programming Trap-and-Kill Peptide Nanonets for Novel Antimicrobial Therapy",
-    image: undefined,
+    image: "/speakers/ee.jpg",
   },
 
   // INVITED SPEAKERS
@@ -101,7 +102,7 @@ const speakers: Speaker[] = [
     affiliationShort: "TUS",
     category: "Invited",
     title: "Regenerative cell-based therapy for lymph node reconstruction",
-    image: undefined,
+    image: "/speakers/kosuke.jpg",
   },
   {
     name: "Professor Dr Wong Tin Wui",
@@ -118,7 +119,7 @@ const speakers: Speaker[] = [
     affiliationShort: "IMU",
     category: "Invited",
     title: "AI Revolution: Transformation of Health Education",
-    image: undefined,
+    image: "/speakers/ho.jpg",
   },
   {
     name: "Associate Professor Dr Shazia Jamshed",
@@ -136,7 +137,7 @@ const speakers: Speaker[] = [
     category: "Invited",
     title:
       "From Pharmacogenomics to Pharmacophytogenomics: Diversity Driven Pathways in Precision Health",
-    image: "/speakers/teh.png",
+    image: "/speakers/teh.jpeg",
   },
   {
     name: "Professor Dr Takehisa Hanawa",
@@ -164,7 +165,7 @@ const speakers: Speaker[] = [
     affiliationShort: "UiTM",
     category: "Professorial Lecture",
     title: "Professorial Lecture",
-    image: "/speakers/kala.png",
+    image: "/speakers/kala.jpeg",
   },
 ];
 
@@ -195,13 +196,13 @@ function SpeakerCard({ speaker }: { speaker: Speaker }) {
             alt={speaker.name}
             fill
             sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 30vw"
-            className="object-cover transition duration-300 group-hover:scale-105"
+            className="object-cover object-top transition duration-300 group-hover:scale-105"
           />
         ) : (
           <div className="flex h-full w-full items-center justify-center text-sm font-semibold text-slate-600">
             <div className="text-center">
               <div className="mx-auto mb-3 h-12 w-12 rounded-full bg-slate-200" />
-              <p>TBC</p>
+              <p>Photo to be announced</p>
             </div>
           </div>
         )}
