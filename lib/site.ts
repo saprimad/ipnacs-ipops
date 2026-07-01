@@ -128,14 +128,7 @@ export const schedule = [
       },
       {
         time: "17:00–18:30",
-        title: "Teabreak & Networking",
-      },
-      {
-        time: "19:30–22:30",
-        title: "Gala Dinner",
-        descriptionLines: [
-          "25th Anniversary Celebration, Cultural Performances, Networking",
-        ],
+        title: "Hi-Tea & Networking",
       },
     ],
   },
