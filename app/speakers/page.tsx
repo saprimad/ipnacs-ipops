@@ -64,7 +64,7 @@ const speakers: Speaker[] = [
     category: "Plenary",
     title:
       "Reprogramming Cancer through Integrative Omics and Computational Pharmacology: From Biomarker Discovery to Precision Targeting of Cellular Signaling",
-    image: "/speakers/varissa.png",
+    image: "/speakers/varisa.png",
   },
   {
     name: "Professor Dr Kazunori Akimoto",
