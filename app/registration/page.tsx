@@ -6,23 +6,17 @@ export default function RegistrationPage() {
       title: "Undergraduate (UG) / Postgraduate (PG)",
       note: "Valid student ID is required upon registration verification.",
       rows: [
-        { label: "Early Bird", rm: "MYR 400", usd: "USD 110" },
-        { label: "Normal", rm: "MYR 450", usd: "USD 120" },
+        { label: "Early Bird", rm: "MYR 400", usd: "USD 110", closed: true },
+        { label: "Normal", rm: "MYR 450", usd: "USD 120", closed: false },
       ],
     },
     {
       title: "Academician / Industry / Professional",
       note: "Applicable to academic staff, industry participants and professionals.",
       rows: [
-        { label: "Early Bird", rm: "MYR 850", usd: "USD 230" },
-        { label: "Normal", rm: "MYR 950", usd: "USD 250" },
+        { label: "Early Bird", rm: "MYR 850", usd: "USD 230", closed: true },
+        { label: "Normal", rm: "MYR 950", usd: "USD 250", closed: false },
       ],
-    },
-    {
-      title: "IPNaCS–IPoPS Networking Dinner",
-      note:
-        "Every participant is invited to join the gala dinner celebrating 25 years of the Faculty of Pharmacy at UiTM, commemorating the faculty’s milestone and achievements.",
-      rows: [],
     },
   ] as const;
 
@@ -34,7 +28,6 @@ export default function RegistrationPage() {
 
   return (
     <main className="bg-[#F7F8FA] text-[#0F2A4D]">
-
       {/* HEADER */}
       <section className="bg-white py-16 md:py-20 border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-6 text-center">
@@ -57,7 +50,6 @@ export default function RegistrationPage() {
       {/* BODY */}
       <section className="py-16 md:py-20">
         <div className="max-w-6xl mx-auto px-6 space-y-16">
-
           {/* REGISTRATION FEES */}
           <div>
             <div className="text-center mb-10">
@@ -67,7 +59,7 @@ export default function RegistrationPage() {
               <div className="mx-auto mt-3 h-1 w-12 rounded bg-[#E5B82E]" />
             </div>
 
-            <div className="grid gap-6 md:grid-cols-3">
+            <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-2">
               {fees.map((f) => (
                 <div
                   key={f.title}
@@ -79,18 +71,32 @@ export default function RegistrationPage() {
                     {f.rows.map((row) => (
                       <div
                         key={row.label}
-                        className="flex items-center justify-between rounded-xl border border-gray-200 bg-[#F7F8FA] px-5 py-4"
+                        className={`flex items-center justify-between rounded-xl border border-gray-200 bg-[#F7F8FA] px-5 py-4 ${
+                          row.closed ? "opacity-60" : ""
+                        }`}
                       >
-                        <div className="text-sm font-semibold">
+                        <div
+                          className={`text-sm font-semibold ${
+                            row.closed ? "line-through" : ""
+                          }`}
+                        >
                           {row.label}
                         </div>
 
-                        <div className="text-base font-bold">
-                          {row.rm}
-                          {row.usd && (
-                            <span className="text-sm text-gray-500">
-                              {" "}
-                              / {row.usd}
+                        <div className="flex items-center gap-2 text-base font-bold">
+                          <span className={row.closed ? "line-through" : ""}>
+                            {row.rm}
+                            {row.usd && (
+                              <span className="text-sm text-gray-500">
+                                {" "}
+                                / {row.usd}
+                              </span>
+                            )}
+                          </span>
+
+                          {row.closed && (
+                            <span className="rounded-full bg-gray-200 px-2 py-1 text-xs font-semibold text-gray-600 no-underline">
+                              Closed
                             </span>
                           )}
                         </div>
@@ -98,9 +104,7 @@ export default function RegistrationPage() {
                     ))}
                   </div>
 
-                  <p className="mt-5 text-sm text-gray-600">
-                    {f.note}
-                  </p>
+                  <p className="mt-5 text-sm text-gray-600">{f.note}</p>
                 </div>
               ))}
             </div>
@@ -127,7 +131,6 @@ export default function RegistrationPage() {
 
               {/* BUTTONS */}
               <div className="mt-10 grid gap-4 sm:grid-cols-2 max-w-2xl mx-auto">
-
                 {/* Presenter */}
                 <a
                   href={presenterLink}
@@ -156,7 +159,6 @@ export default function RegistrationPage() {
                     Non-Presenter Registration
                   </span>
                 </a>
-
               </div>
 
               <p className="mt-5 text-center text-sm text-gray-600">
@@ -172,7 +174,7 @@ export default function RegistrationPage() {
 
             <ul className="mt-5 space-y-3 text-gray-600">
               {[
-                "Early bird rates are offered based on slot availability.",
+                "Early bird registration is now closed. Normal rates apply.",
                 "Student category requires a valid student ID.",
                 "Participants are responsible for selecting the appropriate category.",
                 "The organiser reserves the right to verify eligibility and request supporting documentation where necessary.",
@@ -184,10 +186,8 @@ export default function RegistrationPage() {
               ))}
             </ul>
           </div>
-
         </div>
       </section>
-
     </main>
   );
 }
