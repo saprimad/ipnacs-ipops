@@ -30,7 +30,7 @@ const speakers: Speaker[] = [
     category: "Plenary",
     title:
       "Stewarding Connected Innovation: Advancing Digital Transformation Across the Pharmaceutical Ecosystem",
-    image: "/speakers/azuana.jpg",
+    image: "/speakers/azuana.png",
   },
   {
     name: "Professor Dr Suzana Shahar",
@@ -48,7 +48,7 @@ const speakers: Speaker[] = [
     category: "Plenary",
     title:
       "Digital Frontier in Obesity Management: Leveraging Digital Transformation for Better Outcomes",
-    image: "/speakers/rohana-new.JPG",
+    image: "/speakers/rohana.png",
   },
   {
     name: "Professor Dr Varisa Pongrakhananon",
@@ -57,7 +57,7 @@ const speakers: Speaker[] = [
     category: "Plenary",
     title:
       "Reprogramming Cancer through Integrative Omics and Computational Pharmacology: From Biomarker Discovery to Precision Targeting of Cellular Signaling",
-    image: "/speakers/Varissa.png",
+    image: "/speakers/varissa.png",
   },
   {
     name: "Professor Dr Kazunori Akimoto",
@@ -66,7 +66,7 @@ const speakers: Speaker[] = [
     category: "Plenary",
     title:
       "Data-Driven Integrative Cancer Research: Bridging Computational Discovery, Molecular Mechanisms, and Clinical Outcomes",
-    image: "/speakers/akimoto.jpeg",
+    image: "/speakers/akimoto.png",
   },
   {
     name: "Associate Professor Ee Pui Lai, Rachel",
@@ -76,7 +76,7 @@ const speakers: Speaker[] = [
     category: "Plenary",
     title:
       "Precision Design and Programming Trap-and-Kill Peptide Nanonets for Novel Antimicrobial Therapy",
-    image: "/speakers/ee.jpg",
+    image: "/speakers/ee.png",
   },
 
   // INVITED SPEAKERS
@@ -87,7 +87,7 @@ const speakers: Speaker[] = [
     category: "Invited",
     title:
       "Connected data, transforming pharma: Lessons from MyHDW and AI potential",
-    image: "/speakers/ismat.jpg",
+    image: "/speakers/ismat.png",
   },
   {
     name: "Associate Professor Dr Kosuke Kusamori",
@@ -95,7 +95,7 @@ const speakers: Speaker[] = [
     affiliationShort: "TUS",
     category: "Invited",
     title: "Regenerative cell-based therapy for lymph node reconstruction",
-    image: "/speakers/kosuke.jpg",
+    image: "/speakers/kosuke.png",
   },
   {
     name: "Professor Dr Wong Tin Wui",
@@ -104,7 +104,7 @@ const speakers: Speaker[] = [
     category: "Invited",
     title:
       "Natural product discovery and delivery: Modulation of gut-liver axis for hepatic diseases",
-    image: "/speakers/wong.jpg",
+    image: "/speakers/wong.png",
   },
   {
     name: "Associate Professor Ho Ket Li",
@@ -112,7 +112,7 @@ const speakers: Speaker[] = [
     affiliationShort: "IMU",
     category: "Invited",
     title: "AI Revolution: Transformation of Health Education",
-    image: "/speakers/ho.jpg",
+    image: "/speakers/ho.png",
   },
   {
     name: "Associate Professor Dr Shazia Jamshed",
@@ -121,7 +121,7 @@ const speakers: Speaker[] = [
     category: "Invited",
     title:
       "Applications of Digital Health: Current Insights and Future Directions",
-    image: "/speakers/shazia.jpg",
+    image: "/speakers/shazia.png",
   },
   {
     name: "Professor Dr Teh Lay Kek",
@@ -130,7 +130,7 @@ const speakers: Speaker[] = [
     category: "Invited",
     title:
       "From Pharmacogenomics to Pharmacophytogenomics: Diversity Driven Pathways in Precision Health",
-    image: "/speakers/teh.jpeg",
+    image: "/speakers/teh.png",
   },
   {
     name: "Professor Dr Takehisa Hanawa",
@@ -148,7 +148,7 @@ const speakers: Speaker[] = [
     category: "Invited",
     title:
       "From Classroom to Connected Care: Digital Transformation of Pharmacy Education and Practice",
-    image: "/speakers/aleth.jpg",
+    image: "/speakers/aleth.png",
   },
 
   // PROFESSORIAL LECTURE
@@ -158,7 +158,7 @@ const speakers: Speaker[] = [
     affiliationShort: "UiTM",
     category: "Professorial Lecture",
     title: "Professorial Lecture",
-    image: "/speakers/kala.jpeg",
+    image: "/speakers/kala.png",
   },
 ];
 
@@ -180,7 +180,10 @@ export default async function SpeakerSlugPage({
   const { slug } = await params;
 
   const speaker = getSpeakerBySlug(slug);
-  if (!speaker) return notFound();
+
+  if (!speaker) {
+    notFound();
+  }
 
   const affiliation =
     speaker.affiliationShort && speaker.affiliationShort.trim() !== ""
@@ -213,7 +216,7 @@ export default async function SpeakerSlugPage({
                 alt={speaker.name}
                 fill
                 sizes="(max-width: 640px) 90vw, 560px"
-                className="object-cover"
+                className="object-cover object-top"
                 priority
               />
             ) : (
