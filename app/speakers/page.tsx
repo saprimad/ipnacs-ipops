@@ -46,7 +46,7 @@ const speakers: Speaker[] = [
     category: "Plenary",
     title:
       "Neuroprotective Model for Healthy Aging: The Value of Nutraceutical and Lifestyle Modification",
-    image: undefined,
+    image: "/speakers/suzana.png",
   },
   {
     name: "Professor Dr Rohana Abd Ghani",
@@ -146,7 +146,7 @@ const speakers: Speaker[] = [
     category: "Invited",
     title:
       "Pharmaceutical Technology for the Improvement of the Bioavailability of Drugs",
-    image: undefined,
+    image: "/speakers/takehisa.png",
   },
   {
     name: "Professor Dr Aleth Therese Dacanay",
