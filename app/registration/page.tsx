@@ -31,7 +31,9 @@ export default function RegistrationPage() {
       {/* HEADER */}
       <section className="bg-white py-16 md:py-20 border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Registration</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            Registration
+          </h1>
 
           <div className="mx-auto h-1 w-16 rounded bg-[#E5B82E] mb-6" />
 
@@ -59,7 +61,7 @@ export default function RegistrationPage() {
               <div className="mx-auto mt-3 h-1 w-12 rounded bg-[#E5B82E]" />
             </div>
 
-            <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-2">
+            <div className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-3">
               {fees.map((f) => (
                 <div
                   key={f.title}
@@ -107,6 +109,63 @@ export default function RegistrationPage() {
                   <p className="mt-5 text-sm text-gray-600">{f.note}</p>
                 </div>
               ))}
+
+              {/* PAYMENT DEADLINE REMINDER */}
+              <aside className="rounded-2xl border border-[#E5B82E]/40 bg-[#FFF9E6] p-8 shadow-sm hover:shadow-md transition">
+                <div className="mb-5 flex items-start gap-3">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#E5B82E] text-lg">
+                    📢
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-semibold text-[#0F2A4D]">
+                      Payment Deadline Reminder
+                    </h3>
+                    <p className="mt-1 text-sm leading-relaxed text-gray-600">
+                      Participants are reminded to complete payment according to
+                      the following deadlines based on your chosen payment
+                      method:
+                    </p>
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                  <div className="rounded-xl border border-gray-200 bg-white px-4 py-3">
+                    <p className="text-sm font-semibold text-[#0F2A4D]">
+                      UiTM FinePay Link
+                    </p>
+                    <p className="mt-1 text-sm text-gray-600">
+                      by 10 August 2026
+                    </p>
+                  </div>
+
+                  <div className="rounded-xl border border-gray-200 bg-white px-4 py-3">
+                    <p className="text-sm font-semibold text-[#0F2A4D]">
+                      Bank Transfer
+                    </p>
+                    <p className="mt-1 text-sm text-gray-600">
+                      including for international participants
+                    </p>
+                    <p className="mt-1 text-sm text-gray-600">
+                      by 31 July 2026
+                    </p>
+                  </div>
+
+                  <div className="rounded-xl border border-gray-200 bg-white px-4 py-3">
+                    <p className="text-sm font-semibold text-[#0F2A4D]">
+                      Local Order (LO)
+                    </p>
+                    <p className="mt-1 text-sm text-gray-600">
+                      by 31 July 2026
+                    </p>
+                  </div>
+                </div>
+
+                <p className="mt-5 rounded-xl bg-[#0F2A4D] px-4 py-3 text-sm leading-relaxed text-white">
+                  Please ensure payment is made within the stipulated timeframe
+                  to secure your registration.
+                </p>
+              </aside>
             </div>
           </div>
 
