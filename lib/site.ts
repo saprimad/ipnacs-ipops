@@ -25,18 +25,18 @@ export const schedule = [
         time: "09:30–10:00",
         title: "Opening Speech",
         descriptionLines: [
-          "Opening Speech by Vice Chancellor of Universiti Teknologi MARA (UiTM)",
+          "Opening Speech by the Vice Chancellor of Universiti Teknologi MARA (UiTM)",
         ],
       },
       {
         time: "10:00–11:00",
-        title: "Teabreak & Poster Session",
+        title: "Tea Break & Poster Session",
       },
       {
         time: "11:00–12:00",
         title: "Keynote Lecture",
         descriptionLines: [
-          "Dr Azuana Ramli",
+          "Dr Azuana Ramli, Ministry of Health Malaysia",
           "_Stewarding Connected Innovation: Advancing Digital Transformation Across the Pharmaceutical Ecosystem_",
         ],
       },
@@ -44,7 +44,7 @@ export const schedule = [
         time: "12:00–12:50",
         title: "Plenary Session I",
         descriptionLines: [
-          "Prof. Dr. Suzana Shahar",
+          "Prof Dr Suzana Shahar, Universiti Kebangsaan Malaysia",
           "_Neuroprotective Model for Healthy Aging: The Value of Nutraceutical and Lifestyle Modification_",
         ],
       },
@@ -57,17 +57,17 @@ export const schedule = [
         title: "Parallel Plenary Sessions",
         tracks: [
           {
-            label: "Hall A",
-            name: "Prof Dr. Varisa Pongrakhananon",
+            label: "Plenary Session II · Hall A",
+            name: "Prof Dr Varisa Pongrakhananon",
             role: "Chulalongkorn University",
             title:
               "_Reprogramming Cancer through Integrative Omics and Computational Pharmacology: From Biomarker Discovery to Precision Targeting of Cellular Signaling_",
           },
           {
-            label: "Hall B",
-            name: "Prof Dr. Kazunori Akimoto",
+            label: "Plenary Session III · Hall B",
+            name: "Prof Dr Kazunori Akimoto",
             role:
-              "Professor, Faculty of Pharmaceutical Sciences, Tokyo University of Science (TUS)",
+              "Faculty of Pharmaceutical Sciences, Tokyo University of Science (TUS)",
             title:
               "_Data-Driven Integrative Cancer Research: Bridging Computational Discovery, Molecular Mechanisms, and Clinical Outcomes_",
           },
@@ -80,29 +80,31 @@ export const schedule = [
           {
             label: "Track 1",
             name: "Dr Ismat binti Mohd Sulaiman",
-            role: "Ketua Penolong Pengarah Kanan, Pusat Informatik Kesihatan",
+            role:
+              "Ketua Penolong Pengarah Kanan, Pusat Informatik Kesihatan",
             title:
-              "_Connected data, transforming pharma: Lessons from MyHDW and AI potential_",
+              "_Connected Data, Transforming Pharma: Lessons from MyHDW and AI Potential_",
           },
           {
             label: "Track 2",
-            name: "AP Dr Kosuke Kusamori",
+            name: "Associate Professor Dr Kosuke Kusamori",
             role: "Tokyo University of Science (TUS)",
             title:
-              "_Regenerative cell-based therapy for lymph node reconstruction_",
+              "_Regenerative Cell-Based Therapy for Lymph Node Reconstruction_",
           },
           {
             label: "Track 3",
             name: "Prof Wong Tin Wui",
             role: "Universiti Teknologi MARA (UiTM)",
             title:
-              "_Natural product discovery and delivery: Modulation of gut-liver axis for hepatic diseases_",
+              "_Natural Product Discovery and Delivery: Modulation of the Gut–Liver Axis for Hepatic Diseases_",
           },
           {
             label: "Track 4",
-            name: "Assoc Prof Ho Ket Li",
+            name: "Associate Professor Ho Ket Li",
             role: "International Medical University (IMU)",
-            title: "_AI Revolution: Transformation of Health Education_",
+            title:
+              "_AI Revolution: Transformation of Health Education_",
           },
         ],
       },
@@ -127,6 +129,10 @@ export const schedule = [
         title: "Oral Presentations",
       },
       {
+        time: "16:45–17:00",
+        title: "Oral Presentations",
+      },
+      {
         time: "17:00–18:30",
         title: "Hi-Tea & Networking",
       },
@@ -142,15 +148,15 @@ export const schedule = [
         title: "Parallel Plenary Sessions",
         tracks: [
           {
-            label: "Hall A",
+            label: "Plenary Session IV · Hall A",
             name: "Prof Dr Rohana Abd Ghani",
             role:
-              "Consultant Endocrinologist and Professor of Medicine, Faculty of Medicine, UiTM",
+              "Consultant Endocrinologist and Professor of Medicine, Faculty of Medicine, Universiti Teknologi MARA",
             title:
               "_Digital Frontier in Obesity Management: Leveraging Digital Transformation for Better Outcomes_",
           },
           {
-            label: "Hall B",
+            label: "Plenary Session V · Hall B",
             name: "Associate Professor Ee Pui Lai, Rachel",
             role:
               "Department of Pharmacy and Pharmaceutical Sciences, National University of Singapore",
@@ -161,7 +167,7 @@ export const schedule = [
       },
       {
         time: "10:00–10:30",
-        title: "Teabreak & Poster Session",
+        title: "Tea Break & Poster Session",
       },
       {
         time: "10:30–11:00",
@@ -169,17 +175,17 @@ export const schedule = [
         tracks: [
           {
             label: "Track 5",
-            name: "AP Dr Shazia Jamshed",
+            name: "Associate Professor Dr Shazia Jamshed",
             role: "International Medical University (IMU)",
             title:
               "_Applications of Digital Health: Current Insights and Future Directions_",
           },
           {
             label: "Track 6",
-            name: "Prof. Teh Lay Kek",
+            name: "Prof Dr Teh Lay Kek",
             role: "Universiti Teknologi MARA (UiTM)",
             title:
-              "_From Pharmacogenomics to Pharmacophytogenomics: Diversity Driven Pathways in Precision Health_",
+              "_From Pharmacogenomics to Pharmacophytogenomics: Diversity-Driven Pathways in Precision Health_",
           },
           {
             label: "Track 7",
@@ -190,8 +196,9 @@ export const schedule = [
           },
           {
             label: "Track 8",
-            name: "Prof. Aleth Therese Dacanay",
-            role: "Dean, Faculty of Pharmacy, University of Santo Tomas",
+            name: "Prof Aleth Therese Dacanay",
+            role:
+              "Dean, Faculty of Pharmacy, University of Santo Tomas",
             title:
               "_From Classroom to Connected Care: Digital Transformation of Pharmacy Education and Practice_",
           },
@@ -227,20 +234,21 @@ export const schedule = [
       },
       {
         time: "14:45–16:30",
-        title: "Closing Plenary",
+        title: "Closing Plenary & Professorial Lecture",
         descriptionLines: [
-          "Professorial Lecture by Prof Dr Kalavathy Ramasamy",
+          "Prof Dr Kalavathy Ramasamy",
+          "_Listen to Your Gut_",
         ],
       },
       {
         time: "16:30–17:00",
-        title: "Teabreak",
+        title: "Tea Break",
       },
       {
         time: "17:00–17:30",
         title: "Prize-Giving",
         descriptionLines: [
-          "Awards for Best Oral Presentations & Collaborator Recognition",
+          "Awards for Best Oral & Poster Presentations and Collaborator Recognition",
         ],
       },
       {
