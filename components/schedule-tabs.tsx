@@ -60,7 +60,10 @@ function DescriptionBlock({
         </p>
 
         {rest.map((line, index) => (
-          <p key={`${line}-${index}`} className="leading-relaxed text-slate-700">
+          <p
+            key={`${line}-${index}`}
+            className="leading-relaxed text-slate-700"
+          >
             {renderItalics(line)}
           </p>
         ))}
@@ -89,7 +92,11 @@ export function ScheduleTabs({
   const [activeKey, setActiveKey] = useState<string>(firstKey);
 
   useEffect(() => {
-    if (!days.some((day) => day.key === activeKey)) {
+    const activeDayStillExists = days.some(
+      (day) => day.key === activeKey
+    );
+
+    if (!activeDayStillExists) {
       setActiveKey(firstKey);
     }
   }, [days, activeKey, firstKey]);
@@ -147,7 +154,7 @@ export function ScheduleTabs({
         })}
       </div>
 
-      {/* Active day content */}
+      {/* Active programme day */}
       <div
         id={`schedule-panel-${activeDay.key}`}
         role="tabpanel"
@@ -169,6 +176,7 @@ export function ScheduleTabs({
               key={`${activeDay.key}-${item.time}-${itemIndex}`}
               className="rounded-lg border border-slate-200 bg-white p-4 shadow-sm"
             >
+              {/* Session heading */}
               <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                 <div>
                   <h3 className="text-sm font-semibold text-slate-900 sm:text-base">
@@ -196,7 +204,7 @@ export function ScheduleTabs({
                       ? "grid-cols-1"
                       : item.tracks.length === 2
                         ? "grid-cols-1 md:grid-cols-2"
-                        : "grid-cols-1 sm:grid-cols-2 xl:grid-cols-4",
+                        : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4",
                   ].join(" ")}
                 >
                   {item.tracks.map((track, trackIndex) => (
