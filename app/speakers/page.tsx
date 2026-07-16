@@ -164,7 +164,7 @@ const speakers: Speaker[] = [
     affiliationFull: "Universiti Teknologi MARA",
     affiliationShort: "UiTM",
     category: "Professorial Lecture",
-    title: "Professorial Lecture",
+    title: "Listen to Your Gut",
     image: "/speakers/kala.png",
   },
 ];
