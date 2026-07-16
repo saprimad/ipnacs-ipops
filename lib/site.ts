@@ -58,10 +58,10 @@ export const schedule = [
         tracks: [
           {
             label: "Plenary Session II · Hall A",
-            name: "Prof Dr Varisa Pongrakhananon",
-            role: "Chulalongkorn University",
+            name: "Prof Dr Rohana Abd Ghani",
+            role: "Universiti Teknologi MARA (UiTM)",
             title:
-              "_Reprogramming Cancer through Integrative Omics and Computational Pharmacology: From Biomarker Discovery to Precision Targeting of Cellular Signaling_",
+              "_Digital Frontier in Obesity Management: Leveraging Digital Transformation for Better Outcomes_",
           },
           {
             label: "Plenary Session III · Hall B",
@@ -149,11 +149,10 @@ export const schedule = [
         tracks: [
           {
             label: "Plenary Session IV · Hall A",
-            name: "Prof Dr Rohana Abd Ghani",
-            role:
-              "Consultant Endocrinologist and Professor of Medicine, Faculty of Medicine, Universiti Teknologi MARA",
+            name: "Prof Dr Varisa Pongrakhananon",
+            role: "Chulalongkorn University",
             title:
-              "_Digital Frontier in Obesity Management: Leveraging Digital Transformation for Better Outcomes_",
+              "_Reprogramming Cancer through Integrative Omics and Computational Pharmacology: From Biomarker Discovery to Precision Targeting of Cellular Signaling_",
           },
           {
             label: "Plenary Session V · Hall B",
@@ -197,8 +196,7 @@ export const schedule = [
           {
             label: "Track 8",
             name: "Prof Aleth Therese Dacanay",
-            role:
-              "Dean, Faculty of Pharmacy, University of Santo Tomas",
+            role: "Dean, Faculty of Pharmacy, University of Santo Tomas",
             title:
               "_From Classroom to Connected Care: Digital Transformation of Pharmacy Education and Practice_",
           },
