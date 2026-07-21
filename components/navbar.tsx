@@ -9,7 +9,7 @@ const links = [
   ["Schedule", "/schedule"],
   ["Venue", "/venue"],
   ["Submit Abstract", "/faq"],
-  ["Guidelines", "/guidelines"],
+  ["Presenter Guidelines", "/guidelines"],
   ["Contact", "/contact"],
 ] as const;
 
@@ -23,7 +23,7 @@ export function Navbar() {
           IPNACS–IPOPS 2026
         </Link>
 
-        <ul className="hidden items-center gap-6 text-sm md:flex">
+        <ul className="hidden items-center gap-5 text-sm md:flex">
           {links.map(([label, href]) => (
             <li key={href}>
               <Link
@@ -38,7 +38,7 @@ export function Navbar() {
           <li>
             <Link
               href="/registration"
-              className="ml-2 rounded-lg bg-[#0F2A4D] px-4 py-2 font-medium text-white transition hover:opacity-90"
+              className="ml-1 rounded-lg bg-[#0F2A4D] px-4 py-2 font-medium text-white transition hover:opacity-90"
             >
               Register
             </Link>
