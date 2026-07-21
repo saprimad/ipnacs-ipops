@@ -126,23 +126,24 @@ export default function HomePage() {
             <div className="rounded-xl border border-slate-200 bg-white p-10 shadow-sm">
               <div className="space-y-5 text-slate-700 leading-relaxed text-base md:text-lg">
                 <p>
-                  Welcome to the official portal for the 8th International Conference
-                  on Pharmaceutical, Nutraceutical, and Cosmeceutical Sciences
-                  (IPNaCS) and the 11th International Postgraduate Conference on
-                  Pharmaceutical Sciences (IPoPS) 2026.
+                  Welcome to the official portal for the 8th International
+                  Conference on Pharmaceutical, Nutraceutical, and Cosmeceutical
+                  Sciences (IPNaCS) and the 11th International Postgraduate
+                  Conference on Pharmaceutical Sciences (IPoPS) 2026.
                 </p>
 
                 <p>
-                  This year is a landmark celebration marking the 25th Anniversary
-                  of the Faculty of Pharmacy, Universiti Teknologi MARA. For over
-                  two decades, this collaborative spirit has been the heartbeat of
-                  our community, and we are honoured to host this silver jubilee
-                  event.
+                  This year is a landmark celebration marking the 25th
+                  Anniversary of the Faculty of Pharmacy, Universiti Teknologi
+                  MARA. For over two decades, this collaborative spirit has been
+                  the heartbeat of our community, and we are honoured to host
+                  this silver jubilee event.
                 </p>
 
                 <p>
-                  The landscape of health and wellness is shifting. As we celebrate
-                  25 years of academic excellence, our focus turns toward the future:{" "}
+                  The landscape of health and wellness is shifting. As we
+                  celebrate 25 years of academic excellence, our focus turns
+                  toward the future:{" "}
                   <span className="font-semibold text-[#0F2A4D]">
                     Digital Transformation
                   </span>
@@ -160,15 +161,122 @@ export default function HomePage() {
                 <p>
                   IPNaCS and IPoPS are the result of a deep-rooted partnership
                   spanning more than 20 years. Whether you are an established
-                  researcher, an industry professional, or a postgraduate student
-                  at the start of your journey, this conference offers a platform
-                  to exchange ideas, forge global partnerships, and celebrate a
-                  quarter-century of pharmaceutical progress.
+                  researcher, an industry professional, or a postgraduate
+                  student at the start of your journey, this conference offers a
+                  platform to exchange ideas, forge global partnerships, and
+                  celebrate a quarter-century of pharmaceutical progress.
                 </p>
 
                 <p className="font-semibold text-[#0F2A4D]">
                   Join us in 2026 as we honour our past and digitise our future.
                 </p>
+              </div>
+            </div>
+
+            {/* ================= DEAN PREFACE ================= */}
+            <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm sm:p-10">
+              <div className="text-center">
+                <h3 className="text-2xl font-bold tracking-tight text-[#0F2A4D] sm:text-3xl">
+                  Preface from the Dean
+                </h3>
+              </div>
+
+              <div className="mt-10 text-base leading-relaxed text-slate-700 md:text-lg">
+                <div className="mx-auto mb-6 flex justify-center sm:float-left sm:mb-4 sm:mr-8">
+                  <img
+                    src="/dean.png"
+                    alt="Professor Dato’ Dr. Abu Bakar Abdul Majeed"
+                    className="h-64 w-auto object-contain"
+                    loading="lazy"
+                  />
+                </div>
+
+                <p className="mb-5">
+                  It is with great pleasure that I welcome you to the 8th
+                  International Conference on Pharmaceutical, Nutraceutical, and
+                  Cosmeceutical Sciences (IPNaCS) and the 11th International
+                  Postgraduate Conference on Pharmaceutical Sciences (IPoPS)
+                  2026, hosted by the Faculty of Pharmacy, Universiti Teknologi
+                  MARA (UiTM).
+                </p>
+
+                <p className="mb-5">
+                  The year 2026 marks a significant milestone for our faculty as
+                  we celebrate our 25th Anniversary. Over the past quarter of a
+                  century, the Faculty of Pharmacy, UiTM has grown into a vibrant
+                  academic and research community committed to advancing
+                  pharmaceutical sciences, nurturing future leaders, and
+                  contributing meaningfully to healthcare and society. This
+                  silver jubilee celebration provides a timely opportunity to
+                  reflect on our journey while looking forward to the evolving
+                  future of the pharmaceutical and health sciences landscape.
+                </p>
+
+                <p className="mb-5">
+                  The theme of this year’s conference, Digital Transformation,
+                  highlights the profound ways in which emerging technologies
+                  are reshaping research, practice, and innovation in health and
+                  wellness. Advances in artificial intelligence, digital health
+                  monitoring, data analytics, and precision medicine are rapidly
+                  transforming how medicines are discovered, developed,
+                  delivered, and monitored. These developments present exciting
+                  opportunities for interdisciplinary collaboration across
+                  pharmacology and pharmacy practice, nutraceutical sciences, and
+                  cosmeceutical innovation.
+                </p>
+
+                <p className="mb-5">
+                  IPNaCS and IPoPS have, for more than two decades, served as
+                  important platforms for scholarly exchange and international
+                  collaboration. This year’s conference continues that tradition
+                  through the strong partnership of our distinguished
+                  co-organising institutions, including Tokyo University of
+                  Science, IMU University, Chulalongkorn University, Universitas
+                  Indonesia, University of Santo Tomas, and Josai University.
+                  Together, these collaborations reflect our shared commitment to
+                  advancing scientific knowledge and fostering meaningful global
+                  engagement.
+                </p>
+
+                <p className="mb-5">
+                  The conference programme brings together renowned speakers,
+                  researchers, industry professionals, and postgraduate scholars
+                  from diverse disciplines. Through keynote and plenary lectures,
+                  invited sessions, and scientific presentations, participants
+                  will have the opportunity to share innovative research,
+                  discuss emerging challenges, and explore new avenues for
+                  collaboration in pharmaceutical sciences and related fields.
+                </p>
+
+                <p className="mb-5">
+                  On behalf of the Faculty of Pharmacy, Universiti Teknologi
+                  MARA, I extend my sincere appreciation to all speakers,
+                  organising committee members, partners, sponsors, and
+                  participants whose contributions have made this conference
+                  possible. Your support and engagement are essential in
+                  sustaining the spirit of collaboration and academic excellence
+                  that defines IPNaCS and IPoPS.
+                </p>
+
+                <p className="mb-5">
+                  I warmly welcome you to IPNaCS–IPoPS 2026, and I hope this
+                  conference will inspire meaningful discussions, fruitful
+                  collaborations, and new ideas that will shape the future of
+                  pharmaceutical sciences and pharmacy practice.
+                </p>
+
+                <div className="clear-both pt-4">
+                  <p className="font-bold text-[#0F2A4D]">
+                    Professor Dato’ Dr. Abu Bakar Abdul Majeed
+                  </p>
+                  <p className="text-sm text-slate-600">
+                    Dean, Faculty of Pharmacy
+                    <br />
+                    Universiti Teknologi MARA (UiTM)
+                    <br />
+                    Selangor, Malaysia
+                  </p>
+                </div>
               </div>
             </div>
 
@@ -179,8 +287,8 @@ export default function HomePage() {
                 </h3>
                 <p className="mx-auto mt-3 max-w-3xl text-slate-600">
                   Our conference is supported by a network of universities and
-                  academic partners. Click a logo to visit the official institution
-                  website.
+                  academic partners. Click a logo to visit the official
+                  institution website.
                 </p>
               </div>
 
@@ -205,7 +313,8 @@ export default function HomePage() {
               </div>
 
               <p className="mt-8 text-center text-sm text-slate-500">
-                Logos are displayed for identification of collaborating institutions.
+                Logos are displayed for identification of collaborating
+                institutions.
               </p>
             </div>
 
@@ -218,14 +327,14 @@ export default function HomePage() {
                 <p>
                   IPNaCS &amp; IPoPS 2026 welcomes researchers, academics,
                   healthcare professionals, industry partners and postgraduate
-                  students across pharmaceutical, nutraceutical, cosmeceutical and
-                  health sciences.
+                  students across pharmaceutical, nutraceutical, cosmeceutical
+                  and health sciences.
                 </p>
                 <p>
-                  Participants will gain opportunities to share findings, connect
-                  with international collaborators, and explore how digital
-                  transformation is reshaping research, education and practice in
-                  health and wellness.
+                  Participants will gain opportunities to share findings,
+                  connect with international collaborators, and explore how
+                  digital transformation is reshaping research, education and
+                  practice in health and wellness.
                 </p>
               </div>
             </div>
