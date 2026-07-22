@@ -10,6 +10,20 @@ type TrackItem = {
   location?: string;
 };
 
+type OralPresentation = {
+  id: string;
+  title: string;
+  track?: string;
+};
+
+type OralTrack = {
+  key: string;
+  label: string;
+  name: string;
+  location?: string;
+  presentations: readonly OralPresentation[];
+};
+
 type ScheduleItem = {
   time: string;
   title: string;
@@ -17,6 +31,7 @@ type ScheduleItem = {
   descriptionLines?: readonly string[];
   location?: string;
   tracks?: readonly TrackItem[];
+  oralTracks?: readonly OralTrack[];
 };
 
 type ScheduleDay = {
@@ -82,6 +97,129 @@ function DescriptionBlock({
   return null;
 }
 
+function OralTrackTabs({
+  oralTracks,
+}: {
+  oralTracks: readonly OralTrack[];
+}) {
+  const firstTrackKey = useMemo(
+    () => oralTracks?.[0]?.key ?? "",
+    [oralTracks]
+  );
+
+  const [activeTrackKey, setActiveTrackKey] =
+    useState<string>(firstTrackKey);
+
+  useEffect(() => {
+    const activeTrackStillExists = oralTracks.some(
+      (track) => track.key === activeTrackKey
+    );
+
+    if (!activeTrackStillExists) {
+      setActiveTrackKey(firstTrackKey);
+    }
+  }, [oralTracks, activeTrackKey, firstTrackKey]);
+
+  const activeTrack = useMemo(
+    () =>
+      oralTracks.find((track) => track.key === activeTrackKey) ??
+      oralTracks[0],
+    [oralTracks, activeTrackKey]
+  );
+
+  if (!activeTrack) {
+    return null;
+  }
+
+  return (
+    <div className="mt-4 overflow-hidden rounded-lg border border-slate-200 bg-slate-50">
+      <div
+        className="grid grid-cols-2 gap-2 border-b border-slate-200 bg-white p-3 md:grid-cols-4"
+        role="tablist"
+        aria-label="Oral presentation tracks"
+      >
+        {oralTracks.map((track) => {
+          const isActive = track.key === activeTrackKey;
+
+          return (
+            <button
+              key={track.key}
+              type="button"
+              role="tab"
+              aria-selected={isActive}
+              onClick={() => setActiveTrackKey(track.key)}
+              className={[
+                "w-full rounded-lg px-4 py-3 text-center text-base font-bold transition",
+                "focus:outline-none focus-visible:ring-2 focus-visible:ring-[#0F2A4D] focus-visible:ring-offset-2",
+                isActive
+                  ? "bg-[#0F2A4D] text-white shadow-sm"
+                  : "bg-slate-100 text-[#0F2A4D] hover:bg-slate-200",
+              ].join(" ")}
+            >
+              {track.label}
+            </button>
+          );
+        })}
+      </div>
+
+      <div className="p-4">
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+          <div>
+            <h4 className="text-lg font-bold text-[#0F2A4D]">
+              {activeTrack.label}
+            </h4>
+
+            <p className="mt-1 text-sm font-semibold leading-relaxed text-slate-900">
+              {activeTrack.name}
+            </p>
+
+            {activeTrack.location ? (
+              <p className="mt-1 text-xs font-medium uppercase tracking-wide text-slate-500">
+                {activeTrack.location}
+              </p>
+            ) : null}
+          </div>
+
+          <span className="w-fit rounded-full bg-white px-3 py-1 text-xs font-semibold text-slate-500">
+            {activeTrack.presentations.length} presentations
+          </span>
+        </div>
+
+        <div className="mt-4 space-y-3">
+          {activeTrack.presentations.map((presentation, index) => (
+            <article
+              key={`${presentation.id}-${index}`}
+              className="rounded-lg border border-slate-200 bg-white p-4"
+            >
+              <div className="flex gap-3">
+                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#0F2A4D] text-xs font-bold text-white">
+                  {index + 1}
+                </span>
+
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+                    {presentation.id}
+                  </p>
+
+                  <h5 className="mt-1 text-sm font-semibold leading-relaxed text-slate-900">
+                    {renderItalics(presentation.title)}
+                  </h5>
+
+                  {presentation.track ? (
+                    <p className="mt-2 text-xs font-medium text-slate-500">
+                      {presentation.track}
+                    </p>
+                  ) : null}
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function ScheduleTabs({
   days,
 }: {
@@ -112,7 +250,6 @@ export function ScheduleTabs({
 
   return (
     <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
-      {/* Day tabs */}
       <div
         className="flex flex-wrap gap-2 border-b border-slate-200 bg-slate-50 p-4"
         role="tablist"
@@ -154,7 +291,6 @@ export function ScheduleTabs({
         })}
       </div>
 
-      {/* Active programme day */}
       <div
         id={`schedule-panel-${activeDay.key}`}
         role="tabpanel"
@@ -176,7 +312,6 @@ export function ScheduleTabs({
               key={`${activeDay.key}-${item.time}-${itemIndex}`}
               className="rounded-lg border border-slate-200 bg-white p-4 shadow-sm"
             >
-              {/* Session heading */}
               <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                 <div>
                   <h3 className="text-sm font-semibold text-slate-900 sm:text-base">
@@ -190,13 +325,14 @@ export function ScheduleTabs({
                   ) : null}
                 </div>
 
-                <div className="shrink-0 text-sm font-bold text-[#0F2A4D]">
+                <div className="w-fit shrink-0 rounded-full bg-slate-100 px-3 py-1 text-sm font-bold text-[#0F2A4D]">
                   {item.time}
                 </div>
               </div>
 
-              {/* Parallel tracks */}
-              {item.tracks?.length ? (
+              {item.oralTracks?.length ? (
+                <OralTrackTabs oralTracks={item.oralTracks} />
+              ) : item.tracks?.length ? (
                 <div
                   className={[
                     "mt-4 grid gap-4",

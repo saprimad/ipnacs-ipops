@@ -109,28 +109,185 @@ export const schedule = [
         ],
       },
       {
-        time: "15:30–15:45",
+        time: "15:30–17:00",
         title: "Oral Presentations",
-      },
-      {
-        time: "15:45–16:00",
-        title: "Oral Presentations",
-      },
-      {
-        time: "16:00–16:15",
-        title: "Oral Presentations",
-      },
-      {
-        time: "16:15–16:30",
-        title: "Oral Presentations",
-      },
-      {
-        time: "16:30–16:45",
-        title: "Oral Presentations",
-      },
-      {
-        time: "16:45–17:00",
-        title: "Oral Presentations",
+        oralTracks: [
+          {
+            key: "track-1",
+            label: "Track 1",
+            name: "Pharmacy & Digital Health / Policy, Regulation & Ethics",
+            location: "Track 1",
+            presentations: [
+              {
+                id: "OP049",
+                title:
+                  "A Mobile Health RCT on Blood Pressure Control in Hypertension",
+                track: "Pharmacy & Digital Health",
+              },
+              {
+                id: "OP059",
+                title:
+                  "Patient-Reported Instruments for Assessing Inhaler Adherence in Asthma and COPD in Low- and Middle-Income Countries: A Scoping Review",
+                track: "Pharmacy & Digital Health",
+              },
+              {
+                id: "OP095",
+                title:
+                  "BASELINE DATA FOR A QUALICOPC-PCPSSP STUDY AND QUALITY OF LIFE EVALUATION ON T2DM OLDER ADULTS IN A MALAYSIAN SETTING",
+                track: "Policy, Regulation & Ethics",
+              },
+              {
+                id: "OP024",
+                title:
+                  "REGULATORY GOVERNANCE OF OVER-THE-COUNTER MEDICINE DISTRIBUTION IN NON-PHARMACY RETAIL SETTINGS: A COMPARATIVE POLICY ANALYSIS OF MALAYSIA AND INDONESIA",
+                track: "Policy, Regulation & Ethics",
+              },
+              {
+                id: "OP055",
+                title:
+                  "DOES HEALTH INSURANCE STATUS INFLUENCE PATIENT SATISFACTION WITH PHARMACEUTICAL SERVICES? A SERVQUAL-BASED STUDY AMONG INDONESIAN OUTPATIENTS",
+                track: "Policy, Regulation & Ethics",
+              },
+              {
+                id: "OP056",
+                title:
+                  "TUBERCULOSIS KNOWLEDGE, ATTITUDE, AND PRACTICE AMONG COMMUNITY PHARMACISTS IN A HIGH-BURDEN TUBERCULOSIS SETTING IN INDONESIA",
+                track: "Policy, Regulation & Ethics",
+              },
+            ],
+          },
+          {
+            key: "track-2",
+            label: "Track 2",
+            name: "Pharmacology & Precision Medicine",
+            location: "Track 2",
+            presentations: [
+              {
+                id: "OP001",
+                title:
+                  "INTEGRATING NETWORK PHARMACOLOGY, VIRTUAL SCREENING AND MOLECULAR DYNAMICS SIMULATIONS TO IDENTIFY POTENTIAL DUAL-TARGETING MEDICINAL COMPOUNDS FOR PERIODONTITIS AND CORONARY ARTERY DISEASE",
+                track: "Pharmacology & Precision Medicine",
+              },
+              {
+                id: "OP006",
+                title:
+                  "Glycemic, Metabolic, and Safety Outcomes of Metformin Extended-Release (XR) in Type 2 Diabetes Mellitus",
+                track: "Pharmacology & Precision Medicine",
+              },
+              {
+                id: "OP022",
+                title:
+                  "Nuclear PKCλ promotes cervical cancer progression through a TCF7L2-dependent transcriptional program",
+                track: "Pharmacology & Precision Medicine",
+              },
+              {
+                id: "OP033",
+                title:
+                  "Mechanical stimuli and mechanosensitive ion channels modulate radiation-induced cellular responses",
+                track: "Pharmacology & Precision Medicine",
+              },
+              {
+                id: "OP045",
+                title:
+                  "Combined PKCζ, CTNNBIP1, and ALDH1A3 expression is associated with poor outcomes in endocrine therapy-treated luminal B breast cancer",
+                track: "Pharmacology & Precision Medicine",
+              },
+              {
+                id: "OP054",
+                title:
+                  "Advances in Physiologically Based Biopharmaceutics Modeling: Toward Virtual Bioequivalence Simulations",
+                track: "Pharmacology & Precision Medicine",
+              },
+            ],
+          },
+          {
+            key: "track-3",
+            label: "Track 3",
+            name: "Pharmaceutical Technology",
+            location: "Track 3",
+            presentations: [
+              {
+                id: "OP029",
+                title:
+                  "Rapidly Dissolving Microneedle Patch Integrated with Benidipine-Loaded Transethosomes for Enhanced Transdermal Delivery and Bioavailability",
+                track: "Pharmaceutical Technology",
+              },
+              {
+                id: "OP037",
+                title:
+                  "Physicochemical and microbiological stability of specialised parenteral nutrition formulations for patients at risk of refeeding syndrome",
+                track: "Pharmaceutical Technology",
+              },
+              {
+                id: "OP040",
+                title:
+                  "Microalgae-derived Extracellular Vesicles as Sustainable Nanocarriers: Advances in Production, Isolation and Biomedical Applications",
+                track: "Pharmaceutical Technology",
+              },
+              {
+                id: "OP065",
+                title:
+                  "Eugenol–Silver Nanocomposite Derived from Fagonia indica Induces Caspase-Dependent Apoptosis in MCF-7 Breast Cancer Cells",
+                track: "Pharmaceutical Technology",
+              },
+              {
+                id: "OP067",
+                title:
+                  "Development and Optimization of Alcaftadine Ocular In Situ Gel for Sustained Drug Delivery Employing a 3² Full Factorial Design",
+                track: "Pharmaceutical Technology",
+              },
+              {
+                id: "OP023",
+                title:
+                  "Guiding Peptide Nanonet Formation and Antibacterial Activity through Aromatic Hydrophobicity Engineering for Sepsis Control",
+                track: "Pharmaceutical Technology",
+              },
+            ],
+          },
+          {
+            key: "track-4",
+            label: "Track 4",
+            name: "Pharmaceutical Chemistry",
+            location: "Track 4",
+            presentations: [
+              {
+                id: "OP004",
+                title:
+                  "ANTI-METASTATIC EFFECTS OF ANDROGRAPHOLIDE AND ITS DERIVATIVES IN TRIPLE-NEGATIVE BREAST CANCER (MDA-MB-231)",
+                track: "Pharmaceutical Chemistry",
+              },
+              {
+                id: "OP005",
+                title:
+                  "BIOTRANSFORMATION OF TESTOSTERONE BY TROPICAL FUNGI: PRELIMINARY ANALYTICAL PROFILING AND POTENTIAL NEUROPROTECTIVE APPLICATIONS",
+                track: "Pharmaceutical Chemistry",
+              },
+              {
+                id: "OP007",
+                title: "Drug Discovery and Natural Products: Microbes as Hidden Architects",
+                track: "Pharmaceutical Chemistry",
+              },
+              {
+                id: "OP014",
+                title:
+                  "Synthesis, Optimization, Characterization and Bioactivity of Aurein 1.2-Copper(II) Oxide Nanoparticles Conjugates Against Antimicrobial Resistant Bacteria",
+                track: "Pharmaceutical Chemistry",
+              },
+              {
+                id: "OP019",
+                title:
+                  "Technological Acceptability of a Predictive Chemical Toxicity Software for Science-Related Undergraduate Programs in a Catholic School in Davao City",
+                track: "Pharmaceutical Chemistry",
+              },
+              {
+                id: "OP036",
+                title:
+                  "COMPUTATIONAL INVESTIGATION OF KAEMFEROL, MYRICETIN, CATECHIN, MANGIFERIN, AND NARINGIN FOR ANTIMALARIAL DRUG DEVELOPMENT",
+                track: "Pharmaceutical Chemistry",
+              },
+            ],
+          },
+        ],
       },
       {
         time: "17:00–18:30",
@@ -203,24 +360,155 @@ export const schedule = [
         ],
       },
       {
-        time: "11:00–11:15",
+        time: "11:00–12:15",
         title: "Oral Presentations",
-      },
-      {
-        time: "11:15–11:30",
-        title: "Oral Presentations",
-      },
-      {
-        time: "11:30–11:45",
-        title: "Oral Presentations",
-      },
-      {
-        time: "11:45–12:00",
-        title: "Oral Presentations",
-      },
-      {
-        time: "12:00–12:15",
-        title: "Oral Presentations",
+        oralTracks: [
+          {
+            key: "track-5",
+            label: "Track 5",
+            name: "Pharmacy & Digital Health / Policy, Regulation & Ethics",
+            location: "Track 5",
+            presentations: [
+              {
+                id: "OP083",
+                title:
+                  "Bridging the Adherence Gap in Tuberculosis Care: The Emerging Role of Pharmacist-Led Interventions",
+                track: "Policy, Regulation & Ethics",
+              },
+              {
+                id: "OP088",
+                title:
+                  "Analysis of Anti-Tuberculosis Medication Adherence and Its Impact on Clinical Outcome Achievement Among Pulmonary Tuberculosis Patients in Primary Health Care Centers in Pekanbaru, Riau, Indonesia",
+                track: "Policy, Regulation & Ethics",
+              },
+              {
+                id: "OP060",
+                title:
+                  "EVALUATION OF ANTICOAGULAN IN COVID-19 PATIENTS AT A HOSPITAL IN SIAK DISTRICT",
+                track: "Pharmacy & Digital Health",
+              },
+              {
+                id: "OP009",
+                title:
+                  "Trustworthy renal decision support in the artificial intelligence era: reducing alert burden through the PANDU pipeline",
+                track: "Pharmacy & Digital Health",
+              },
+            ],
+          },
+          {
+            key: "track-6",
+            label: "Track 6",
+            name: "Pharmaceutical Chemistry",
+            location: "Track 6",
+            presentations: [
+              {
+                id: "OP038",
+                title:
+                  "METABOLIC FINGERPRINTING OF MEDICINAL PLANTS AND FUNGI: NMR-BASED STRATEGIES FOR UNCOVERING NEUROTHERAPEUTIC AGENTS",
+                track: "Pharmaceutical Chemistry",
+              },
+              {
+                id: "OP039",
+                title:
+                  "Design and Synthesis of Antiviral Small Molecule Drugs Inspired by Antimalarial Drugs",
+                track: "Pharmaceutical Chemistry",
+              },
+              {
+                id: "OP048",
+                title:
+                  "Synthesis of Macrocyclic Oligosaccharides by One-pot Glycosylation of Glycosyl Donor/Acceptors and Complex with Metal Cations",
+                track: "Pharmaceutical Chemistry",
+              },
+              {
+                id: "OP050",
+                title:
+                  "Phosphate Monoester Hydrolysis by Metallosupramolecular Phosphatases Functionalized with Lewis Acidic Moieties in Two-Phase Solvent Systems",
+                track: "Pharmaceutical Chemistry",
+              },
+              {
+                id: "OP061",
+                title:
+                  "Synthesis of three 2’-aminomethoxy chalcone derivatives and in vitro hemin polymerization inhibition activity testing",
+                track: "Pharmaceutical Chemistry",
+              },
+            ],
+          },
+          {
+            key: "track-7",
+            label: "Track 7",
+            name: "Pharmaceutical Technology / Cosmetic Science & Innovation",
+            location: "Track 7",
+            presentations: [
+              {
+                id: "OP002",
+                title:
+                  "Development of Nanoemulgel Containing Ixora coccinea Leaves Extract for Antioxidant Property",
+                track: "Pharmaceutical Technology",
+              },
+              {
+                id: "OP010",
+                title:
+                  "Fish oil alginate microspheres produced via wave-based drop-on-demand jetting electrospray: Improving stability and palatability",
+                track: "Pharmaceutical Technology",
+              },
+              {
+                id: "OP017",
+                title:
+                  "DEVELOPMENT AND OPTIMISATION OF A MUCOADHESIVE IN SITU NASAL GEL OF BUDESONIDE FOR ENHANCED INTRANASAL DELIVERY",
+                track: "Pharmaceutical Technology",
+              },
+              {
+                id: "OP003",
+                title:
+                  "Facial Pigmentation in Bangladeshi Adults: Prevalence and Associated Factors",
+                track: "Cosmetic Science & Innovation",
+              },
+              {
+                id: "OP035",
+                title:
+                  "FORMULATION DEVELOPMENT AND STABILITY EVALUATION OF AN ASTAXANTHIN NANOEMULSION LOTION",
+                track: "Cosmetic Science & Innovation",
+              },
+            ],
+          },
+          {
+            key: "track-8",
+            label: "Track 8",
+            name: "Nutraceutical Science / Regenerative & Translational Medicine / Mixed Track",
+            location: "Track 8",
+            presentations: [
+              {
+                id: "OP066",
+                title: "TBC",
+                track: "Regenerative & Translational Medicine",
+              },
+              {
+                id: "OP069",
+                title:
+                  "AI Techniques for Water Quality Monitoring and River Pollution Control",
+                track: "Pharmaceutical Chemistry",
+              },
+              {
+                id: "OP028",
+                title:
+                  "DEVELOPMENT AND CHARACTERIZATION OF PREDNISOLONE-LOADED SOLID LIPID NANOPARTICLES FOR TRANSDERMAL APPLICATION",
+                track: "Pharmaceutical Technology",
+              },
+              {
+                id: "OP021",
+                title:
+                  "Whole-culture–derived postbiotics from local lactic acid bacteria exhibit antimicrobial and skin barrier–protective effects",
+                track: "Nutraceutical Science",
+              },
+              {
+                id: "OP068",
+                title:
+                  "Pharmacognostic Study, Phytochemical Screening and Formulation Development from Achras Sapota Bark Extract for Wound Healing",
+                track: "Nutraceutical Science",
+              },
+            ],
+          },
+        ],
       },
       {
         time: "12:30–14:30",
