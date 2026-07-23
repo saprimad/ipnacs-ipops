@@ -70,6 +70,14 @@ export default function HomePage() {
 
         <div className="relative z-10 py-28">
           <div className="max-w-6xl mx-auto px-6 text-center text-white">
+            <div className="mb-6 flex justify-center">
+              <img
+                src="/logo.png"
+                alt="IPNaCS–IPoPS 2026 logo"
+                className="h-20 w-20 object-contain drop-shadow-xl md:h-60 md:w-60"
+              />
+            </div>
+
             <h1 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow">
               8th IPNaCS &amp; 11th IPoPS 2026
             </h1>
