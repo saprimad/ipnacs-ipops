@@ -2,10 +2,12 @@
 
 export default function GuidelinesPage() {
   const oralGuidelineUrl =
-    "https://drive.google.com/file/d/13S0Rwi2Jmib4BFV6coj8MlEP9mzrkjr1/view?usp=sharing";
+    "https://drive.google.com/file/d/1la3BN_I87hKknh-CT0qwC7Z3g7upQMg_/view?usp=sharing";
 
   const posterGuidelineUrl =
-    "https://drive.google.com/file/d/15M1ZRj2jWuoDhFTtuk15DdFdlWExzSsG/view?usp=sharing";
+    "https://drive.google.com/file/d/1eoqN-RUAhziz51q-_GJS18gAmU85jwqt/view?usp=drive_link";
+
+  const logoDownloadUrl = "/logo.png";
 
   const oralItems = [
     ["Presentation time", "10 minutes"],
@@ -169,6 +171,19 @@ export default function GuidelinesPage() {
                     {value}
                   </li>
                 ))}
+
+                <li>
+                  <span className="font-semibold text-slate-900">
+                    Official logo:
+                  </span>{" "}
+                  <a
+                    href={logoDownloadUrl}
+                    download
+                    className="font-semibold text-purple-700 underline underline-offset-4 hover:text-purple-900"
+                  >
+                    Download logo
+                  </a>
+                </li>
               </ul>
             </div>
 
