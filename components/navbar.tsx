@@ -18,9 +18,17 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-gray-200 bg-white/95 backdrop-blur">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link href="/" className="text-lg font-semibold text-[#0F2A4D]">
-          IPNACS–IPOPS 2026
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
+        <Link
+          href="/"
+          className="flex items-center gap-3 text-lg font-semibold text-[#0F2A4D]"
+        >
+          <img
+            src="/logo.png"
+            alt="IPNaCS–IPoPS 2026 logo"
+            className="h-11 w-11 object-contain"
+          />
+          <span>IPNACS–IPOPS 2026</span>
         </Link>
 
         <ul className="hidden items-center gap-5 text-sm md:flex">
