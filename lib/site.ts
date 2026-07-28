@@ -270,7 +270,7 @@ export const schedule = [
               {
                 id: "OP014",
                 title:
-                  "Synthesis, Optimization, Characterization and Bioactivity of Aurein 1.2-Copper(II) Oxide Nanoparticles Conjugates Against Antimicrobial Resistant Bacteria",
+                  "Green Synthesis of Copper Oxide Nanoparticles using Annona muricata Leaf Extract: Optimization, Characterization and Antimicrobial Activity",
                 track: "Pharmaceutical Chemistry",
               },
               {
