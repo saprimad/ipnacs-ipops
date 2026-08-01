@@ -115,7 +115,7 @@ const speakers: Speaker[] = [
   },
   {
     name: "Associate Professor Ho Ket Li",
-    affiliationFull: "International Medical University",
+    affiliationFull: "IMU University",
     affiliationShort: "IMU",
     category: "Invited",
     title: "AI Revolution: Transformation of Health Education",
@@ -123,7 +123,7 @@ const speakers: Speaker[] = [
   },
   {
     name: "Associate Professor Dr Shazia Jamshed",
-    affiliationFull: "International Medical University",
+    affiliationFull: "IMU University",
     affiliationShort: "IMU",
     category: "Invited",
     title:
