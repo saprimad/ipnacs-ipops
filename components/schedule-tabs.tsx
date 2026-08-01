@@ -366,7 +366,12 @@ export function ScheduleTabs({
 
                       {track.role ? (
                         <p className="mt-1 text-sm leading-relaxed text-slate-600">
-                          {renderItalics(track.role)}
+                          {renderItalics(
+                            track.role.replace(
+                              "International Medical University (IMU)",
+                              "IMU University (IMU)"
+                            )
+                          )}
                         </p>
                       ) : null}
 
