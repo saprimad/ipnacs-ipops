@@ -203,7 +203,7 @@ export const schedule = [
           {
             key: "track-3",
             label: "Track 3",
-            name: "Pharmaceutical Technology / Pharmaceutical Chemistry",
+            name: "Pharmaceutical Technology",
             location: "Track 3",
             presentations: [
               {
@@ -231,16 +231,10 @@ export const schedule = [
                 track: "Pharmaceutical Technology",
               },
               {
-                id: "OP067",
+                id: "OP096",
                 title:
-                  "Development and Optimization of Alcaftadine Ocular In Situ Gel for Sustained Drug Delivery Employing a 3² Full Factorial Design",
+                  "Artificial Intelligence in Pharmaceutical Quality Assurance: Applications, Regulatory Challenges, and Future Directions",
                 track: "Pharmaceutical Technology",
-              },
-              {
-                id: "OP061",
-                title:
-                  "Synthesis of three 2’-aminomethoxy chalcone derivatives and in vitro hemin polymerization inhibition activity testing",
-                track: "Pharmaceutical Chemistry",
               },
             ],
           },
@@ -257,20 +251,21 @@ export const schedule = [
                 track: "Pharmaceutical Chemistry",
               },
               {
-                id: "OP005",
+                id: "OP061",
                 title:
-                  "BIOTRANSFORMATION OF TESTOSTERONE BY TROPICAL FUNGI: PRELIMINARY ANALYTICAL PROFILING AND POTENTIAL NEUROPROTECTIVE APPLICATIONS",
+                  "Synthesis of three 2’-aminomethoxy chalcone derivatives and in vitro hemin polymerization inhibition activity testing",
                 track: "Pharmaceutical Chemistry",
               },
               {
                 id: "OP007",
-                title: "Drug Discovery and Natural Products: Microbes as Hidden Architects",
+                title:
+                  "Drug Discovery and Natural Products: Microbes as Hidden Architects",
                 track: "Pharmaceutical Chemistry",
               },
               {
                 id: "OP014",
                 title:
-                  "Green Synthesis of Copper Oxide Nanoparticles using Annona muricata Leaf Extract: Optimization, Characterization and Antimicrobial Activity",
+                  "Synthesis, Optimization, Characterization and Bioactivity of Aurein 1.2-Copper(II) Oxide Nanoparticles Conjugates Against Antimicrobial Resistant Bacteria",
                 track: "Pharmaceutical Chemistry",
               },
               {
@@ -376,27 +371,21 @@ export const schedule = [
                 track: "Policy, Regulation & Ethics",
               },
               {
-                id: "OP088",
-                title:
-                  "Analysis of Anti-Tuberculosis Medication Adherence and Its Impact on Clinical Outcome Achievement Among Pulmonary Tuberculosis Patients in Primary Health Care Centers in Pekanbaru, Riau, Indonesia",
-                track: "Policy, Regulation & Ethics",
-              },
-              {
                 id: "OP097",
                 title:
                   "GENETIC MODIFICATION: A LEGAL AND ETHICAL PERSPECTIVE",
                 track: "Policy, Regulation & Ethics",
               },
               {
-                id: "OP060",
-                title:
-                  "EVALUATION OF ANTICOAGULAN IN COVID-19 PATIENTS AT A HOSPITAL IN SIAK DISTRICT",
-                track: "Pharmacy & Digital Health",
-              },
-              {
                 id: "OP009",
                 title:
                   "Trustworthy renal decision support in the artificial intelligence era: reducing alert burden through the PANDU pipeline",
+                track: "Pharmacy & Digital Health",
+              },
+              {
+                id: "OP075",
+                title:
+                  "Effect of Pharmacist-Led Inhaler Education Using the Teach-to-Goal Method Combined with the Pharcare Mobile App on Pulmonary Function and Quality of Life in Patients with Chronic Obstructive Pulmonary Disease",
                 track: "Pharmacy & Digital Health",
               },
             ],
@@ -432,9 +421,9 @@ export const schedule = [
                 track: "Pharmaceutical Chemistry",
               },
               {
-                id: "OP069",
+                id: "OP115",
                 title:
-                  "AI Techniques for Water Quality Monitoring and River Pollution Control",
+                  "Comprehensive metabolite profiling of ultrasonication-assisted extracted leaf, stem, root, and flower extracts of Clidemia hirta via integrated GC-MS and LC-MS analysis and total phenolic content determination",
                 track: "Pharmaceutical Chemistry",
               },
               {
@@ -492,7 +481,7 @@ export const schedule = [
           {
             key: "track-8",
             label: "Track 8",
-            name: "Regenerative & Translational Medicine / Pharmacology & Precision Medicine / Nutraceutical Science",
+            name: "Regenerative & Translational Medicine / Pharmacology & Precision Medicine",
             location: "Track 8",
             presentations: [
               {
@@ -508,16 +497,22 @@ export const schedule = [
                 track: "Pharmacology & Precision Medicine",
               },
               {
-                id: "OP021",
+                id: "OP105",
                 title:
-                  "Whole-culture–derived postbiotics from local lactic acid bacteria exhibit antimicrobial and skin barrier–protective effects",
-                track: "Nutraceutical Science",
+                  "Combined Curcuma longa and Centella asiatica Granules Attenuate HFHC-Induced Metabolic and Oxidative Dysfunction: Involvement of the SOD–MDA–Nitric Oxide Axis",
+                track: "Pharmacology & Precision Medicine",
               },
               {
-                id: "OP068",
+                id: "OP081",
                 title:
-                  "Pharmacognostic Study, Phytochemical Screening and Formulation Development from Achras Sapota Bark Extract for Wound Healing",
-                track: "Nutraceutical Science",
+                  "Exposure to 1,2-Dichloropropane induces DNA damage and anti-apoptotic effect in vitro and alteration of related pathways in vivo",
+                track: "Pharmacology & Precision Medicine",
+              },
+              {
+                id: "OP082",
+                title:
+                  "Exposure to 1,2-Dichloropropane induces DNA damage and anti-apoptotic effect in vitro and alteration of related pathways in vivo",
+                track: "Pharmacology & Precision Medicine",
               },
             ],
           },
