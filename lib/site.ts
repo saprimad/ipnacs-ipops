@@ -131,10 +131,10 @@ export const schedule = [
                 track: "Pharmacy & Digital Health",
               },
               {
-                id: "OP095",
+                id: "OP111",
                 title:
-                  "BASELINE DATA FOR A QUALICOPC-PCPSSP STUDY AND QUALITY OF LIFE EVALUATION ON T2DM OLDER ADULTS IN A MALAYSIAN SETTING",
-                track: "Policy, Regulation & Ethics",
+                  "Efficacy and Durability of Pharmacist-Led Diabetes Therapy Management Interventions on Medication Adherence, Glycemic Control, and Quality of Life in Outpatients with Type 2 Diabetes Mellitus: A Systematic Review of Randomized Controlled Trials",
+                track: "Pharmacy & Digital Health",
               },
               {
                 id: "OP024",
@@ -203,7 +203,7 @@ export const schedule = [
           {
             key: "track-3",
             label: "Track 3",
-            name: "Pharmaceutical Technology",
+            name: "Pharmaceutical Technology / Pharmaceutical Chemistry",
             location: "Track 3",
             presentations: [
               {
@@ -221,13 +221,13 @@ export const schedule = [
               {
                 id: "OP040",
                 title:
-                  "Microalgae-derived Extracellular Vesicles as Sustainable Nanocarriers: Advances in Production, Isolation and Biomedical Applications",
+                  "Microalgae-derived Extracellular Vesicles as Sustainable Nanocarriers : Advances in Production, Isolation and Biomedical Applications",
                 track: "Pharmaceutical Technology",
               },
               {
-                id: "OP065",
+                id: "OP023",
                 title:
-                  "Eugenol–Silver Nanocomposite Derived from Fagonia indica Induces Caspase-Dependent Apoptosis in MCF-7 Breast Cancer Cells",
+                  "Guiding Peptide Nanonet Formation and Antibacterial Activity through Aromatic Hydrophobicity Engineering for Sepsis Control",
                 track: "Pharmaceutical Technology",
               },
               {
@@ -237,10 +237,10 @@ export const schedule = [
                 track: "Pharmaceutical Technology",
               },
               {
-                id: "OP023",
+                id: "OP061",
                 title:
-                  "Guiding Peptide Nanonet Formation and Antibacterial Activity through Aromatic Hydrophobicity Engineering for Sepsis Control",
-                track: "Pharmaceutical Technology",
+                  "Synthesis of three 2’-aminomethoxy chalcone derivatives and in vitro hemin polymerization inhibition activity testing",
+                track: "Pharmaceutical Chemistry",
               },
             ],
           },
@@ -382,6 +382,12 @@ export const schedule = [
                 track: "Policy, Regulation & Ethics",
               },
               {
+                id: "OP097",
+                title:
+                  "GENETIC MODIFICATION: A LEGAL AND ETHICAL PERSPECTIVE",
+                track: "Policy, Regulation & Ethics",
+              },
+              {
                 id: "OP060",
                 title:
                   "EVALUATION OF ANTICOAGULAN IN COVID-19 PATIENTS AT A HOSPITAL IN SIAK DISTRICT",
@@ -426,9 +432,15 @@ export const schedule = [
                 track: "Pharmaceutical Chemistry",
               },
               {
-                id: "OP061",
+                id: "OP069",
                 title:
-                  "Synthesis of three 2’-aminomethoxy chalcone derivatives and in vitro hemin polymerization inhibition activity testing",
+                  "AI Techniques for Water Quality Monitoring and River Pollution Control",
+                track: "Pharmaceutical Chemistry",
+              },
+              {
+                id: "P100",
+                title:
+                  "FROM OCEAN TO ONCOLOGY: ML-DRIVEN DISCOVERY OF MARINE PIM1 KINASE INHIBITORS WITH MULTISCALE VALIDATION",
                 track: "Pharmaceutical Chemistry",
               },
             ],
@@ -458,6 +470,12 @@ export const schedule = [
                 track: "Pharmaceutical Technology",
               },
               {
+                id: "OP028",
+                title:
+                  "DEVELOPMENT AND CHARACTERIZATION OF PREDNISOLONE-LOADED SOLID LIPID NANOPARTICLES FOR TRANSDERMAL APPLICATION",
+                track: "Pharmaceutical Technology",
+              },
+              {
                 id: "OP003",
                 title:
                   "Facial Pigmentation in Bangladeshi Adults: Prevalence and Associated Factors",
@@ -474,25 +492,20 @@ export const schedule = [
           {
             key: "track-8",
             label: "Track 8",
-            name: "Nutraceutical Science / Regenerative & Translational Medicine / Mixed Track",
+            name: "Regenerative & Translational Medicine / Pharmacology & Precision Medicine / Nutraceutical Science",
             location: "Track 8",
             presentations: [
               {
                 id: "OP066",
-                title: "TBC",
+                title:
+                  "Lymph nodes provide an immune-regulatory niche for islet organoid engraftment and endocrine function",
                 track: "Regenerative & Translational Medicine",
               },
               {
-                id: "OP069",
+                id: "OP103",
                 title:
-                  "AI Techniques for Water Quality Monitoring and River Pollution Control",
-                track: "Pharmaceutical Chemistry",
-              },
-              {
-                id: "OP028",
-                title:
-                  "DEVELOPMENT AND CHARACTERIZATION OF PREDNISOLONE-LOADED SOLID LIPID NANOPARTICLES FOR TRANSDERMAL APPLICATION",
-                track: "Pharmaceutical Technology",
+                  "Beyond Glutathione S-Transferase: A Novel Sulfide-Mediated Pathway for cis Urocanic Acid Conjugation",
+                track: "Pharmacology & Precision Medicine",
               },
               {
                 id: "OP021",
