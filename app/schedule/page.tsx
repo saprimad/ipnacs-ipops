@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { ScheduleTabs } from "@/components/schedule-tabs";
 import { buildMetadata } from "@/lib/metadata";
-import { schedule } from "@/lib/site";
+import { posterTracks, schedule } from "@/lib/site";
 
 export const metadata: Metadata = buildMetadata(
   "Scientific Programme",
-  "Explore the scientific programme by day. Timing and session details may be updated closer to the event."
+  "Explore the scientific programme and poster presentations by day and scientific track."
 );
 
 export default function SchedulePage() {
@@ -16,13 +16,19 @@ export default function SchedulePage() {
           <h1 className="text-3xl font-bold text-[#0F2A4D] sm:text-4xl">
             Scientific Programme and Conference Timetable
           </h1>
+
           <p className="max-w-3xl text-slate-700">
-            Browse sessions by day. Timing and session details may be updated closer to the event to reflect the final scientific programme.
+            Browse sessions by day and explore poster presentations by
+            scientific track. Programme details may be updated closer to the
+            event.
           </p>
         </header>
 
         <div className="mt-8">
-          <ScheduleTabs days={schedule} />
+          <ScheduleTabs
+            days={schedule}
+            posterTracks={posterTracks}
+          />
         </div>
       </div>
     </main>

@@ -553,3 +553,286 @@ export const schedule = [
     ],
   },
 ] as const;
+
+export const posterTracks = [
+  {
+    key: "nutraceutical-science",
+    name: "Nutraceutical Science",
+    posters: [
+      {
+        id: "PP015",
+        title:
+          "Alpha-Tocotrienol Preserves Hormonal Balance and Follicular Ultrastructure in Nicotine-Treated Mice",
+      },
+      {
+        id: "PP041",
+        title:
+          "POSTBIOTICS DERIVED FROM LACTIPLANTIBACILLUS PLANTARUM LAB12-FERMENTED SOYMILK ATTENUATED LIPOPOLYSACCHARIDE (LPS)-INDUCED NEUROINFLAMMATION IN VITRO",
+      },
+      {
+        id: "PP042",
+        title:
+          "Potential Role of the Gut-Brain-Muscle Axis in Exercise-Ameliorated Cognitive Frailty in D-Galactose-Induced and Naturally Aged Sprague Dawley Rats",
+      },
+      {
+        id: "PP043",
+        title:
+          "CLINICAL EVIDENCE OF PROBIOTICS, PREBIOTICS AND SYNBIOTICS ON GUT MICROBIOTA AND LIPID PROFILES OF INDIVIDUALS WITH DYSLIPIDAEMIA AND CARDIOVASCULAR DISEASES: A SYSTEMATIC REVIEW",
+      },
+    ],
+  },
+  {
+    key: "pharmaceutical-chemistry",
+    name: "Pharmaceutical Chemistry",
+    posters: [
+      {
+        id: "PP027",
+        title: "LITERATURE REVIEW ON SOLANUM SPECIES (THE TOMATOES)",
+      },
+      {
+        id: "PP031",
+        title: "RECENT STUDIES ON THE BEETROOT AND THE BETALAINS",
+      },
+      {
+        id: "PP034",
+        title:
+          "ANTIOXIDANT ACTIVITY OF BASIL (Ocimum basilicum): A SYSTEMATIC REVIEW AND META-ANALYSIS",
+      },
+      {
+        id: "PP051",
+        title:
+          "From Gastric Fluids to Mucociliary Clearance: Reviewing the Physicochemical Bottlenecks of Oral and Intranasal Antiviral Absorption",
+      },
+      {
+        id: "PP058",
+        title:
+          "Novel PARP inhibitor-NOTA conjugate: synthesis, optimisation, and Gallium-68 radiolabelling for cancer theranostics",
+      },
+      {
+        id: "PP071",
+        title:
+          "MICROGREENS AS EMERGING FUNCTIONAL FOODS: ANTIOXIDANT PROPERTY AND PHYTOCHEMICAL COMPOSITION OF MALAYSIAN LEAFY VEGETABLES",
+      },
+      {
+        id: "PP072",
+        title:
+          "Radiolabeling Conditions and In Vitro Stability of Bismuth and Lead Complexes with Novel 18- and 21-Membered Benzodiazacrown Macrocycles for Targeted Alpha Therapy",
+      },
+      {
+        id: "PP085",
+        title:
+          "IDENTIFICATION OF FLAVONOID BASED INHIBITORS TARGETING THE DENGUE VIRUS ENVELOPE PROTEIN THROUGH STRUCTURE BASED MOLECULAR DOCKING & ADME ANALYSIS",
+      },
+    ],
+  },
+  {
+    key: "pharmaceutical-technology",
+    name: "Pharmaceutical Technology",
+    posters: [
+      {
+        id: "PP012",
+        title:
+          "PHENOLIC-MEDIATED REDOX CROSSTALK AND ANTIOXIDANT MECHANISMS OF GREEN-SYNTHESIZED GOLD NANOPARTICLES FROM PURPLE CARROT ROOT EXTRACT",
+      },
+      {
+        id: "PP018",
+        title:
+          "PHENOLIC-MEDIATED REDOX CROSSTALK AND ANTIOXIDANT MECHANISMS OF GREEN-SYNTHESIZED GOLD NANOPARTICLES FROM PURPLE CARROT ROOT EXTRACT",
+      },
+      {
+        id: "PP020",
+        title:
+          "Metal-Sequestering Self-Assembling Peptide Nanonets for Immobilizing and Inhibiting the growth of Escherichia coli",
+      },
+      {
+        id: "PP052",
+        title:
+          "Systematic Evaluation of the Predictive Performance of Biorelevant In Vitro Systems Integrated with PBBM for Human Pharmacokinetics",
+      },
+      {
+        id: "PP053",
+        title:
+          "Development of a Mechanistic Model for Predicting the Bioavailability of Subcutaneously Administered Therapeutic Antibodies",
+      },
+      {
+        id: "PP121",
+        title:
+          "A modified hanging trap for sampling blowflies (Diptera: Calliphoridae) in Tropical Rainforest environments",
+      },
+    ],
+  },
+  {
+    key: "pharmacology-precision-medicine",
+    name: "Pharmacology & Precision Medicine",
+    posters: [
+      {
+        id: "PP011",
+        title:
+          "KNOWLEDGE, ATTITUDE, AND PRACTICE OF NON-SMALL- CELL LUNG CANCER (NSCLC): TARGETED THERAPIES AMONG PHARMACISTS",
+      },
+      {
+        id: "PP013",
+        title:
+          "ANTIOXIDANT, ANTI-INFLAMMATORY, AND CYTOPROTECTIVE ACTIVITIES OF Baeckea frutescens BRANCH ETHANOLIC EXTRACT",
+      },
+      {
+        id: "PP026",
+        title:
+          "TRPML1 INHIBITION REDUCES VIABILITY AND MIGRATION IN HCT116 COLORECTAL CANCER CELLS",
+      },
+      {
+        id: "PP063",
+        title:
+          "Genotoxic Effects of 4-[(6-Iodo-2-phenylquinazolin-4-yl)oxy]benzoic Acid in MCF-7 and MDA-MB-231 Breast Cancer Cells Under Normoxic and Hypoxic Conditions",
+      },
+      {
+        id: "PP073",
+        title:
+          "ASIATIC ACID SUPPRESSES CCRF-CEM CELL PROLIFERATION THROUGH TNFα-ASSOCIATED SIGNALLING: IN VITRO AND IN SILICO EVIDENCE",
+      },
+      {
+        id: "PP074",
+        title:
+          "E498A AND R499G VARIANTS OF PCSK9 ENHANCED PCSK9-LDLR BINDING - INSIGHT FROM MOLECULAR DYNAMICS SIMULATIONS.",
+      },
+      {
+        id: "PP087",
+        title:
+          "Fluorescence-Based Detection of the HbE Mutation Using PAMless CRISPR/Cas12a",
+      },
+      {
+        id: "PP091",
+        title:
+          "METABOLIC DYSFUNCTION-ASSOCIATED FATTY LIVER DISEASE DRIVES MORPHOLOGICAL CHANGES IN LIVER SINUSOIDAL ENDOTHELIAL CELLS",
+      },
+      {
+        id: "PP092",
+        title:
+          "TIME COURSE ANALYSIS OF BEHAVIOURAL AND MOLECULAR CHANGES IN INTRAHIPPOCAMPAL STREPTOZOTOCIN-INDUCED FEMALE SPORADIC ALZHEIMER’S DISEASE RAT MODEL",
+      },
+      {
+        id: "PP099",
+        title:
+          "ACUTE ORAL TOXICITY, BIOCHEMICAL, AND HISTOPATHOLOGICAL EVALUATION OF PTERYGOPLICHTHYS PARDALIS FLESH AS A SUSTAINABLE PET-DIET INGREDIENT",
+      },
+      {
+        id: "PP101",
+        title:
+          "Potentially inappropriate medications across heart failure phenotypes in a real-world outpatient setting in indonesia",
+      },
+      {
+        id: "PP102",
+        title:
+          "Fruit Waste Bioconversion for Bioactive Fermentation: Linking Phytochemical Composition with Biological Activities",
+      },
+      {
+        id: "PP107",
+        title:
+          "An Integrated Transcriptomic and Machine Learning Approach for Identifying Doxorubicin-Responsive Exosomal MiRNAs",
+      },
+      {
+        id: "PP109",
+        title:
+          "EXTRACTION-DEPENDENT ACTIVITY OF Caesalpinia bonducella SEED EXTRACTS: CORRELATION BETWEEN PHYTOCHEMICAL COMPOSITION WITH ANTIOXIDANT AND ANTI-INFLAMMATORY ACTIVITIES",
+      },
+      {
+        id: "PP112",
+        title:
+          "Comprehensive metabolite profiling of ultrasonication-assisted extracted leaf, stem, root, and flower extracts of Clidemia hirta via integrated GC-MS and LC-MS analysis and total phenolic content determination",
+      },
+      {
+        id: "PP116",
+        title:
+          "Adaptation and Validation of Diabetic Foot Ulcer Scale – Short Form (DFS-SF) in Indonesian",
+      },
+      {
+        id: "PP120",
+        title:
+          "Abdominal Obesity and Oxidative Stress-Induced DNA Damage",
+      },
+    ],
+  },
+  {
+    key: "regenerative-translational-medicine",
+    name: "Regenerative & Translational Medicine",
+    posters: [
+      {
+        id: "PP044",
+        title:
+          "INHIBITION OF CXCR4/CXCL12 SIGNALLING PATHWAY DISRUPTED MIGRATION OF PROLIFERATIVE CELLS FROM FRONTAL TO MIDBRAIN AND FURTHER IMPAIRED LOCOMOTOR RECOVERY IN THE 6-OHDA-LESIONED ADULT ZEBRAFISH PARKINSON’S DISEASE MODEL",
+      },
+    ],
+  },
+  {
+    key: "pharmacy-digital-health",
+    name: "Pharmacy & Digital Health",
+    posters: [
+      {
+        id: "PP030",
+        title:
+          "COMPARING LOCAL, SUBGROUP, AND GLOBAL XGBOOST MODELS FOR FORECASTING CARDIOVASCULAR MEDICATION UTILISATION DURING FLOOD DISASTERS",
+      },
+      {
+        id: "PP106",
+        title:
+          "Adverse Effects of SSRIs: Prevalence and Associated Factors in Patients with Mental Disorders at a Specialized Regional Hospital Indonesia",
+      },
+      {
+        id: "PP110",
+        title:
+          "Development of a Mobile Application for A Self Care in Atrial Fibrillation Patients Undergoing Follow-up at A Malaysian Teaching Hospital",
+      },
+      {
+        id: "PP114",
+        title:
+          "Development of an evidence-based ABCDE heart failure management protocol for healthcare professionals in Malaysia: A modified Delphi study",
+      },
+      {
+        id: "PP117",
+        title:
+          "The Knowledge, Attitude and Practice Towards Artificial Intelligence (AI) Among Undergraduate Pharmacy Students in UiTM",
+      },
+      {
+        id: "PP119",
+        title:
+          "Treatment Patterns and Clinical Outcomes in Women with Gestational Diabetes Mellitus: A Retrospective Study at a Malaysian Tertiary Hospital.",
+      },
+      {
+        id: "PP122",
+        title:
+          "INTENTION TO ADOPT AND USE TELEPHARMACY SERVICES AMONG PATIENTS WITH ASTHMA IN PUNCAK ALAM, MALAYSIA",
+      },
+    ],
+  },
+  {
+    key: "policy-regulation-ethics",
+    name: "Policy, Regulation & Ethics",
+    posters: [
+      {
+        id: "PP016",
+        title:
+          "Anti-money laundering framework and pharmaceutical crime in Malaysia: A statutory gap analysis",
+      },
+      {
+        id: "PP032",
+        title:
+          "Pharmacists’ insights on their internship training experiences in Malaysian community pharmacies",
+      },
+      {
+        id: "PP104",
+        title:
+          "CONTENT VALIDATION OF ASSESSMENT INSTRUMENT FOR COMPLEX GENERIC MEDICINES DEVELOPMENT AND REGISTRATION IN MALAYSIA",
+      },
+      {
+        id: "PP113",
+        title:
+          "PUBLIC PERCEPTIONS AND FUTURE ACCEPTANCE OF COMMUNITY PHARMACIST-LED VACCINATION SERVICES IN MALAYSIA",
+      },
+      {
+        id: "PP118",
+        title:
+          "Knowledge and Attitudes of Community Pharmacists in Managing Dermatological Conditions: A Malaysian Cross-Sectional Study",
+      },
+    ],
+  },
+] as const;
