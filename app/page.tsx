@@ -6,6 +6,12 @@ type Partner = {
   url: string;
 };
 
+type Sponsor = {
+  name: string;
+  src: string;
+  url: string;
+};
+
 export default function HomePage() {
   const importantDates = [
     { label: "FIRST ANNOUNCEMENT", value: "February 2026" },
@@ -54,6 +60,43 @@ export default function HomePage() {
       url: "https://www.jiu.ac.jp/en/",
     },
   ];
+
+  const sponsors: Record<
+    "gold" | "silver" | "supporting",
+    Sponsor[]
+  > = {
+    gold: [
+      {
+        name: "ProSainsES Sdn Bhd",
+        src: "/sponsors/prosains.png",
+        url: "https://www.prosainses.com.my/contact.php",
+      },
+    ],
+    silver: [
+      {
+        name: "Duopharma Biotech Berhad",
+        src: "/sponsors/duopharma.png",
+        url: "https://duopharmabiotech.com/",
+      },
+      {
+        name: "Selia-Tek",
+        src: "/sponsors/seliatek.png",
+        url: "https://seliatek.com/",
+      },
+    ],
+    supporting: [
+      {
+        name: "Saintifik Maju",
+        src: "/sponsors/saintifikmaju.png",
+        url: "https://web.facebook.com/p/SAINTIFIK-MAJU-100067102480148/",
+      },
+      {
+        name: "Unggul Medik",
+        src: "/sponsors/unggulmedik.png",
+        url: "https://unggulmedik.com.my/",
+      },
+    ],
+  };
 
   return (
     <main className="bg-[#F7F8FA] text-[#0F2A4D]">
@@ -286,6 +329,105 @@ export default function HomePage() {
                   </p>
                 </div>
               </div>
+            </div>
+
+            {/* ================= SPONSORS ================= */}
+            <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm sm:p-10">
+              <div className="text-center">
+                <h3 className="text-2xl font-bold tracking-tight text-[#0F2A4D] sm:text-3xl">
+                  Our Sponsors
+                </h3>
+
+                <p className="mx-auto mt-3 max-w-3xl text-slate-600">
+                  We gratefully acknowledge the organisations supporting
+                  IPNaCS–IPoPS 2026.
+                </p>
+              </div>
+
+              <div className="mt-10">
+                <p className="text-center text-xs font-bold uppercase tracking-[0.2em] text-[#B58A1F]">
+                  Gold Sponsor
+                </p>
+
+                <div className="mx-auto mt-4 max-w-2xl">
+                  {sponsors.gold.map((sponsor) => (
+                    <a
+                      key={sponsor.name}
+                      href={sponsor.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Visit ${sponsor.name} website`}
+                      title={sponsor.name}
+                      className="flex h-36 items-center justify-center rounded-xl border border-amber-200 bg-white px-8 py-6 shadow-sm transition hover:-translate-y-1 hover:border-amber-300 hover:shadow-md sm:h-40"
+                    >
+                      <img
+                        src={sponsor.src}
+                        alt={sponsor.name}
+                        className="h-24 w-full object-contain sm:h-28"
+                        loading="lazy"
+                      />
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-10">
+                <p className="text-center text-xs font-bold uppercase tracking-[0.2em] text-slate-500">
+                  Silver Sponsors
+                </p>
+
+                <div className="mx-auto mt-4 grid max-w-3xl grid-cols-1 gap-5 sm:grid-cols-2">
+                  {sponsors.silver.map((sponsor) => (
+                    <a
+                      key={sponsor.name}
+                      href={sponsor.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Visit ${sponsor.name} website`}
+                      title={sponsor.name}
+                      className="flex h-36 items-center justify-center rounded-xl border border-slate-200 bg-white px-6 py-5 shadow-sm transition hover:-translate-y-1 hover:border-slate-300 hover:shadow-md"
+                    >
+                      <img
+                        src={sponsor.src}
+                        alt={sponsor.name}
+                        className="h-24 w-full object-contain"
+                        loading="lazy"
+                      />
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-10">
+                <p className="text-center text-xs font-bold uppercase tracking-[0.2em] text-slate-500">
+                  Supporting Sponsors
+                </p>
+
+                <div className="mx-auto mt-4 grid max-w-3xl grid-cols-1 gap-5 sm:grid-cols-2">
+                  {sponsors.supporting.map((sponsor) => (
+                    <a
+                      key={sponsor.name}
+                      href={sponsor.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Visit ${sponsor.name} website`}
+                      title={sponsor.name}
+                      className="flex h-36 items-center justify-center rounded-xl border border-slate-200 bg-white px-6 py-5 shadow-sm transition hover:-translate-y-1 hover:border-slate-300 hover:shadow-md"
+                    >
+                      <img
+                        src={sponsor.src}
+                        alt={sponsor.name}
+                        className="h-24 w-full object-contain"
+                        loading="lazy"
+                      />
+                    </a>
+                  ))}
+                </div>
+              </div>
+
+              <p className="mt-8 text-center text-xs text-slate-500">
+                Click a logo to visit the sponsor&apos;s official website.
+              </p>
             </div>
 
             <div className="rounded-xl border border-slate-200 bg-white p-10 shadow-sm">
