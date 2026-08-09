@@ -269,12 +269,6 @@ export const schedule = [
                 track: "Pharmaceutical Chemistry",
               },
               {
-                id: "OP019",
-                title:
-                  "Technological Acceptability of a Predictive Chemical Toxicity Software for Science-Related Undergraduate Programs in a Catholic School in Davao City",
-                track: "Pharmaceutical Chemistry",
-              },
-              {
                 id: "OP036",
                 title:
                   "COMPUTATIONAL INVESTIGATION OF KAEMFEROL, MYRICETIN, CATECHIN, MANGIFERIN, AND NARINGIN FOR ANTIMALARIAL DRUG DEVELOPMENT",
