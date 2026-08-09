@@ -693,7 +693,7 @@ export const posterTracks = [
       {
         id: "PP074",
         title:
-          "E498A AND R499G VARIANTS OF PCSK9 ENHANCED PCSK9-LDLR BINDING - INSIGHT FROM MOLECULAR DYNAMICS SIMULATIONS.",
+          "E498A AND R499G VARIANTS OF PCSK9 ALTERED PCSK9-LDLR BINDING - INSIGHT FROM MOLECULAR DYNAMICS SIMULATIONS.",
       },
       {
         id: "PP087",
@@ -770,7 +770,7 @@ export const posterTracks = [
       {
         id: "PP030",
         title:
-          "COMPARING LOCAL, SUBGROUP, AND GLOBAL XGBOOST MODELS FOR FORECASTING CARDIOVASCULAR MEDICATION UTILISATION DURING FLOOD DISASTERS",
+          "Multi-Horizon Forecasting of Cardiovascular Medication Utilisation During Flood Disasters: A Comparison of XGBoost, LSTM and Temporal Fusion Transformer",
       },
       {
         id: "PP106",
