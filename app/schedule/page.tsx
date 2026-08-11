@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { PresentationSearch } from "@/components/presentation-search";
 import { ScheduleTabs } from "@/components/schedule-tabs";
 import { buildMetadata } from "@/lib/metadata";
 import { posterTracks, schedule } from "@/lib/site";
@@ -25,6 +26,11 @@ export default function SchedulePage() {
         </header>
 
         <div className="mt-8">
+          <PresentationSearch
+            days={schedule}
+            posterTracks={posterTracks}
+          />
+
           <ScheduleTabs
             days={schedule}
             posterTracks={posterTracks}
