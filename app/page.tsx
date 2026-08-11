@@ -95,6 +95,11 @@ export default function HomePage() {
         src: "/sponsors/unggulmedik.png",
         url: "https://unggulmedik.com.my/",
       },
+      {
+        name: "Alpro Pharmacy",
+        src: "/sponsors/alpro.png",
+        url: "https://alpropharmacy.com.my/",
+      },
     ],
   };
 
