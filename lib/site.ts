@@ -265,7 +265,7 @@ export const schedule = [
               {
                 id: "OP014",
                 title:
-                  "Synthesis, Optimization, Characterization and Bioactivity of Aurein 1.2-Copper(II) Oxide Nanoparticles Conjugates Against Antimicrobial Resistant Bacteria",
+                  "Green Synthesis of Copper Oxide Nanoparticles using Annona muricata Leaf Extract: Optimization, Characterization and Antimicrobial Activity",
                 track: "Pharmaceutical Chemistry",
               },
               {
@@ -382,6 +382,18 @@ export const schedule = [
                   "Effect of Pharmacist-Led Inhaler Education Using the Teach-to-Goal Method Combined with the Pharcare Mobile App on Pulmonary Function and Quality of Life in Patients with Chronic Obstructive Pulmonary Disease",
                 track: "Pharmacy & Digital Health",
               },
+              {
+                id: "OP081",
+                title:
+                  "Exposure to 1,2-Dichloropropane induces DNA damage and anti-apoptotic effect in vitro and alteration of related pathways in vivo",
+                track: "Policy, Regulation & Ethics",
+              },
+              {
+                id: "OP082",
+                title:
+                  "The role of the transcription factor Nrf2 in lung inflammation induced by exposure to amorphous silica nanoparticles in mice",
+                track: "Policy, Regulation & Ethics",
+              },
             ],
           },
           {
@@ -496,18 +508,6 @@ export const schedule = [
                   "Combined Curcuma longa and Centella asiatica Granules Attenuate HFHC-Induced Metabolic and Oxidative Dysfunction: Involvement of the SOD–MDA–Nitric Oxide Axis",
                 track: "Pharmacology & Precision Medicine",
               },
-              {
-                id: "OP081",
-                title:
-                  "Exposure to 1,2-Dichloropropane induces DNA damage and anti-apoptotic effect in vitro and alteration of related pathways in vivo",
-                track: "Pharmacology & Precision Medicine",
-              },
-              {
-                id: "OP082",
-                title:
-                  "Exposure to 1,2-Dichloropropane induces DNA damage and anti-apoptotic effect in vitro and alteration of related pathways in vivo",
-                track: "Pharmacology & Precision Medicine",
-              },
             ],
           },
         ],
@@ -572,6 +572,11 @@ export const posterTracks = [
         id: "PP043",
         title:
           "CLINICAL EVIDENCE OF PROBIOTICS, PREBIOTICS AND SYNBIOTICS ON GUT MICROBIOTA AND LIPID PROFILES OF INDIVIDUALS WITH DYSLIPIDAEMIA AND CARDIOVASCULAR DISEASES: A SYSTEMATIC REVIEW",
+      },
+      {
+        id: "PP124",
+        title:
+          "10-HDA Ameliorates Cancer-Related Fatigue Through Modulation of Neuroinflammation and Metabolic Regulation",
       },
     ],
   },
@@ -744,6 +749,16 @@ export const posterTracks = [
         title:
           "Abdominal Obesity and Oxidative Stress-Induced DNA Damage",
       },
+      {
+        id: "PP123",
+        title:
+          "IDENTIFICATION OF FDA-APPROVED DRUG CANDIDATES TARGETING THE DENGUE VIRUS NS2B–NS3 PROTEASE THROUGH IN SILICO SCREENING",
+      },
+      {
+        id: "PP126",
+        title:
+          "Molecular Docking and ADME-Based Evaluation of Kratom Alkaloids Targeting the 5-HT2A Receptor",
+      },
     ],
   },
   {
@@ -796,6 +811,11 @@ export const posterTracks = [
         title:
           "INTENTION TO ADOPT AND USE TELEPHARMACY SERVICES AMONG PATIENTS WITH ASTHMA IN PUNCAK ALAM, MALAYSIA",
       },
+      {
+        id: "PP125",
+        title:
+          "Development and Expert Review of Cases on Vitamin, Mineral and Natural Health Product (VMNHP)-Related Problems.",
+      },
     ],
   },
   {
@@ -826,6 +846,16 @@ export const posterTracks = [
         id: "PP118",
         title:
           "Knowledge and Attitudes of Community Pharmacists in Managing Dermatological Conditions: A Malaysian Cross-Sectional Study",
+      },
+      {
+        id: "PP127",
+        title:
+          "Disposal Trends and Cost Analysis of Blood and Blood-Forming Organ Drugs Collected from Alpro Pharmacy",
+      },
+      {
+        id: "PP128",
+        title:
+          "MEDICINE PRICE TRANSPARENCY IN MALAYSIA: A CROSS-SECTIONAL ANALYSIS OF PUBLIC KNOWLEDGE, PRACTICES, AND SOCIODEMOGRAPHIC PREDICTORS",
       },
     ],
   },
