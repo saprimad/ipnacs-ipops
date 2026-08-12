@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { PresentationSearch } from "@/components/presentation-search";
 import { ScheduleTabs } from "@/components/schedule-tabs";
 import { buildMetadata } from "@/lib/metadata";
-import { posterTracks, schedule } from "@/lib/site";
+import { schedule } from "@/lib/programme";
+import { posterTracks } from "@/lib/site";
 
 export const metadata: Metadata = buildMetadata(
   "Scientific Programme",
@@ -19,9 +20,9 @@ export default function SchedulePage() {
           </h1>
 
           <p className="max-w-3xl text-slate-700">
-            Browse sessions by day and explore poster presentations by
-            scientific track. Programme details may be updated closer to the
-            event.
+            Browse the detailed programme by day, venue and scientific track,
+            including moderators, session chairs, presenters and presentation
+            time slots.
           </p>
         </header>
 
