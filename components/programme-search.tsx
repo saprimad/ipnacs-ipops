@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import type { ProgrammeDay } from "@/lib/programme-view";
-import { posterAuthors } from "@/lib/poster-authors";
+import { posterAuthors, posterTitleOverrides } from "@/lib/poster-authors";
 
 type PosterPresentation = { id: string; title: string };
 type PosterTrack = {
@@ -54,7 +54,7 @@ export function ProgrammeSearch({
     const posters = posterTracks.flatMap((posterTrack) =>
       posterTrack.posters.map((poster) => ({
         id: poster.id,
-        title: poster.title,
+        title: posterTitleOverrides[poster.id] ?? poster.title,
         track: posterTrack.name,
         presenter: posterAuthors[poster.id],
         type: "Poster Presentation" as const,
