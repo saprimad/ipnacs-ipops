@@ -337,7 +337,7 @@ export const schedule = [
             name: "Prof Dr Takehisa Hanawa",
             role: "Tokyo University of Science (TUS)",
             title:
-              "_Pharmaceutical Technology for the Improvement of the Bioavailability of Drugs_",
+              "_Strategies for Improving the Solubility of Poorly Water-Soluble Drugs_",
           },
           {
             label: "Track 8",
