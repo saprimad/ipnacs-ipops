@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ProgrammeSearch } from "@/components/programme-search";
 import { ProgrammeTabs } from "@/components/programme-tabs";
 import { buildMetadata } from "@/lib/metadata";
+import { posterTitleOverrides } from "@/lib/poster-authors";
 import { programmeSchedule } from "@/lib/programme-view";
 import { posterTracks } from "@/lib/site";
 
@@ -9,6 +10,14 @@ export const metadata: Metadata = buildMetadata(
   "Scientific Programme",
   "Explore the scientific programme and poster presentations by day and scientific track."
 );
+
+const correctedPosterTracks = posterTracks.map((track) => ({
+  ...track,
+  posters: track.posters.map((poster) => ({
+    ...poster,
+    title: posterTitleOverrides[poster.id] ?? poster.title,
+  })),
+}));
 
 export default function SchedulePage() {
   return (
@@ -29,12 +38,12 @@ export default function SchedulePage() {
         <div className="mt-8">
           <ProgrammeSearch
             days={programmeSchedule}
-            posterTracks={posterTracks}
+            posterTracks={correctedPosterTracks}
           />
 
           <ProgrammeTabs
             days={programmeSchedule}
-            posterTracks={posterTracks}
+            posterTracks={correctedPosterTracks}
           />
         </div>
       </div>
