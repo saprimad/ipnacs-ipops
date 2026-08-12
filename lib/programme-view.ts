@@ -113,6 +113,14 @@ function normalizePresenterName(name?: string) {
     .replace(/^MST Rahman\b/, "Mst Rahman");
 }
 
+function normalizeTrackTitle(name: string, title?: string) {
+  if (name === "Associate Professor Dr Shazia Jamshed") {
+    return "_Applications of Digital Health in Pharmacy Practice and Education: Current Insights and Future Directions_";
+  }
+
+  return title;
+}
+
 function normalizeFeaturedSessionLines(
   title: string,
   lines?: readonly string[]
@@ -184,7 +192,7 @@ export const programmeSchedule: readonly ProgrammeDay[] = rawSchedule.map(
       tracks: item.tracks?.map((track) => ({
         label: track.label,
         name: track.name,
-        title: track.title,
+        title: normalizeTrackTitle(track.name, track.title),
         location: track.location,
         ...parseTrackRole(track.role),
       })),
