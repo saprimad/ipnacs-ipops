@@ -6,7 +6,7 @@ import type {
   ProgrammeOralTrack,
   ProgrammeTrackItem,
 } from "@/lib/programme-view";
-import { posterAuthors } from "@/lib/poster-authors";
+import { posterAuthors, posterTitleOverrides } from "@/lib/poster-authors";
 
 type PosterPresentation = { id: string; title: string };
 type PosterTrack = {
@@ -187,6 +187,7 @@ function PosterTabs({ posterTracks }: { posterTracks: readonly PosterTrack[] }) 
       posterTracks.flatMap((track) =>
         track.posters.map((poster) => ({
           ...poster,
+          title: posterTitleOverrides[poster.id] ?? poster.title,
           presenter: posterAuthors[poster.id],
           track: track.name,
         }))
