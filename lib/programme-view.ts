@@ -113,6 +113,44 @@ function normalizePresenterName(name?: string) {
     .replace(/^MST Rahman\b/, "Mst Rahman");
 }
 
+function normalizeFeaturedSessionLines(
+  title: string,
+  lines?: readonly string[]
+): readonly string[] | undefined {
+  if (!lines?.length) {
+    return lines;
+  }
+
+  if (title === "Keynote Lecture" && lines.length >= 2) {
+    const [talkTitle, speaker, ...details] = lines;
+    return [speaker, talkTitle, ...details];
+  }
+
+  if (title === "Plenary Session I" && lines.length >= 2) {
+    const [talkTitle, speakerLine, ...details] = lines;
+    const commaIndex = speakerLine.indexOf(",");
+
+    if (commaIndex > -1) {
+      const speaker = speakerLine.slice(0, commaIndex).trim();
+      const affiliation = speakerLine.slice(commaIndex + 1).trim();
+      return [speaker, talkTitle, affiliation, ...details];
+    }
+
+    return [speakerLine, talkTitle, ...details];
+  }
+
+  if (title === "Closing Plenary" && lines.length >= 2) {
+    const [talkTitle, lectureLine, ...details] = lines;
+    const speaker = lectureLine
+      .replace(/^Professorial Lecture by\s+/i, "")
+      .replace(/^Prof Dr\s+/, "Prof. Dr. ");
+
+    return [speaker, talkTitle, "Professorial Lecture", ...details];
+  }
+
+  return lines;
+}
+
 function parsePresentationMeta(value?: string, fallbackTrack?: string) {
   if (!value) {
     return { track: fallbackTrack };
@@ -139,6 +177,10 @@ export const programmeSchedule: readonly ProgrammeDay[] = rawSchedule.map(
     ...day,
     items: day.items.map((item) => ({
       ...item,
+      descriptionLines: normalizeFeaturedSessionLines(
+        item.title,
+        item.descriptionLines
+      ),
       tracks: item.tracks?.map((track) => ({
         label: track.label,
         name: track.name,
