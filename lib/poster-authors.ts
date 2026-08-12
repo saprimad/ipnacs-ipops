@@ -13,7 +13,7 @@ export const posterAuthors: Readonly<Record<string, string>> = {
   PP102: "Afiqah Mohammad",
   PP107: "Farhan Matloob Khan",
   PP109: "Nur Asyiera Amiruddin",
-  PP112: "Kamran Ashraf",
+  PP112: "Widhya Aligita",
   PP116: "Khairunisa Qomariyanti",
   PP120: "Maziana Mahamood",
   PP123: "Zafirah Liyana Abdullah",
@@ -53,4 +53,9 @@ export const posterAuthors: Readonly<Record<string, string>> = {
   PP118: "Wan Nur Najihah Wan Zulkifli",
   PP127: "Nadia Jalaludin",
   PP128: "Maisarah Roslan",
+};
+
+export const posterTitleOverrides: Readonly<Record<string, string>> = {
+  PP112:
+    "Water Kefir, Rice Water, and Rice Water Kefir as Potential Anti-Aging Agents: In Vitro Superoxide Dismutase (SOD-Like) Activity",
 };
