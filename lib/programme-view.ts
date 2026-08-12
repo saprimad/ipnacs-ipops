@@ -103,6 +103,16 @@ function parseTrackRole(role?: string) {
   return { affiliation: role };
 }
 
+function normalizePresenterName(name?: string) {
+  if (!name) {
+    return name;
+  }
+
+  return name
+    .replace("SADIA SULTAN", "Sadia Sultan")
+    .replace(/^MST Rahman\b/, "Mst Rahman");
+}
+
 function parsePresentationMeta(value?: string, fallbackTrack?: string) {
   if (!value) {
     return { track: fallbackTrack };
@@ -114,7 +124,7 @@ function parsePresentationMeta(value?: string, fallbackTrack?: string) {
   if (looksLikeTime && parts.length >= 3) {
     return {
       time: parts[0],
-      presenter: parts[1],
+      presenter: normalizePresenterName(parts[1]),
       track: parts.slice(2).join(" · "),
     };
   }
