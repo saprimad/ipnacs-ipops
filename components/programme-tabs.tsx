@@ -6,6 +6,7 @@ import type {
   ProgrammeOralTrack,
   ProgrammeTrackItem,
 } from "@/lib/programme-view";
+import { posterAuthors } from "@/lib/poster-authors";
 
 type PosterPresentation = { id: string; title: string };
 type PosterTrack = {
@@ -184,7 +185,11 @@ function PosterTabs({ posterTracks }: { posterTracks: readonly PosterTrack[] }) 
   const all = useMemo(
     () =>
       posterTracks.flatMap((track) =>
-        track.posters.map((poster) => ({ ...poster, track: track.name }))
+        track.posters.map((poster) => ({
+          ...poster,
+          presenter: posterAuthors[poster.id],
+          track: track.name,
+        }))
       ),
     [posterTracks]
   );
@@ -199,7 +204,7 @@ function PosterTabs({ posterTracks }: { posterTracks: readonly PosterTrack[] }) 
         );
 
   const filtered = selected.filter((poster) =>
-    [poster.id, poster.title, poster.track].some((value) =>
+    [poster.id, poster.presenter ?? "", poster.title, poster.track].some((value) =>
       value.toLowerCase().includes(query.trim().toLowerCase())
     )
   );
@@ -225,7 +230,7 @@ function PosterTabs({ posterTracks }: { posterTracks: readonly PosterTrack[] }) 
         type="search"
         value={query}
         onChange={(event) => setQuery(event.target.value)}
-        placeholder="Search by poster ID, title or track"
+        placeholder="Search by poster ID, presenter, title or track"
         className="mt-6 w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm outline-none focus:border-[#0F2A4D] focus:ring-2 focus:ring-[#0F2A4D]/20"
       />
 
@@ -268,7 +273,12 @@ function PosterTabs({ posterTracks }: { posterTracks: readonly PosterTrack[] }) 
             <span className="inline-flex w-fit rounded-full bg-[#0F2A4D] px-2.5 py-1 text-xs font-bold text-white">
               {poster.id}
             </span>
-            <h4 className="mt-3 text-sm font-semibold leading-relaxed text-slate-900">
+            {poster.presenter ? (
+              <p className="mt-3 text-sm font-semibold text-slate-900">
+                {poster.presenter}
+              </p>
+            ) : null}
+            <h4 className="mt-1 text-sm font-semibold leading-relaxed text-slate-800">
               {poster.title}
             </h4>
             <p className="mt-2 text-xs font-medium text-slate-500">
