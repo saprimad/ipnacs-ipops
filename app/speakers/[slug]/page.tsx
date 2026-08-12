@@ -138,7 +138,7 @@ const speakers: Speaker[] = [
     affiliationShort: "TUS",
     category: "Invited",
     title:
-      "Pharmaceutical Technology for the Improvement of the Bioavailability of Drugs",
+      "Strategies for Improving the Solubility of Poorly Water-Soluble Drugs",
     image: "/speakers/takehisa.png",
   },
   {
