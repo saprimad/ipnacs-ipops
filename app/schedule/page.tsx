@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { PresentationSearch } from "@/components/presentation-search";
-import { ScheduleTabs } from "@/components/schedule-tabs";
+import { ProgrammeSearch } from "@/components/programme-search";
+import { ProgrammeTabs } from "@/components/programme-tabs";
 import { buildMetadata } from "@/lib/metadata";
-import { schedule } from "@/lib/programme";
+import { programmeSchedule } from "@/lib/programme-view";
 import { posterTracks } from "@/lib/site";
 
 export const metadata: Metadata = buildMetadata(
@@ -27,13 +27,13 @@ export default function SchedulePage() {
         </header>
 
         <div className="mt-8">
-          <PresentationSearch
-            days={schedule}
+          <ProgrammeSearch
+            days={programmeSchedule}
             posterTracks={posterTracks}
           />
 
-          <ScheduleTabs
-            days={schedule}
+          <ProgrammeTabs
+            days={programmeSchedule}
             posterTracks={posterTracks}
           />
         </div>
