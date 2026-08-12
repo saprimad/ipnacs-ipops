@@ -123,7 +123,7 @@ const baseSpeakers: readonly Speaker[] = [
     affiliationShort: "IMU",
     category: "Invited",
     title:
-      "Applications of Digital Health: Current Insights and Future Directions",
+      "Applications of Digital Health in Pharmacy Practice and Education: Current Insights and Future Directions",
     image: "/speakers/shazia.png",
   },
   {
