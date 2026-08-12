@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import type { ProgrammeDay } from "@/lib/programme-view";
+import { posterAuthors } from "@/lib/poster-authors";
 
 type PosterPresentation = { id: string; title: string };
 type PosterTrack = {
@@ -55,6 +56,7 @@ export function ProgrammeSearch({
         id: poster.id,
         title: poster.title,
         track: posterTrack.name,
+        presenter: posterAuthors[poster.id],
         type: "Poster Presentation" as const,
       }))
     );
@@ -100,7 +102,7 @@ export function ProgrammeSearch({
         type="search"
         value={query}
         onChange={(event) => setQuery(event.target.value)}
-        placeholder="Try Asrul Ismail, OP014, Suite V, Nrf2..."
+        placeholder="Try Asrul Ismail, Saidatul Akhmal, PP015, Suite V..."
         autoComplete="off"
         className="mt-4 w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-[#0F2A4D] focus:ring-2 focus:ring-[#0F2A4D]/20"
       />
