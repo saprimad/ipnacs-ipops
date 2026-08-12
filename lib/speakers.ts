@@ -8,6 +8,12 @@ export type Speaker = {
   category: SpeakerCategory;
   title?: string;
   image?: string;
+  speakerLabel?: string;
+  day?: string;
+  time?: string;
+  venue?: string;
+  bio?: string;
+  abstract?: string;
 };
 
 export const speakers: readonly Speaker[] = [
@@ -17,9 +23,17 @@ export const speakers: readonly Speaker[] = [
     affiliationFull: "Ministry of Health Malaysia",
     affiliationShort: "MOH",
     category: "Plenary",
+    speakerLabel: "Keynote Speaker",
     title:
       "Stewarding Connected Innovation: Advancing Digital Transformation Across the Pharmaceutical Ecosystem",
     image: "/speakers/azuana.png",
+    day: "Day 1 · Thursday, 13 August 2026",
+    time: "11:00–12:00",
+    venue: "Suite III",
+    bio:
+      "Dr. Azuana Ramli is Malaysia’s Deputy Director-General of Health (Pharmaceutical Services) at the Ministry of Health. Appointed in April 2025, the UKM-trained pharmacist and former NPRA Director leads national drug regulation, security, and supply policies.",
+    abstract:
+      "Digital transformation is reshaping every stage of the pharmaceutical ecosystem, from scientific discovery and regulatory governance to pharmaceutical services, surveillance and patient care. Malaysia’s evolving experience illustrates how this transformation can be advanced while keeping responsible stewardship at its core. Key developments include the growing role of artificial intelligence in scientific discovery and regulatory oversight, the modernisation of regulatory infrastructure, and digital platforms such as MyPhIS and MyUBAT in strengthening services and patient access. Emerging risks in the digital marketplace are also driving new approaches to surveillance, product authentication, traceability and post-market safety. Looking ahead, meaningful progress will depend on better connecting technology, data, evidence and people across the pharmaceutical ecosystem, supported by collaboration across government, academia, industry and healthcare professionals. Ultimately, connected innovation must remain anchored in patient safety, equitable access, responsible data governance and public trust.",
   },
   {
     slug: "professor-dr-suzana-shahar",
