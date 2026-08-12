@@ -13,7 +13,7 @@ export const posterAuthors: Readonly<Record<string, string>> = {
   PP102: "Afiqah Mohammad",
   PP107: "Farhan Matloob Khan",
   PP109: "Nur Asyiera Amiruddin",
-  PP112: "Widhya Aligita",
+  PP112: "Kamran Ashraf",
   PP116: "Khairunisa Qomariyanti",
   PP120: "Maziana Mahamood",
   PP123: "Zafirah Liyana Abdullah",
