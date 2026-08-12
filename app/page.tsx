@@ -151,10 +151,12 @@ export default function HomePage() {
 
             <div className="mt-14 flex flex-wrap items-center justify-center gap-4">
               <a
-                href="/registration"
+                href="https://drive.google.com/file/d/1gXa3ndwibTnI9YGDhnevvwDJaPROxFqN/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full sm:w-auto sm:min-w-[200px] text-center rounded-lg px-8 py-3 font-semibold text-white bg-[#0F2A4D] hover:bg-[#0c2240] transition shadow-md"
               >
-                Register Now
+                Abstract Book
               </a>
 
               <a
