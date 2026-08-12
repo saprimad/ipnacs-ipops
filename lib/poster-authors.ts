@@ -58,4 +58,6 @@ export const posterAuthors: Readonly<Record<string, string>> = {
 export const posterTitleOverrides: Readonly<Record<string, string>> = {
   PP112:
     "Water Kefir, Rice Water, and Rice Water Kefir as Potential Anti-Aging Agents: In Vitro Superoxide Dismutase (SOD-Like) Activity",
+  PP125:
+    "Development and Expert Review of Cases on Vitamins, Mineral and Natural Health Product (VMNHP)-Related Problems",
 };
