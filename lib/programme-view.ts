@@ -121,6 +121,14 @@ function normalizeTrackTitle(name: string, title?: string) {
   return title;
 }
 
+function normalizePresentationTitle(id: string, title: string) {
+  if (id === "OP014") {
+    return "Green Synthesis of Copper Oxide Nanoparticles using Annona muricata Leaf Extract: Optimization, Characterization and Antimicrobial Activity";
+  }
+
+  return title;
+}
+
 function normalizeFeaturedSessionLines(
   title: string,
   lines?: readonly string[]
@@ -199,7 +207,10 @@ export const programmeSchedule: readonly ProgrammeDay[] = rawSchedule.map(
       oralTracks: item.oralTracks?.map((oralTrack) => {
         const presentations = oralTrack.presentations.map((presentation) => ({
           id: presentation.id,
-          title: presentation.title,
+          title: normalizePresentationTitle(
+            presentation.id,
+            presentation.title
+          ),
           ...parsePresentationMeta(presentation.track, oralTrack.name),
         }));
 
