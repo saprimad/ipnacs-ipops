@@ -196,14 +196,28 @@ export const programmeSchedule: readonly ProgrammeDay[] = rawSchedule.map(
         location: track.location,
         ...parseTrackRole(track.role),
       })),
-      oralTracks: item.oralTracks?.map((oralTrack) => ({
-        ...oralTrack,
-        presentations: oralTrack.presentations.map((presentation) => ({
+      oralTracks: item.oralTracks?.map((oralTrack) => {
+        const presentations = oralTrack.presentations.map((presentation) => ({
           id: presentation.id,
           title: presentation.title,
           ...parsePresentationMeta(presentation.track, oralTrack.name),
-        })),
-      })),
+        }));
+
+        if (day.key === "day-2" && oralTrack.key === "track-8") {
+          presentations.push({
+            id: "OP122",
+            title: "Evidence-Based Preventive Medicine",
+            time: "11:45–12:00",
+            presenter: "Prof. Gaku Ichihara",
+            track: oralTrack.name,
+          });
+        }
+
+        return {
+          ...oralTrack,
+          presentations,
+        };
+      }),
     })),
   })
 );
