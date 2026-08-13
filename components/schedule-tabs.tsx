@@ -58,6 +58,10 @@ type DisplayPoster = PosterPresentation & {
 
 const POSTER_TAB_KEY = "poster-presentation";
 const ALL_POSTERS_KEY = "all-posters";
+const PROFESSORIAL_LIVESTREAM_TITLE =
+  "Closing Plenary & Professorial Lecture";
+const PROFESSORIAL_LIVESTREAM_URL =
+  "https://www.youtube.com/live/N6L9wi76bs8";
 
 function renderItalics(text: string) {
   const parts = text.split(/(_[^_]+_)/g);
@@ -289,9 +293,7 @@ function PosterTrackTabs({
   const filteredPosters = useMemo(() => {
     const query = searchQuery.trim().toLowerCase();
 
-    if (!query) {
-      return selectedPosters;
-    }
+    if (!query) return selectedPosters;
 
     return selectedPosters.filter((poster) =>
       [poster.id, poster.title, poster.track].some((value) =>
@@ -303,14 +305,15 @@ function PosterTrackTabs({
   const activeTrackName =
     activeTrackKey === ALL_POSTERS_KEY
       ? "All Posters"
-      : posterTracks.find((track) => track.key === activeTrackKey)?.name ??
-        "Poster Presentation";
+      : posterTracks.find(
+(track) => track.key === activeTrackKey)
+          ?.name ?? "Poster Presentation";
 
   return (
     <div>
       <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
         <div>
-          <h2 className="text-xl font-bold text-[#0F2A4D] sm:text-2xl">
+          <h2 className="text-xl font-bold text-{#0F2A4D] sm:text-2xl">
             Poster Presentation
           </h2>
 
@@ -343,12 +346,12 @@ function PosterTrackTabs({
         />
       </div>
 
-      <div
+    <div
         className="mt-6 grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-4"
         role="tablist"
         aria-label="Poster presentation tracks"
       >
-        <button
+      <button
           type="button"
           role="tab"
           aria-selected={activeTrackKey === ALL_POSTERS_KEY}
@@ -412,7 +415,7 @@ function PosterTrackTabs({
       </div>
 
       <div className="mt-6 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-        <h3 className="text-lg font-bold text-[#0F2A4D]">
+        <h3 className="text-lg font-bold text-{#0F2A4D]">
           {activeTrackName}
         </h3>
 
@@ -429,13 +432,13 @@ function PosterTrackTabs({
               className="rounded-lg border border-slate-200 bg-white p-4 shadow-sm"
             >
               <div className="flex gap-3">
-                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#0F2A4D] text-xs font-bold text-white">
+                <span className="flex h-7 w-7 shrink-0  items-center justify-center rounded-full bg-[#0F2A4D] text-xs font-bold text-white">
                   {index + 1}
                 </span>
 
                 <div className="min-w-0">
                   <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
-                    {poster.id}
+                   {poster.id}
                   </p>
 
                   <h4 className="mt-1 text-sm font-semibold leading-relaxed text-slate-900">
@@ -443,7 +446,7 @@ function PosterTrackTabs({
                   </h4>
 
                   <p className="mt-2 text-xs font-medium text-slate-500">
-                    {poster.track}
+                   {poster.track}
                   </p>
                 </div>
               </div>
@@ -506,7 +509,7 @@ export function ScheduleTabs({
   return (
     <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
       <div
-        className="flex flex-wrap gap-2 border-b border-slate-200 bg-slate-50 p-4"
+        className="flex flex-wrap gap-2 border-b border-slate-200 bg-slate-50 p4"
         role="tablist"
         aria-label="Conference programme and presentations"
       >
@@ -572,7 +575,7 @@ export function ScheduleTabs({
           <PosterTrackTabs posterTracks={posterTracks} />
         ) : activeDay ? (
           <>
-            <h2 className="text-xl font-bold text-[#0F2A4D] sm:text-2xl">
+            <h2 className="text-xl font-bold text-{#0F2A4D] sm:text-2xl">
               {activeDay.label}
 
               {activeDay.date ? (
@@ -596,7 +599,7 @@ export function ScheduleTabs({
 
                       {item.location ? (
                         <p className="mt-1 text-xs font-medium uppercase tracking-wide text-slate-500">
-                          {item.location}
+                         {item.location}
                         </p>
                       ) : null}
                     </div>
@@ -616,7 +619,7 @@ export function ScheduleTabs({
                           ? "grid-cols-1"
                           : item.tracks.length === 2
                             ? "grid-cols-1 md:grid-cols-2"
-                            : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4",
+                              : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4",
                       ].join(" ")}
                     >
                       {item.tracks.map((track, trackIndex) => (
@@ -663,10 +666,46 @@ export function ScheduleTabs({
                       ))}
                     </div>
                   ) : (
-                    <DescriptionBlock
-                      lines={item.descriptionLines}
-                      fallback={item.description}
-                    />
+                    <>
+                      <DescriptionBlock
+                        lines={item.descriptionLines}
+                        fallback={item.description}
+                      />
+
+                      {item.title === PROFESSORIAL_LIVESTREAM_TITLE ? (
+                        <div className="mt-4 rounded-lg border border-red-200 bg-red-50 p-4">
+                          <div className="flex flex-wrap items-center gap-2">
+                            <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-red-700">
+                              <span className="h-2.5 w-2.5 animate-pulse rounded-full bg-red-600" />
+                              Live Stream
+                            </span>
+
+                            <span className="text-xs font-medium text-slate-500">
+                              Starts at 2:30 PM
+                            </span>
+                          </div>
+
+                          <a
+                            href={PROFESSORIAL_LIVESTREAM_URL}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="mt-3 inline-flex items-center gap-2 rounded-lg bg-[#FF0000] px-4 py-2.5 text-sm font-bold text-white transition hover:bg-red-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-600 focus-visible:ring-offset-2"
+                          >
+                            <span
+                              aria-hidden="true"
+                              className="inline-flex h-5 w-7 items-center justify-center rounded bg-white/15"
+                            >
+                              ▶
+                            </span>
+                            Watch Live on YouTube
+                          </a>
+
+                          <p className="mt-2 text-xs font-medium text-slate-600">
+                            Faculty of Pharmacy UiTM
+                          </p>
+                        </div>
+                      ) : null}
+                    </>
                   )}
                 </article>
               ))}
