@@ -20,6 +20,26 @@ const ALL_POSTERS_KEY = "all-posters";
 const PROFESSORIAL_LIVESTREAM_TITLE = "Closing Plenary";
 const PROFESSORIAL_LIVESTREAM_URL =
   "https://www.youtube.com/live/N6L9wi76bs8";
+const PRESENTATION_AWARDS_TITLE = "Prize-Giving";
+const PRESENTATION_AWARD_WINNERS = [
+  {
+    category: "Best Oral Presentation",
+    winners: [
+      "Shu Obana",
+      "apt. Rickha Octavia, M.Sc",
+      "Dr. Hisyam Abdul Hamid",
+    ],
+  },
+  {
+    category: "Best Poster Presentation",
+    winners: [
+      "Ts. Mohd Radzi Ab. Aziz",
+      "Larasati Arrum Kusumawardani",
+      "Nur Asyiera Amiruddin",
+    ],
+  },
+] as const;
+const AWARD_MEDALS = ["🥇", "🥈", "🥉"] as const;
 
 function renderItalics(text: string) {
   const parts = text.split(/(_[^_]+_)/g);
@@ -489,6 +509,46 @@ export function ProgrammeTabs({
                       <p className="mt-3 text-xs font-medium text-slate-200">
                         Faculty of Pharmacy UiTM
                       </p>
+                    </div>
+                  ) : null}
+
+                  {item.title === PRESENTATION_AWARDS_TITLE ? (
+                    <div className="mt-4 overflow-hidden rounded-xl border border-amber-200 bg-gradient-to-br from-amber-50 via-white to-yellow-50 shadow-sm">
+                      <div className="bg-[#0F2A4D] px-4 py-3 text-white sm:px-5">
+                        <h4 className="text-base font-bold sm:text-lg">
+                          🏆 Best Presentation Award Winners
+                        </h4>
+                      </div>
+
+                      <div className="grid gap-4 p-4 sm:p-5 md:grid-cols-2">
+                        {PRESENTATION_AWARD_WINNERS.map((award) => (
+                          <section
+                            key={award.category}
+                            className="rounded-lg border border-amber-200/80 bg-white p-4"
+                          >
+                            <h5 className="font-bold text-[#0F2A4D]">
+                              {award.category}
+                            </h5>
+
+                            <ol className="mt-3 space-y-3">
+                              {award.winners.map((winner, winnerIndex) => (
+                                <li
+                                  key={winner}
+                                  className="flex items-start gap-3 text-sm font-semibold leading-relaxed text-slate-800"
+                                >
+                                  <span
+                                    aria-label={`Rank ${winnerIndex + 1}`}
+                                    className="text-lg leading-none"
+                                  >
+                                    {AWARD_MEDALS[winnerIndex]}
+                                  </span>
+                                  <span>{winner}</span>
+                                </li>
+                              ))}
+                            </ol>
+                          </section>
+                        ))}
+                      </div>
                     </div>
                   ) : null}
                 </article>
