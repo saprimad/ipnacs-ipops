@@ -467,7 +467,7 @@ export function ProgrammeTabs({
                           Live Stream
                         </span>
                         <span className="text-xs font-medium text-slate-200">
-                          Starts at 2:45 PM
+                          Starts at 2:30 PM
                         </span>
                       </div>
 
