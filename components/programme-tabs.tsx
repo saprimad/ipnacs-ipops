@@ -361,20 +361,48 @@ export function ProgrammeTabs({
               {activeDay.items.map((item, index) => (
                 <article
                   key={`${item.time}-${index}`}
-                  className="rounded-lg border border-slate-200 bg-white p-4 shadow-sm"
+                  className={[
+                    "rounded-xl p-5 shadow-sm",
+                    item.title === PROFESSORIAL_LIVESTREAM_TITLE
+                      ? "overflow-hidden border border-amber-300/70 bg-gradient-to-br from-[#0F2A4D] via-[#17365D] to-[#452060] shadow-xl shadow-[#0F2A4D]/20"
+                      : "border border-slate-200 bg-white",
+                  ].join(" ")}
                 >
                   <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
                     <div>
-                      <span className="inline-flex max-w-full w-fit rounded-full bg-[#0F2A4D] px-3 py-1 text-xs font-bold leading-relaxed text-white sm:text-sm">
-                        {item.title}
+                      <span
+                        className={[
+                          "inline-flex max-w-full w-fit rounded-full px-3 py-1 text-xs font-bold leading-relaxed sm:text-sm",
+                          item.title === PROFESSORIAL_LIVESTREAM_TITLE
+                            ? "bg-amber-300 text-[#0F2A4D]"
+                            : "bg-[#0F2A4D] text-white",
+                        ].join(" ")}
+                      >
+                        {item.title === PROFESSORIAL_LIVESTREAM_TITLE
+                          ? "PROFESSORIAL LECTURE"
+                          : item.title}
                       </span>
                       {item.location ? (
-                        <p className="mt-2 text-xs font-medium uppercase tracking-wide text-slate-500">
+                        <p
+                          className={[
+                            "mt-2 text-xs font-medium uppercase tracking-wide",
+                            item.title === PROFESSORIAL_LIVESTREAM_TITLE
+                              ? "text-amber-100"
+                              : "text-slate-500",
+                          ].join(" ")}
+                        >
                           {item.location}
                         </p>
                       ) : null}
                     </div>
-                    <div className="w-fit shrink-0 rounded-full bg-slate-100 px-3 py-1 text-sm font-bold text-[#0F2A4D]">
+                    <div
+                      className={[
+                        "w-fit shrink-0 rounded-full px-3 py-1 text-sm font-bold",
+                        item.title === PROFESSORIAL_LIVESTREAM_TITLE
+                          ? "bg-white/10 text-white ring-1 ring-inset ring-white/25"
+                          : "bg-slate-100 text-[#0F2A4D]",
+                      ].join(" ")}
+                    >
                       {item.time}
                     </div>
                   </div>
@@ -398,12 +426,25 @@ export function ProgrammeTabs({
                       ))}
                     </div>
                   ) : item.descriptionLines?.length ? (
-                    <div className="mt-3 space-y-1 text-sm">
-                      {item.descriptionLines.map((line, lineIndex) => (
+                    <div
+                      className={
+                        item.title === PROFESSORIAL_LIVESTREAM_TITLE
+                          ? "mt-5 space-y-2"
+                          : "mt-3 space-y-1 text-sm"
+                      }
+                    >
+                      {(item.title === PROFESSORIAL_LIVESTREAM_TITLE
+                        ? item.descriptionLines.slice(0, 2)
+                        : item.descriptionLines
+                      ).map((line, lineIndex) => (
                         <p
                           key={`${line}-${lineIndex}`}
                           className={
-                            lineIndex === 0
+                            item.title === PROFESSORIAL_LIVESTREAM_TITLE
+                              ? lineIndex === 0
+                                ? "text-lg font-bold leading-relaxed text-white sm:text-xl"
+                                : "text-xl font-semibold leading-relaxed text-amber-200 sm:text-2xl"
+                              : lineIndex === 0
                               ? "font-semibold leading-relaxed text-slate-900"
                               : "leading-relaxed text-slate-700"
                           }
@@ -419,13 +460,13 @@ export function ProgrammeTabs({
                   ) : null}
 
                   {item.title === PROFESSORIAL_LIVESTREAM_TITLE ? (
-                    <div className="mt-4 rounded-lg border border-red-200 bg-red-50 p-4">
+                    <div className="mt-5 rounded-xl border border-white/15 bg-white/10 p-4 backdrop-blur-sm">
                       <div className="flex flex-wrap items-center gap-2">
-                        <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-red-700">
+                        <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-white">
                           <span className="h-2.5 w-2.5 animate-pulse rounded-full bg-red-600" />
                           Live Stream
                         </span>
-                        <span className="text-xs font-medium text-slate-500">
+                        <span className="text-xs font-medium text-slate-200">
                           Starts at 2:45 PM
                         </span>
                       </div>
@@ -434,7 +475,7 @@ export function ProgrammeTabs({
                         href={PROFESSORIAL_LIVESTREAM_URL}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="mt-3 inline-flex items-center gap-2 rounded-lg bg-[#FF0000] px-4 py-2.5 text-sm font-bold text-white transition hover:bg-red-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-600 focus-visible:ring-offset-2"
+                        className="mt-3 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-[#FF0000] px-4 py-3 text-sm font-bold text-white shadow-lg shadow-red-950/20 transition hover:bg-red-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#17365D] sm:w-auto"
                       >
                         <span
                           aria-hidden="true"
@@ -445,7 +486,7 @@ export function ProgrammeTabs({
                         Watch Live on YouTube
                       </a>
 
-                      <p className="mt-2 text-xs font-medium text-slate-600">
+                      <p className="mt-3 text-xs font-medium text-slate-200">
                         Faculty of Pharmacy UiTM
                       </p>
                     </div>
