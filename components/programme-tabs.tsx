@@ -7,6 +7,8 @@ import type {
   ProgrammeTrackItem,
 } from "@/lib/programme-view";
 import { posterAuthors, posterTitleOverrides } from "@/lib/poster-authors";
+import { PRESENTATION_AWARD_WINNERS } from "@/lib/presentation-awards";
+import { PresentationAwardBadge } from "@/components/presentation-award-badge";
 
 type PosterPresentation = { id: string; title: string };
 type PosterTrack = {
@@ -21,25 +23,6 @@ const PROFESSORIAL_LIVESTREAM_TITLE = "Closing Plenary";
 const PROFESSORIAL_LIVESTREAM_URL =
   "https://www.youtube.com/live/N6L9wi76bs8";
 const PRESENTATION_AWARDS_TITLE = "Prize-Giving";
-const PRESENTATION_AWARD_WINNERS = [
-  {
-    category: "Best Oral Presentation",
-    winners: [
-      "Shu Obana",
-      "apt. Rickha Octavia, M.Sc",
-      "Dr. Hisyam Abdul Hamid",
-    ],
-  },
-  {
-    category: "Best Poster Presentation",
-    winners: [
-      "Ts. Mohd Radzi Ab. Aziz",
-      "Larasati Arrum Kusumawardani",
-      "Nur Asyiera Amiruddin",
-    ],
-  },
-] as const;
-const AWARD_MEDALS = ["🥇", "🥈", "🥉"] as const;
 
 function renderItalics(text: string) {
   const parts = text.split(/(_[^_]+_)/g);
@@ -184,6 +167,8 @@ function OralTrackTabs({
                 </p>
               ) : null}
 
+              <PresentationAwardBadge presentationId={presentation.id} />
+
               <h5 className="mt-1 text-sm font-semibold leading-relaxed text-slate-800">
                 {renderItalics(presentation.title)}
               </h5>
@@ -302,6 +287,7 @@ function PosterTabs({ posterTracks }: { posterTracks: readonly PosterTrack[] }) 
                 {poster.presenter}
               </p>
             ) : null}
+            <PresentationAwardBadge presentationId={poster.id} />
             <h4 className="mt-1 text-sm font-semibold leading-relaxed text-slate-800">
               {poster.title}
             </h4>
@@ -535,18 +521,18 @@ export function ProgrammeTabs({
                             </h5>
 
                             <ol className="mt-3 space-y-3">
-                              {award.winners.map((winner, winnerIndex) => (
+                              {award.winners.map((winner) => (
                                 <li
-                                  key={winner}
+                                  key={winner.id}
                                   className="flex items-start gap-3 text-sm font-semibold leading-relaxed text-slate-800"
                                 >
                                   <span
-                                    aria-label={`Rank ${winnerIndex + 1}`}
+                                    aria-label={`Rank ${winner.rank}`}
                                     className="text-lg leading-none"
                                   >
-                                    {AWARD_MEDALS[winnerIndex]}
+                                    {winner.medal}
                                   </span>
-                                  <span>{winner}</span>
+                                  <span>{winner.name}</span>
                                 </li>
                               ))}
                             </ol>
