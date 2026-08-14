@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import type { ProgrammeDay } from "@/lib/programme-view";
 import { posterAuthors, posterTitleOverrides } from "@/lib/poster-authors";
+import { PresentationAwardBadge } from "@/components/presentation-award-badge";
 
 type PosterPresentation = { id: string; title: string };
 type PosterTrack = {
@@ -132,6 +133,7 @@ export function ProgrammeSearch({
                     ) : null}
                   </div>
 
+                  <PresentationAwardBadge presentationId={result.id} />
                   {result.presenter ? <p className="mt-3 text-sm font-semibold text-slate-900">{result.presenter}</p> : null}
                   <h3 className="mt-1 text-sm font-semibold leading-relaxed text-slate-800">{result.title}</h3>
                   <p className="mt-2 text-xs font-medium text-slate-500">{result.track}</p>
