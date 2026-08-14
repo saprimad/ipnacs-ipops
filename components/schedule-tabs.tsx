@@ -59,7 +59,7 @@ type DisplayPoster = PosterPresentation & {
 const POSTER_TAB_KEY = "poster-presentation";
 const ALL_POSTERS_KEY = "all-posters";
 const PROFESSORIAL_LIVESTREAM_TITLE =
-  "Closing Plenary & Professorial Lecture";
+  "Closing Plenary";
 const PROFESSORIAL_LIVESTREAM_URL =
   "https://www.youtube.com/live/N6L9wi76bs8";
 
@@ -682,7 +682,7 @@ export function ScheduleTabs({
                             </span>
 
                             <span className="text-xs font-medium text-slate-500">
-                              Starts at 2:30 PM
+                              Starts at 2:45 PM
                             </span>
                           </div>
 
