@@ -17,6 +17,9 @@ type PosterTrack = {
 
 const POSTER_TAB_KEY = "poster-presentation";
 const ALL_POSTERS_KEY = "all-posters";
+const PROFESSORIAL_LIVESTREAM_TITLE = "Closing Plenary";
+const PROFESSORIAL_LIVESTREAM_URL =
+  "https://www.youtube.com/live/N6L9wi76bs8";
 
 function renderItalics(text: string) {
   const parts = text.split(/(_[^_]+_)/g);
@@ -413,6 +416,39 @@ export function ProgrammeTabs({
                     <p className="mt-3 text-sm leading-relaxed text-slate-700">
                       {renderItalics(item.description)}
                     </p>
+                  ) : null}
+
+                  {item.title === PROFESSORIAL_LIVESTREAM_TITLE ? (
+                    <div className="mt-4 rounded-lg border border-red-200 bg-red-50 p-4">
+                      <div className="flex flex-wrap items-center gap-2">
+                        <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-red-700">
+                          <span className="h-2.5 w-2.5 animate-pulse rounded-full bg-red-600" />
+                          Live Stream
+                        </span>
+                        <span className="text-xs font-medium text-slate-500">
+                          Starts at 2:45 PM
+                        </span>
+                      </div>
+
+                      <a
+                        href={PROFESSORIAL_LIVESTREAM_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-3 inline-flex items-center gap-2 rounded-lg bg-[#FF0000] px-4 py-2.5 text-sm font-bold text-white transition hover:bg-red-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-600 focus-visible:ring-offset-2"
+                      >
+                        <span
+                          aria-hidden="true"
+                          className="inline-flex h-5 w-7 items-center justify-center rounded bg-white/15"
+                        >
+                          ▶
+                        </span>
+                        Watch Live on YouTube
+                      </a>
+
+                      <p className="mt-2 text-xs font-medium text-slate-600">
+                        Faculty of Pharmacy UiTM
+                      </p>
+                    </div>
                   ) : null}
                 </article>
               ))}
