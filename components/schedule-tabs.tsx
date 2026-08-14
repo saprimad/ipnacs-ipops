@@ -293,7 +293,9 @@ function PosterTrackTabs({
   const filteredPosters = useMemo(() => {
     const query = searchQuery.trim().toLowerCase();
 
-    if (!query) return selectedPosters;
+    if (!query) {
+      return selectedPosters;
+    }
 
     return selectedPosters.filter((poster) =>
       [poster.id, poster.title, poster.track].some((value) =>
@@ -305,15 +307,14 @@ function PosterTrackTabs({
   const activeTrackName =
     activeTrackKey === ALL_POSTERS_KEY
       ? "All Posters"
-      : posterTracks.find(
-(track) => track.key === activeTrackKey)
-          ?.name ?? "Poster Presentation";
+      : posterTracks.find((track) => track.key === activeTrackKey)?.name ??
+        "Poster Presentation";
 
   return (
     <div>
       <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
         <div>
-          <h2 className="text-xl font-bold text-{#0F2A4D] sm:text-2xl">
+          <h2 className="text-xl font-bold text-[#0F2A4D] sm:text-2xl">
             Poster Presentation
           </h2>
 
@@ -346,12 +347,12 @@ function PosterTrackTabs({
         />
       </div>
 
-    <div
+      <div
         className="mt-6 grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-4"
         role="tablist"
         aria-label="Poster presentation tracks"
       >
-      <button
+        <button
           type="button"
           role="tab"
           aria-selected={activeTrackKey === ALL_POSTERS_KEY}
@@ -415,7 +416,7 @@ function PosterTrackTabs({
       </div>
 
       <div className="mt-6 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-        <h3 className="text-lg font-bold text-{#0F2A4D]">
+        <h3 className="text-lg font-bold text-[#0F2A4D]">
           {activeTrackName}
         </h3>
 
@@ -432,13 +433,13 @@ function PosterTrackTabs({
               className="rounded-lg border border-slate-200 bg-white p-4 shadow-sm"
             >
               <div className="flex gap-3">
-                <span className="flex h-7 w-7 shrink-0  items-center justify-center rounded-full bg-[#0F2A4D] text-xs font-bold text-white">
+                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#0F2A4D] text-xs font-bold text-white">
                   {index + 1}
                 </span>
 
                 <div className="min-w-0">
                   <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
-                   {poster.id}
+                    {poster.id}
                   </p>
 
                   <h4 className="mt-1 text-sm font-semibold leading-relaxed text-slate-900">
@@ -446,7 +447,7 @@ function PosterTrackTabs({
                   </h4>
 
                   <p className="mt-2 text-xs font-medium text-slate-500">
-                   {poster.track}
+                    {poster.track}
                   </p>
                 </div>
               </div>
@@ -509,7 +510,7 @@ export function ScheduleTabs({
   return (
     <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
       <div
-        className="flex flex-wrap gap-2 border-b border-slate-200 bg-slate-50 p4"
+        className="flex flex-wrap gap-2 border-b border-slate-200 bg-slate-50 p-4"
         role="tablist"
         aria-label="Conference programme and presentations"
       >
@@ -575,7 +576,7 @@ export function ScheduleTabs({
           <PosterTrackTabs posterTracks={posterTracks} />
         ) : activeDay ? (
           <>
-            <h2 className="text-xl font-bold text-{#0F2A4D] sm:text-2xl">
+            <h2 className="text-xl font-bold text-[#0F2A4D] sm:text-2xl">
               {activeDay.label}
 
               {activeDay.date ? (
@@ -599,7 +600,7 @@ export function ScheduleTabs({
 
                       {item.location ? (
                         <p className="mt-1 text-xs font-medium uppercase tracking-wide text-slate-500">
-                         {item.location}
+                          {item.location}
                         </p>
                       ) : null}
                     </div>
@@ -619,7 +620,7 @@ export function ScheduleTabs({
                           ? "grid-cols-1"
                           : item.tracks.length === 2
                             ? "grid-cols-1 md:grid-cols-2"
-                              : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4",
+                            : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4",
                       ].join(" ")}
                     >
                       {item.tracks.map((track, trackIndex) => (
