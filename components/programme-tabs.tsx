@@ -513,7 +513,11 @@ export function ProgrammeTabs({
                   ) : null}
 
                   {item.title === PRESENTATION_AWARDS_TITLE ? (
-                    <div className="mt-4 overflow-hidden rounded-xl border border-amber-200 bg-gradient-to-br from-amber-50 via-white to-yellow-50 shadow-sm">
+                    <div
+                      aria-label="Best presentation award winners"
+                      className="mt-4 overflow-hidden rounded-xl border border-amber-200 bg-gradient-to-br from-amber-50 via-white to-yellow-50 shadow-sm"
+                      role="region"
+                    >
                       <div className="bg-[#0F2A4D] px-4 py-3 text-white sm:px-5">
                         <h4 className="text-base font-bold sm:text-lg">
                           🏆 Best Presentation Award Winners
