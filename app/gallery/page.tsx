@@ -2,6 +2,27 @@
 
 import { useEffect, useState } from "react";
 
+const officialHighlights = [
+  {
+    type: "Photo Highlights",
+    title: "Official Photo Highlights",
+    description:
+      "Selected moments from IPNaCS–IPoPS 2026 shared by Bahagian Komunikasi Korporat, UiTM.",
+    url: "https://www.facebook.com/darilensakorporat/posts/pfbid02D4mE1bwjgekiJttc49KZPTf6KaRooMwZC94dfmX3zqqu5S4kpcqaBzxZjquzByMkl",
+    action: "View on Facebook",
+    kind: "photo",
+  },
+  {
+    type: "Video Highlight",
+    title: "Conference Highlight Video",
+    description:
+      "Watch the official IPNaCS–IPoPS 2026 video highlight shared on Facebook.",
+    url: "https://www.facebook.com/reel/1034445492521693/",
+    action: "Watch on Facebook",
+    kind: "video",
+  },
+] as const;
+
 export default function GalleryPage() {
   const [introVisible, setIntroVisible] = useState(true);
 
@@ -127,6 +148,109 @@ export default function GalleryPage() {
               </div>
             ))}
           </div>
+
+          <section className="mt-16 rounded-3xl border border-[#0F2A4D]/10 bg-white p-5 shadow-[0_22px_55px_rgba(15,42,77,0.08)] sm:p-8 lg:p-10">
+            <div className="mx-auto max-w-2xl text-center">
+              <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-[#B58A1F]">
+                Official Coverage
+              </p>
+              <h2 className="mt-3 text-2xl font-extrabold tracking-tight text-[#0F2A4D] sm:text-3xl">
+                Official Social Highlights
+              </h2>
+              <p className="mx-auto mt-3 max-w-xl text-sm leading-6 text-slate-500 sm:text-base">
+                Selected IPNaCS–IPoPS 2026 moments shared through official UiTM
+                corporate coverage while the full conference gallery is being prepared.
+              </p>
+            </div>
+
+            <div className="mt-8 grid gap-5 md:grid-cols-2">
+              {officialHighlights.map((highlight) => (
+                <a
+                  key={highlight.url}
+                  href={highlight.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-gradient-to-br from-white via-white to-slate-50 p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#E5B82E]/60 hover:shadow-[0_18px_40px_rgba(15,42,77,0.12)] sm:p-7"
+                >
+                  <div className="absolute -right-14 -top-14 h-32 w-32 rounded-full bg-[#E5B82E]/10 blur-2xl transition duration-300 group-hover:bg-[#E5B82E]/20" />
+
+                  <div className="relative flex items-start justify-between gap-4">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#0F2A4D] text-white shadow-lg">
+                      {highlight.kind === "video" ? (
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="22"
+                          height="22"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          aria-hidden="true"
+                        >
+                          <polygon points="6 3 20 12 6 21 6 3" />
+                        </svg>
+                      ) : (
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="22"
+                          height="22"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          aria-hidden="true"
+                        >
+                          <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+                          <circle cx="9" cy="9" r="2" />
+                          <path d="m21 15-3.1-3.1a2 2 0 0 0-2.8 0L6 21" />
+                        </svg>
+                      )}
+                    </div>
+
+                    <span className="rounded-full border border-[#E5B82E]/35 bg-[#E5B82E]/10 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.14em] text-[#7A5B10]">
+                      {highlight.type}
+                    </span>
+                  </div>
+
+                  <div className="relative mt-6">
+                    <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">
+                      Bahagian Komunikasi Korporat, UiTM
+                    </p>
+                    <h3 className="mt-2 text-xl font-extrabold tracking-tight text-[#0F2A4D]">
+                      {highlight.title}
+                    </h3>
+                    <p className="mt-3 text-sm leading-6 text-slate-600">
+                      {highlight.description}
+                    </p>
+
+                    <div className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-[#0F2A4D]">
+                      {highlight.action}
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden="true"
+                        className="transition duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                      >
+                        <path d="M7 17 17 7" />
+                        <path d="M7 7h10v10" />
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </section>
 
           <div className="mx-auto mt-14 max-w-2xl text-center">
             <p className="text-xl font-bold tracking-tight text-[#0F2A4D] sm:text-2xl">
