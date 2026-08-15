@@ -23,7 +23,38 @@ export function Countdown({ targetDate }: { targetDate: string }) {
   if (!mounted) return null;
 
   const diff = target - now;
-  if (diff <= 0) return null;
+  if (diff <= 0) {
+    return (
+      <div className="mt-10 text-center">
+        <a
+          href="https://drive.google.com/drive/u/0/mobile/folders/1iwuuwWAvRZLeK3Z6X3SEpytaDu7rayf6?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex min-w-[240px] items-center justify-center gap-3 rounded-lg bg-[#0F2A4D] px-8 py-3 font-semibold text-white shadow-md transition hover:bg-[#0c2240]"
+          aria-label="Open Conference Materials"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+          </svg>
+          Conference Materials
+        </a>
+        <p className="mt-2 text-sm text-white/75">
+          Presentation slides and post-conference resources
+        </p>
+      </div>
+    );
+  }
 
   const days = Math.floor(diff / (1000 * 60 * 60 * 24));
   const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
