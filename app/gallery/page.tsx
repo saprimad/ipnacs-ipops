@@ -2,26 +2,9 @@
 
 import { useEffect, useState } from "react";
 
-const officialHighlights = [
-  {
-    type: "Photo Highlights",
-    title: "Official Photo Highlights",
-    description:
-      "Selected moments from IPNaCS–IPoPS 2026 shared by Bahagian Komunikasi Korporat, UiTM.",
-    url: "https://www.facebook.com/darilensakorporat/posts/pfbid02D4mE1bwjgekiJttc49KZPTf6KaRooMwZC94dfmX3zqqu5S4kpcqaBzxZjquzByMkl",
-    action: "View on Facebook",
-    kind: "photo",
-  },
-  {
-    type: "Video Highlight",
-    title: "Conference Highlight Video",
-    description:
-      "Watch the official IPNaCS–IPoPS 2026 video highlight shared on Facebook.",
-    url: "https://www.facebook.com/reel/1034445492521693/",
-    action: "Watch on Facebook",
-    kind: "video",
-  },
-] as const;
+const officialPhotoPost =
+  "https://www.facebook.com/darilensakorporat/posts/pfbid02D4mE1bwjgekiJttc49KZPTf6KaRooMwZC94dfmX3zqqu5S4kpcqaBzxZjquzByMkl";
+const officialVideo = "https://www.facebook.com/reel/1034445492521693/";
 
 export default function GalleryPage() {
   const [introVisible, setIntroVisible] = useState(true);
@@ -39,6 +22,14 @@ export default function GalleryPage() {
     { span: "sm:col-span-2", tilt: "-rotate-[0.7deg]", delay: "0.3s" },
     { span: "", tilt: "rotate-[0.6deg]", delay: "1.8s" },
   ];
+
+  const photoEmbed = `https://www.facebook.com/plugins/post.php?href=${encodeURIComponent(
+    officialPhotoPost
+  )}&show_text=true&width=500`;
+
+  const videoEmbed = `https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(
+    officialVideo
+  )}&show_text=true&width=500`;
 
   return (
     <main className="relative min-h-screen overflow-hidden bg-[#F7F8FA] text-[#0F2A4D]">
@@ -89,8 +80,8 @@ export default function GalleryPage() {
 
           <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">
             Our photographers are preparing the official IPNaCS–IPoPS 2026
-            collection. The moments, highlights and memories will be available
-            here soon.
+            collection. In the meantime, explore selected official UiTM coverage
+            from the conference below.
           </p>
 
           <div className="mt-8 inline-flex items-center gap-3 rounded-full border border-[#E5B82E]/45 bg-[#E5B82E]/10 px-5 py-2.5 text-sm font-semibold text-[#7A5B10] shadow-sm">
@@ -98,156 +89,158 @@ export default function GalleryPage() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#B58A1F]/40" />
               <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[#B58A1F]" />
             </span>
-            Gallery developing · Coming soon
+            Full gallery developing · Coming soon
           </div>
         </div>
 
-        <div className="mx-auto mt-16 max-w-5xl">
-          <div className="mb-6 flex items-center justify-center gap-3 text-xs font-bold uppercase tracking-[0.24em] text-slate-400">
-            <span className="h-px w-12 bg-slate-200" />
-            Photo Lab
-            <span className="h-px w-12 bg-slate-200" />
-          </div>
-
-          <div className="grid auto-rows-[150px] grid-cols-2 gap-3 sm:auto-rows-[190px] sm:grid-cols-4 sm:gap-5">
-            {placeholders.map((item, index) => (
-              <div
-                key={index}
-                style={{ animationDelay: item.delay }}
-                className={`photo-frame group relative overflow-hidden rounded-2xl border border-white/80 bg-gradient-to-br from-slate-100 via-white to-slate-200 shadow-[0_16px_35px_rgba(15,42,77,0.10)] ${item.span} ${item.tilt}`}
-              >
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(229,184,46,0.19),transparent_38%),radial-gradient(circle_at_bottom_left,rgba(15,42,77,0.11),transparent_48%)]" />
-                <div className="photo-shimmer absolute inset-0" />
-                {index === 1 && <div className="photo-flash absolute inset-0 bg-white" />}
-
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="camera-breathe flex h-14 w-14 items-center justify-center rounded-full border border-white/80 bg-white/75 text-slate-400 shadow-lg backdrop-blur sm:h-16 sm:w-16">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="25"
-                      height="25"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.7"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      aria-hidden="true"
-                    >
-                      <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
-                      <circle cx="9" cy="9" r="2" />
-                      <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
-                    </svg>
-                  </div>
-                </div>
-
-                <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-white/70 to-transparent" />
-                <div className="absolute bottom-3 left-4 text-[9px] font-bold uppercase tracking-[0.22em] text-slate-400/80">
-                  Frame {String(index + 1).padStart(2, "0")}
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <section className="mt-16 rounded-3xl border border-[#0F2A4D]/10 bg-white p-5 shadow-[0_22px_55px_rgba(15,42,77,0.08)] sm:p-8 lg:p-10">
+        <div className="mx-auto mt-14 max-w-5xl">
+          <section className="rounded-3xl border border-[#0F2A4D]/10 bg-white p-5 shadow-[0_22px_55px_rgba(15,42,77,0.08)] sm:p-8 lg:p-10">
             <div className="mx-auto max-w-2xl text-center">
               <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-[#B58A1F]">
-                Official Coverage
+                Official UiTM Coverage
               </p>
               <h2 className="mt-3 text-2xl font-extrabold tracking-tight text-[#0F2A4D] sm:text-3xl">
-                Official Social Highlights
+                Moments from the Conference
               </h2>
               <p className="mx-auto mt-3 max-w-xl text-sm leading-6 text-slate-500 sm:text-base">
-                Selected IPNaCS–IPoPS 2026 moments shared through official UiTM
-                corporate coverage while the full conference gallery is being prepared.
+                Photo and video highlights shared by Bahagian Komunikasi Korporat,
+                UiTM.
               </p>
             </div>
 
-            <div className="mt-8 grid gap-5 md:grid-cols-2">
-              {officialHighlights.map((highlight) => (
-                <a
-                  key={highlight.url}
-                  href={highlight.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-gradient-to-br from-white via-white to-slate-50 p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#E5B82E]/60 hover:shadow-[0_18px_40px_rgba(15,42,77,0.12)] sm:p-7"
+            <div className="mt-8 grid items-start gap-6 lg:grid-cols-2">
+              <article className="overflow-hidden rounded-2xl border border-slate-200 bg-[#F7F8FA] shadow-sm">
+                <div className="border-b border-slate-200 bg-white px-5 py-4">
+                  <p className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#B58A1F]">
+                    Official Photo Post
+                  </p>
+                  <h3 className="mt-1 text-lg font-extrabold text-[#0F2A4D]">
+                    Photo Highlights
+                  </h3>
+                </div>
+
+                <div className="flex min-h-[620px] items-start justify-center overflow-hidden bg-white p-2 sm:p-4">
+                  <iframe
+                    src={photoEmbed}
+                    title="IPNaCS–IPoPS 2026 official UiTM photo highlights"
+                    width="500"
+                    height="620"
+                    className="w-full max-w-[500px] border-0"
+                    scrolling="no"
+                    allow="encrypted-media"
+                    loading="lazy"
+                  />
+                </div>
+
+                <div className="border-t border-slate-200 bg-white px-5 py-4">
+                  <a
+                    href={officialPhotoPost}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-bold text-[#0F2A4D] transition hover:text-[#B58A1F]"
+                  >
+                    View original post on Facebook
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              </article>
+
+              <article className="overflow-hidden rounded-2xl border border-slate-200 bg-[#F7F8FA] shadow-sm">
+                <div className="border-b border-slate-200 bg-white px-5 py-4">
+                  <p className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#B58A1F]">
+                    Official Video
+                  </p>
+                  <h3 className="mt-1 text-lg font-extrabold text-[#0F2A4D]">
+                    Conference Highlight Reel
+                  </h3>
+                </div>
+
+                <div className="flex min-h-[620px] items-start justify-center overflow-hidden bg-white p-2 sm:p-4">
+                  <iframe
+                    src={videoEmbed}
+                    title="IPNaCS–IPoPS 2026 official UiTM conference highlight video"
+                    width="500"
+                    height="620"
+                    className="w-full max-w-[500px] border-0"
+                    scrolling="no"
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                    allowFullScreen
+                    loading="lazy"
+                  />
+                </div>
+
+                <div className="border-t border-slate-200 bg-white px-5 py-4">
+                  <a
+                    href={officialVideo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-bold text-[#0F2A4D] transition hover:text-[#B58A1F]"
+                  >
+                    View original video on Facebook
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section className="mt-16">
+            <div className="mx-auto max-w-2xl text-center">
+              <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-[#B58A1F]">
+                Full Conference Collection
+              </p>
+              <h2 className="mt-3 text-2xl font-extrabold tracking-tight text-[#0F2A4D] sm:text-3xl">
+                Official Photo Gallery Coming Soon
+              </h2>
+              <p className="mx-auto mt-3 max-w-xl text-sm leading-6 text-slate-500 sm:text-base">
+                The complete photographer collection will appear here once the
+                official images are ready.
+              </p>
+            </div>
+
+            <div className="mt-8 flex items-center justify-center gap-3 text-xs font-bold uppercase tracking-[0.24em] text-slate-400">
+              <span className="h-px w-12 bg-slate-200" />
+              Photo Lab
+              <span className="h-px w-12 bg-slate-200" />
+            </div>
+
+            <div className="mt-6 grid auto-rows-[150px] grid-cols-2 gap-3 sm:auto-rows-[190px] sm:grid-cols-4 sm:gap-5">
+              {placeholders.map((item, index) => (
+                <div
+                  key={index}
+                  style={{ animationDelay: item.delay }}
+                  className={`photo-frame group relative overflow-hidden rounded-2xl border border-white/80 bg-gradient-to-br from-slate-100 via-white to-slate-200 shadow-[0_16px_35px_rgba(15,42,77,0.10)] ${item.span} ${item.tilt}`}
                 >
-                  <div className="absolute -right-14 -top-14 h-32 w-32 rounded-full bg-[#E5B82E]/10 blur-2xl transition duration-300 group-hover:bg-[#E5B82E]/20" />
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(229,184,46,0.19),transparent_38%),radial-gradient(circle_at_bottom_left,rgba(15,42,77,0.11),transparent_48%)]" />
+                  <div className="photo-shimmer absolute inset-0" />
+                  {index === 1 && <div className="photo-flash absolute inset-0 bg-white" />}
 
-                  <div className="relative flex items-start justify-between gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#0F2A4D] text-white shadow-lg">
-                      {highlight.kind === "video" ? (
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="22"
-                          height="22"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          aria-hidden="true"
-                        >
-                          <polygon points="6 3 20 12 6 21 6 3" />
-                        </svg>
-                      ) : (
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="22"
-                          height="22"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          aria-hidden="true"
-                        >
-                          <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
-                          <circle cx="9" cy="9" r="2" />
-                          <path d="m21 15-3.1-3.1a2 2 0 0 0-2.8 0L6 21" />
-                        </svg>
-                      )}
-                    </div>
-
-                    <span className="rounded-full border border-[#E5B82E]/35 bg-[#E5B82E]/10 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.14em] text-[#7A5B10]">
-                      {highlight.type}
-                    </span>
-                  </div>
-
-                  <div className="relative mt-6">
-                    <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">
-                      Bahagian Komunikasi Korporat, UiTM
-                    </p>
-                    <h3 className="mt-2 text-xl font-extrabold tracking-tight text-[#0F2A4D]">
-                      {highlight.title}
-                    </h3>
-                    <p className="mt-3 text-sm leading-6 text-slate-600">
-                      {highlight.description}
-                    </p>
-
-                    <div className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-[#0F2A4D]">
-                      {highlight.action}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="camera-breathe flex h-14 w-14 items-center justify-center rounded-full border border-white/80 bg-white/75 text-slate-400 shadow-lg backdrop-blur sm:h-16 sm:w-16">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
+                        width="25"
+                        height="25"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
-                        strokeWidth="2"
+                        strokeWidth="1.7"
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         aria-hidden="true"
-                        className="transition duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
                       >
-                        <path d="M7 17 17 7" />
-                        <path d="M7 7h10v10" />
+                        <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+                        <circle cx="9" cy="9" r="2" />
+                        <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
                       </svg>
                     </div>
                   </div>
-                </a>
+
+                  <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-white/70 to-transparent" />
+                  <div className="absolute bottom-3 left-4 text-[9px] font-bold uppercase tracking-[0.22em] text-slate-400/80">
+                    Frame {String(index + 1).padStart(2, "0")}
+                  </div>
+                </div>
               ))}
             </div>
           </section>
