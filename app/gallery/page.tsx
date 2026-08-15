@@ -155,18 +155,33 @@ export default function GalleryPage() {
                   </h3>
                 </div>
 
-                <div className="flex items-start justify-center overflow-hidden bg-white p-2 sm:p-4">
-                  <iframe
-                    src={videoEmbed}
-                    title="IPNaCS–IPoPS 2026 official UiTM conference highlight video"
-                    width="500"
-                    height="320"
-                    className="h-[320px] w-full max-w-[500px] border-0 sm:h-[340px]"
-                    scrolling="no"
-                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                    allowFullScreen
-                    loading="lazy"
-                  />
+                <div className="bg-white p-2 sm:p-4">
+                  <div className="relative mx-auto aspect-video w-full max-w-[500px] overflow-hidden bg-black">
+                    <iframe
+                      src={videoEmbed}
+                      title="IPNaCS–IPoPS 2026 official UiTM conference highlight video"
+                      width="500"
+                      height="500"
+                      className="absolute inset-0 h-[500px] w-full border-0"
+                      scrolling="no"
+                      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                      allowFullScreen
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+
+                <div className="border-t border-slate-100 bg-white px-5 py-5 sm:px-6">
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-slate-400">
+                    Bahagian Komunikasi Korporat, UiTM
+                  </p>
+                  <p className="mt-2 text-sm leading-6 text-slate-600 sm:text-base">
+                    A short official recap capturing moments from IPNaCS–IPoPS 2026 at
+                    Mercure Kuala Lumpur Glenmarie, Shah Alam.
+                  </p>
+                  <p className="mt-3 text-xs font-semibold text-[#8A6918]">
+                    13–14 August 2026 · Shah Alam, Malaysia
+                  </p>
                 </div>
 
                 <div className="border-t border-slate-200 bg-white px-5 py-4">
