@@ -25,33 +25,70 @@ export function Countdown({ targetDate }: { targetDate: string }) {
   const diff = target - now;
   if (diff <= 0) {
     return (
-      <div className="mt-10 text-center">
+      <div className="mt-10 flex justify-center px-2">
         <a
           href="https://drive.google.com/drive/u/0/mobile/folders/1iwuuwWAvRZLeK3Z6X3SEpytaDu7rayf6?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex min-w-[240px] items-center justify-center gap-3 rounded-lg bg-[#0F2A4D] px-8 py-3 font-semibold text-white shadow-md transition hover:bg-[#0c2240]"
           aria-label="Open Conference Materials"
+          className="group relative w-full max-w-xl overflow-hidden rounded-2xl border border-[#F3D36A]/70 bg-gradient-to-br from-[#F6D365] via-[#E5B82E] to-[#C99518] px-6 py-5 text-left text-[#0F2A4D] shadow-[0_12px_36px_rgba(229,184,46,0.35)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_18px_45px_rgba(229,184,46,0.5)] sm:px-8 sm:py-6"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            aria-hidden="true"
-          >
-            <path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-          </svg>
-          Conference Materials
+          <div className="absolute inset-0 opacity-0 transition duration-300 group-hover:opacity-100">
+            <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-white/20 blur-2xl" />
+          </div>
+
+          <div className="relative flex items-center justify-between gap-5">
+            <div>
+              <span className="inline-flex rounded-full border border-[#0F2A4D]/15 bg-white/30 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.18em] sm:text-xs">
+                Post-Conference Resources
+              </span>
+
+              <div className="mt-3 flex items-center gap-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="26"
+                  height="26"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                  className="shrink-0"
+                >
+                  <path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                </svg>
+
+                <span className="text-xl font-extrabold tracking-tight sm:text-2xl">
+                  Conference Materials
+                </span>
+              </div>
+
+              <p className="mt-2 text-sm font-medium text-[#0F2A4D]/75 sm:text-base">
+                Speaker slides • Presentation materials • Resources
+              </p>
+            </div>
+
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[#0F2A4D] text-white shadow-lg transition duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M7 17 17 7" />
+                <path d="M7 7h10v10" />
+              </svg>
+            </div>
+          </div>
         </a>
-        <p className="mt-2 text-sm text-white/75">
-          Presentation slides and post-conference resources
-        </p>
       </div>
     );
   }
