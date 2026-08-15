@@ -7,6 +7,7 @@ const links = [
   ["Home", "/"],
   ["Speakers", "/speakers"],
   ["Schedule", "/schedule"],
+  ["Photo Gallery", "/gallery"],
   ["Venue", "/venue"],
   ["Submit Abstract", "/faq"],
   ["Presenter Guidelines", "/guidelines"],
