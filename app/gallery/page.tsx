@@ -6,7 +6,7 @@ export default function GalleryPage() {
   const [introVisible, setIntroVisible] = useState(true);
 
   useEffect(() => {
-    const timer = window.setTimeout(() => setIntroVisible(false), 1200);
+    const timer = window.setTimeout(() => setIntroVisible(false), 1400);
     return () => window.clearTimeout(timer);
   }, []);
 
@@ -23,28 +23,27 @@ export default function GalleryPage() {
     <main className="relative min-h-screen overflow-hidden bg-[#F7F8FA] text-[#0F2A4D]">
       {introVisible && (
         <div className="gallery-intro fixed inset-0 z-[100] flex items-center justify-center bg-[#07182d] text-white">
-          <div className="relative flex h-44 w-44 items-center justify-center sm:h-52 sm:w-52">
+          <div className="relative flex h-56 w-56 items-center justify-center sm:h-64 sm:w-64">
             <div className="aperture-ring absolute inset-0 rounded-full border border-[#E5B82E]/50" />
-            <div className="aperture-ring aperture-ring-delay absolute inset-5 rounded-full border border-white/25" />
+            <div className="aperture-ring aperture-ring-delay absolute inset-5 rounded-full border border-white/20" />
+
             <div className="relative z-10 text-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="36"
-                height="36"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.7"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-                className="mx-auto text-[#E5B82E]"
-              >
-                <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z" />
-                <circle cx="12" cy="13" r="3" />
-              </svg>
-              <p className="mt-3 text-[10px] font-bold uppercase tracking-[0.3em] text-white/70">
-                Developing Memories
+              <img
+                src="/logo.png"
+                alt="IPNaCS–IPoPS 2026 logo"
+                className="mx-auto h-14 w-14 object-contain drop-shadow-lg sm:h-16 sm:w-16"
+              />
+
+              <p className="mt-3 text-[10px] font-extrabold uppercase tracking-[0.24em] text-[#E5B82E] sm:text-xs">
+                IPNaCS–IPoPS 2026
+              </p>
+
+              <p className="mt-2 text-sm font-extrabold uppercase tracking-[0.2em] text-white sm:text-base">
+                Moments in Focus
+              </p>
+
+              <p className="mt-1 text-[9px] font-medium uppercase tracking-[0.18em] text-white/55 sm:text-[10px]">
+                Official Photo Gallery
               </p>
             </div>
           </div>
@@ -155,7 +154,7 @@ export default function GalleryPage() {
 
       <style>{`
         @keyframes introFade {
-          0%, 68% { opacity: 1; }
+          0%, 72% { opacity: 1; }
           100% { opacity: 0; visibility: hidden; }
         }
         @keyframes aperturePulse {
@@ -180,7 +179,7 @@ export default function GalleryPage() {
           86% { opacity: .5; }
           88% { opacity: 0; }
         }
-        .gallery-intro { animation: introFade 1.2s ease forwards; }
+        .gallery-intro { animation: introFade 1.4s ease forwards; }
         .aperture-ring { animation: aperturePulse .9s ease-out infinite; }
         .aperture-ring-delay { animation-delay: .22s; }
         .photo-frame { animation: frameFloat 6s ease-in-out infinite; }
