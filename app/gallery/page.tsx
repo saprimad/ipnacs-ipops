@@ -155,13 +155,13 @@ export default function GalleryPage() {
                   </h3>
                 </div>
 
-                <div className="flex min-h-[620px] items-start justify-center overflow-hidden bg-white p-2 sm:p-4">
+                <div className="flex items-start justify-center overflow-hidden bg-white p-2 sm:p-4">
                   <iframe
                     src={videoEmbed}
                     title="IPNaCS–IPoPS 2026 official UiTM conference highlight video"
                     width="500"
-                    height="620"
-                    className="w-full max-w-[500px] border-0"
+                    height="420"
+                    className="h-[420px] w-full max-w-[500px] border-0 sm:h-[460px]"
                     scrolling="no"
                     allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                     allowFullScreen
