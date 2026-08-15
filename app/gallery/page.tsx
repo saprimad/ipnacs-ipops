@@ -29,7 +29,7 @@ export default function GalleryPage() {
 
   const videoEmbed = `https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(
     officialVideo
-  )}&show_text=true&width=500`;
+  )}&show_text=false&width=500`;
 
   return (
     <main className="relative min-h-screen overflow-hidden bg-[#F7F8FA] text-[#0F2A4D]">
@@ -160,8 +160,8 @@ export default function GalleryPage() {
                     src={videoEmbed}
                     title="IPNaCS–IPoPS 2026 official UiTM conference highlight video"
                     width="500"
-                    height="420"
-                    className="h-[420px] w-full max-w-[500px] border-0 sm:h-[460px]"
+                    height="320"
+                    className="h-[320px] w-full max-w-[500px] border-0 sm:h-[340px]"
                     scrolling="no"
                     allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
                     allowFullScreen
