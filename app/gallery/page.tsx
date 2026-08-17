@@ -6,9 +6,9 @@ const officialPhotoPost =
   "https://www.facebook.com/darilensakorporat/posts/pfbid02D4mE1bwjgekiJttc49KZPTf6KaRooMwZC94dfmX3zqqu5S4kpcqaBzxZjquzByMkl";
 const officialVideo = "https://www.facebook.com/reel/1034445492521693/";
 const driveFolder =
-  "https://drive.google.com/drive/folders/1faXKP6jOy9ttaH0Q6zHPRPAnMBLC-rVN?usp=sharing";
+  "https://drive.google.com/drive/folders/1ER4AIAfcjSqaNI7zPTFtGo7xURz9E4Jh";
 const driveEmbed =
-  "https://drive.google.com/embeddedfolderview?id=1faXKP6jOy9ttaH0Q6zHPRPAnMBLC-rVN#grid";
+  "https://drive.google.com/embeddedfolderview?id=1ER4AIAfcjSqaNI7zPTFtGo7xURz9E4Jh#grid";
 
 export default function GalleryPage() {
   const [introVisible, setIntroVisible] = useState(true);
