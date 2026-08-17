@@ -50,7 +50,7 @@ export default function GalleryPage() {
               </p>
 
               <p className="mt-1 text-[9px] font-medium uppercase tracking-[0.18em] text-white/55 sm:text-[10px]">
-                Official Photo Gallery
+                Conference Photo Gallery
               </p>
             </div>
           </div>
@@ -75,7 +75,7 @@ export default function GalleryPage() {
 
           <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">
             Relive IPNaCS–IPoPS 2026 through selected official UiTM coverage and
-            our shared conference photo collection.
+            moments shared by our conference community.
           </p>
 
           <div className="mt-8 inline-flex items-center gap-3 rounded-full border border-[#E5B82E]/45 bg-[#E5B82E]/10 px-5 py-2.5 text-sm font-semibold text-[#7A5B10] shadow-sm">
@@ -83,7 +83,7 @@ export default function GalleryPage() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#B58A1F]/40" />
               <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[#B58A1F]" />
             </span>
-            Conference photo collection available
+            Shared conference gallery open
           </div>
         </div>
 
@@ -196,14 +196,15 @@ export default function GalleryPage() {
           <section className="mt-16">
             <div className="mx-auto max-w-2xl text-center">
               <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-[#B58A1F]">
-                Full Conference Collection
+                Shared Conference Gallery
               </p>
               <h2 className="mt-3 text-2xl font-extrabold tracking-tight text-[#0F2A4D] sm:text-3xl">
-                Browse the Conference Photos
+                Relive &amp; Share the Moments
               </h2>
               <p className="mx-auto mt-3 max-w-xl text-sm leading-6 text-slate-500 sm:text-base">
-                Browse the shared photo collection directly below. Photos remain
-                hosted on Google Drive and are not stored on this website.
+                Explore the IPNaCS–IPoPS 2026 photo collection — and if you
+                captured a memorable moment, feel free to add it to the shared
+                gallery.
               </p>
             </div>
 
@@ -211,32 +212,39 @@ export default function GalleryPage() {
               <div className="flex items-center justify-between gap-4 border-b border-slate-200 bg-white px-5 py-4 sm:px-6">
                 <div>
                   <p className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#B58A1F]">
-                    Google Drive Collection
+                    Shared Conference Gallery
                   </p>
                   <p className="mt-1 text-sm font-bold text-[#0F2A4D] sm:text-base">
-                    IPNaCS–IPoPS 2026 Photos
+                    IPNaCS–IPoPS 2026
                   </p>
                 </div>
                 <span className="rounded-full border border-[#E5B82E]/35 bg-[#E5B82E]/10 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.14em] text-[#7A5B10]">
-                  Live Gallery
+                  Browse &amp; Contribute
                 </span>
               </div>
 
               <iframe
                 src={driveEmbed}
-                title="IPNaCS–IPoPS 2026 Google Drive photo collection"
+                title="IPNaCS–IPoPS 2026 shared Google Drive photo collection"
                 className="h-[620px] w-full border-0 bg-white sm:h-[720px]"
                 loading="lazy"
               />
 
-              <div className="border-t border-slate-200 bg-white px-5 py-4 sm:px-6">
+              <div className="border-t border-slate-200 bg-[#FBFAF6] px-5 py-5 sm:px-6">
+                <p className="text-sm font-bold text-[#0F2A4D]">
+                  Captured a great moment?
+                </p>
+                <p className="mt-1 text-sm leading-6 text-slate-600">
+                  Use the + button in the gallery to add your photos and help us
+                  complete the story of IPNaCS–IPoPS 2026.
+                </p>
                 <a
                   href={driveFolder}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm font-bold text-[#0F2A4D] transition hover:text-[#B58A1F]"
+                  className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-[#0F2A4D] transition hover:text-[#B58A1F]"
                 >
-                  Open full collection in Google Drive
+                  Open shared gallery in Google Drive
                   <span aria-hidden="true">↗</span>
                 </a>
               </div>
