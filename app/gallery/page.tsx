@@ -9,6 +9,7 @@ const driveFolder =
   "https://drive.google.com/drive/folders/1ER4AIAfcjSqaNI7zPTFtGo7xURz9E4Jh";
 const driveEmbed =
   "https://drive.google.com/embeddedfolderview?id=1ER4AIAfcjSqaNI7zPTFtGo7xURz9E4Jh#grid";
+const showDriveLink = false;
 
 export default function GalleryPage() {
   const [introVisible, setIntroVisible] = useState(true);
@@ -238,15 +239,17 @@ export default function GalleryPage() {
                   Use the + button in the gallery to add your photos and help us
                   complete the story of IPNaCS–IPoPS 2026.
                 </p>
-                <a
-                  href={driveFolder}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-[#0F2A4D] transition hover:text-[#B58A1F]"
-                >
-                  Open shared gallery in Google Drive
-                  <span aria-hidden="true">↗</span>
-                </a>
+                {showDriveLink && (
+                  <a
+                    href={driveFolder}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-[#0F2A4D] transition hover:text-[#B58A1F]"
+                  >
+                    Open shared gallery in Google Drive
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                )}
               </div>
             </div>
           </section>
