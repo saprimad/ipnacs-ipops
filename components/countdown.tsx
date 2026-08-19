@@ -27,7 +27,7 @@ export function Countdown({ targetDate }: { targetDate: string }) {
     return (
       <div className="mt-10 flex justify-center px-2">
         <a
-          href="https://drive.google.com/drive/u/0/mobile/folders/1iwuuwWAvRZLeK3Z6X3SEpytaDu7rayf6?usp=sharing"
+          href="https://drive.google.com/drive/folders/1yVCOlWQk6sXpBLAide6gfXilkLs3rK3P"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Open Conference Materials"
