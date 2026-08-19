@@ -66,7 +66,7 @@ export function Countdown({ targetDate }: { targetDate: string }) {
               </div>
 
               <p className="mt-2 text-sm font-medium text-[#0F2A4D]/75 sm:text-base">
-                Speaker slides • Presentation materials • Resources
+                Speaker slides • Presentation materials • Certificates • Resources
               </p>
             </div>
 
