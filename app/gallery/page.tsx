@@ -5,6 +5,10 @@ import { useEffect, useState } from "react";
 const officialPhotoPost =
   "https://www.facebook.com/darilensakorporat/posts/pfbid02D4mE1bwjgekiJttc49KZPTf6KaRooMwZC94dfmX3zqqu5S4kpcqaBzxZjquzByMkl";
 const officialVideo = "https://www.facebook.com/reel/1034445492521693/";
+const conferenceHighlightVideo =
+  "https://drive.google.com/file/d/12vyqL7CUBE-PIvx9Znbn2NliFyKy2QLO/view?usp=drivesdk";
+const conferenceHighlightEmbed =
+  "https://drive.google.com/file/d/12vyqL7CUBE-PIvx9Znbn2NliFyKy2QLO/preview";
 const driveFolder =
   "https://drive.google.com/drive/folders/1ER4AIAfcjSqaNI7zPTFtGo7xURz9E4Jh";
 const driveEmbed =
@@ -191,6 +195,70 @@ export default function GalleryPage() {
                   </a>
                 </div>
               </article>
+            </div>
+          </section>
+
+          <section className="mt-16">
+            <div className="mx-auto max-w-2xl text-center">
+              <p className="text-xs font-extrabold uppercase tracking-[0.24em] text-[#B58A1F]">
+                Conference Highlights
+              </p>
+              <h2 className="mt-3 text-2xl font-extrabold tracking-tight text-[#0F2A4D] sm:text-3xl">
+                Relive IPNaCS–IPoPS 2026
+              </h2>
+              <p className="mx-auto mt-3 max-w-xl text-sm leading-6 text-slate-500 sm:text-base">
+                Watch memorable moments, speakers and highlights from the conference
+                before exploring the shared photo collection below.
+              </p>
+            </div>
+
+            <div className="mt-8 overflow-hidden rounded-3xl border border-[#0F2A4D]/10 bg-white shadow-[0_22px_55px_rgba(15,42,77,0.09)]">
+              <div className="flex items-center justify-between gap-4 border-b border-slate-200 bg-white px-5 py-4 sm:px-6">
+                <div>
+                  <p className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-[#B58A1F]">
+                    Featured Video
+                  </p>
+                  <p className="mt-1 text-sm font-bold text-[#0F2A4D] sm:text-base">
+                    IPNaCS–IPoPS 2026 Conference Highlights
+                  </p>
+                </div>
+                <span className="hidden rounded-full border border-[#E5B82E]/35 bg-[#E5B82E]/10 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.14em] text-[#7A5B10] sm:inline-flex">
+                  Watch Highlights
+                </span>
+              </div>
+
+              <div className="bg-[#07182d] p-2 sm:p-4">
+                <div className="relative aspect-video w-full overflow-hidden rounded-2xl bg-black">
+                  <iframe
+                    src={conferenceHighlightEmbed}
+                    title="IPNaCS–IPoPS 2026 conference highlights video"
+                    className="absolute inset-0 h-full w-full border-0"
+                    allow="autoplay; encrypted-media; picture-in-picture"
+                    allowFullScreen
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-3 border-t border-slate-200 bg-[#FBFAF6] px-5 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+                <div>
+                  <p className="text-sm font-bold text-[#0F2A4D]">
+                    Conference memories in motion
+                  </p>
+                  <p className="mt-1 text-sm leading-6 text-slate-600">
+                    A featured video recap of IPNaCS–IPoPS 2026.
+                  </p>
+                </div>
+                <a
+                  href={conferenceHighlightVideo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex shrink-0 items-center gap-2 text-sm font-bold text-[#0F2A4D] transition hover:text-[#B58A1F]"
+                >
+                  Open video in Google Drive
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </div>
             </div>
           </section>
 
